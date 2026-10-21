@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; base-uri 'none'">
+<title>Ulva order preparation</title>
+<style>
+:root{font:15px/1.45 system-ui,sans-serif;color:#183529;background:#f4f7f4}body{margin:0}main{max-width:1500px;margin:auto;padding:28px}h1{font-size:28px;margin:0 0 6px}p{max-width:1000px}button,input,select{font:inherit;padding:7px 10px;border:1px solid #aab9af;border-radius:5px;background:white}button{cursor:pointer}button:disabled{cursor:default;opacity:.5}input[type=checkbox]{width:20px;height:20px;cursor:pointer}input:disabled{cursor:default}label{display:inline-flex;align-items:center;gap:7px}header,.controls,.downloads{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.controls,.downloads{margin:18px 0}.primary{background:#1c6542;color:white;border-color:#1c6542}.panel{background:white;border:1px solid #d4ded7;border-radius:9px;padding:14px;margin:15px 0}.table-wrap{overflow:auto}table{border-collapse:collapse;width:100%;background:white}th,td{padding:9px 10px;text-align:left;border-bottom:1px solid #dde4df;vertical-align:top}th{font-size:13px;white-space:nowrap;background:#eaf0ec;position:sticky;top:0}td{font-size:13px}.muted{color:#64756b}.badge{display:inline-block;padding:2px 6px;border-radius:4px;background:#e9f2ec}.unknown{background:#fff0cd}.error{background:#ffeadf;color:#8d3011}.status{font-weight:600}code{overflow-wrap:anywhere}details pre{white-space:pre-wrap;max-width:650px;font-size:12px}.counts{font-size:17px;font-weight:600}.ref{font-weight:650;white-space:nowrap}.small{font-size:12px}#boards{width:80px}#search{min-width:260px}#error:empty{display:none}
+</style></head><body><main>
+<header><h1>Ulva order preparation</h1><span class="badge">Offline · no cart or purchase submission</span></header>
+<p>Select supplier assembly or loose LCSC parts for each reference. Selecting one clears the other. Verified Basic and Preferred SMT parts default to PCBA; other valid schematic LCSC parts default to loose parts. Uncheck anything already on hand.</p>
+<div class="panel small"><strong>Snapshot workflow.</strong> This page cannot detect later CAD edits. Before uploading, regenerate from current CAD or run <code>python3 tools/prepare_orders.py --check-source path/to/provenance.json</code>. Supplier stock, packing quantities, prices and fees still need review. KiCad CPL rotations require the supplier assembly preview. No substitutions are taken from documentation.</div>
+<div id="error" class="panel error" role="alert"></div>
+<div class="controls"><label>Boards <input id="boards" type="number" min="1" max="100000" step="1"></label><input id="search" type="search" placeholder="Find reference, value, MPN or LCSC"><label>Show <select id="filter"><option value="purchased">Purchasable parts</option><option value="all">All CAD references</option><option value="pcba">Selected PCBA</option><option value="loose">Selected loose parts</option><option value="manual">Unresolved manual parts</option></select></label><button id="reset">Reset choices</button><button id="load">Load selection JSON</button><input id="file" type="file" accept=".json,application/json" hidden></div>
+<div id="counts" class="counts" aria-live="polite"></div>
+<p id="quantity" class="muted small"></p>
+<div class="downloads"><button class="primary" id="zip">Download selection ZIP</button><button data-download="jlc-bom.csv">JLC BOM</button><button data-download="jlc-cpl.csv">JLC CPL</button><button data-download="lcsc-import.csv">LCSC CSV</button><button data-download="manual-parts.csv">Manual parts</button><button data-download="selection.json">Selection JSON</button><button data-download="provenance.json">Provenance</button></div>
+<p id="fabrication" class="small"></p>
+<div class="table-wrap"><table><thead><tr><th>Ref</th><th>PCBA</th><th>Loose</th><th>Quantity</th><th>Value / footprint</th><th>Exact MPN / LCSC</th><th>Tier / ownership</th><th>Evidence and notes</th></tr></thead><tbody id="rows"></tbody></table></div>
+<details class="panel"><summary>Source provenance</summary><pre id="provenance"></pre></details>
+</main><script id="order-data" type="application/json">__ORDER_DATA__</script><script>
+'use strict';
+const payload=JSON.parse(document.getElementById('order-data').textContent), model=payload.model;
+let selection=structuredClone(payload.selection);
+const $=id=>document.getElementById(id), enc=new TextEncoder();
+const expired=()=>model.rows.some(r=>r.pcba_allowed && (Date.now()-Date.parse(r.evidence.checked_at))/86400000>model.catalog_max_age_days);
+function validate(s){
+ if(s.schema_version!==1||s.source_digest!==model.source_digest||s.model_digest!==model.model_digest)throw Error('This selection belongs to different CAD or catalog data. Regenerate and review it.');
+ if(!Number.isInteger(s.boards)||s.boards<1||s.boards>100000)throw Error('Board count must be an integer from 1 to 100000.');
+ if(!s.choices||Object.keys(s.choices).length!==model.rows.length)throw Error('Selection must contain each reference exactly once.');
+ for(const r of model.rows){const v=s.choices[r.ref];if(!['none','pcba','loose'].includes(v)||(v!=='none'&&!r[v+'_allowed']))throw Error('Invalid selection for '+r.ref);}
+ if(expired())throw Error('Tier evidence has expired. Refresh the catalog and regenerate this page before exporting.');
+}
+function csv(headers,rows){const cell=x=>{const s=String(x??'');if((s&&s.charCodeAt(0)<32)||(/^\s*[=+@-]/.test(s)&&! /^-?\d+(?:\.\d+)?(?:mm)?$/.test(s)))throw Error('CSV text could be interpreted as a spreadsheet formula; correct the CAD field before exporting.');return /[",\r\n]/.test(s)?'"'+s.replaceAll('"','""')+'"':s};return [headers,...rows].map(r=>r.map(cell).join(',')).join('\n')+'\n'}
+function buildFiles(){
+ validate(selection);const a=model.rows.filter(r=>selection.choices[r.ref]==='pcba'),loose={};
+ for(const r of model.rows)if(selection.choices[r.ref]==='loose')(loose[r.lcsc]??=[]).push(r);
+ const cp=['Designator','Mid X','Mid Y','Layer','Rotation'];
+ const provenance=structuredClone(model);delete provenance.rows;Object.assign(provenance,{selected_board_count:selection.boards,pcba_references:a.map(r=>r.ref),loose_references:model.rows.filter(r=>selection.choices[r.ref]==='loose').map(r=>r.ref),parts:model.rows});
+ return {
+ 'jlc-bom.csv':csv(['Comment','Designator','Footprint','LCSC Part #'],a.map(r=>[r.value,r.ref,r.footprint.split(':').at(-1),r.lcsc])),
+ 'jlc-cpl.csv':csv(cp,a.map(r=>cp.map(k=>r.position[k]))),
+ 'lcsc-import.csv':csv(['LCSC Part Number','Quantity','References','MPN','Value'],Object.keys(loose).sort().map(c=>{const rs=loose[c];return[c,rs.length*selection.boards,rs.map(r=>r.ref).join(','),[...new Set(rs.map(r=>r.mpn))].join(' | '),[...new Set(rs.map(r=>r.value))].join(' | ')]})),
+ 'manual-parts.csv':csv(['Reference','Value','MPN','Manufacturer','Footprint','Quantity','Reason'],model.rows.filter(r=>r.manual).map(r=>[r.ref,r.value,r.mpn,r.manufacturer,r.footprint,selection.boards,r.reason])),
+ 'selection.json':JSON.stringify(selection,null,2)+'\n','provenance.json':JSON.stringify(provenance,null,2)+'\n'};
+}
+function fail(e){$('error').textContent=e.message??String(e)}
+function download(name,data,type='text/csv;charset=utf-8'){const url=URL.createObjectURL(new Blob([data],{type})),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+// Store-only ZIP: no external JavaScript, network access or compression library.
+function zip(files){const chunks=[],central=[];let offset=0;const crcTable=Array.from({length:256},(_,n)=>{for(let k=0;k<8;k++)n=(n&1)?0xedb88320^(n>>>1):n>>>1;return n>>>0});
+ const crc=bytes=>{let n=0xffffffff;for(const b of bytes)n=crcTable[(n^b)&255]^(n>>>8);return(n^0xffffffff)>>>0};
+ const u16=(v,o,n)=>v.setUint16(o,n,true),u32=(v,o,n)=>v.setUint32(o,n,true);
+ for(const[name,text]of Object.entries(files)){const n=enc.encode(name),data=enc.encode(text),sum=crc(data),h=new Uint8Array(30+n.length),v=new DataView(h.buffer);u32(v,0,0x04034b50);u16(v,4,20);u32(v,14,sum);u32(v,18,data.length);u32(v,22,data.length);u16(v,26,n.length);h.set(n,30);chunks.push(h,data);
+ const c=new Uint8Array(46+n.length),w=new DataView(c.buffer);u32(w,0,0x02014b50);u16(w,4,20);u16(w,6,20);u32(w,16,sum);u32(w,20,data.length);u32(w,24,data.length);u16(w,28,n.length);u32(w,42,offset);c.set(n,46);central.push(c);offset+=h.length+data.length;}
+ const size=central.reduce((s,c)=>s+c.length,0),end=new Uint8Array(22),v=new DataView(end.buffer);u32(v,0,0x06054b50);u16(v,8,central.length);u16(v,10,central.length);u32(v,12,size);u32(v,16,offset);return new Blob([...chunks,...central,end],{type:'application/zip'});
+}
+function cell(tr,text,cls){const td=document.createElement('td');if(cls)td.className=cls;td.textContent=text;tr.append(td);return td}
+function render(){
+ const q=$('search').value.toLowerCase(),filter=$('filter').value;let pcba=0,loose=0,manual=0;
+ $('rows').replaceChildren();
+ for(const r of model.rows){const mode=selection.choices[r.ref];pcba+=mode==='pcba';loose+=mode==='loose';manual+=r.manual;
+ if(filter==='purchased'&&(r.no_part||r.dnp)||filter==='pcba'&&mode!=='pcba'||filter==='loose'&&mode!=='loose'||filter==='manual'&&!r.manual)continue;
+ if(q&&!`${r.ref} ${r.value} ${r.mpn} ${r.lcsc} ${r.footprint}`.toLowerCase().includes(q))continue;
+ const tr=document.createElement('tr');tr.dataset.ref=r.ref;cell(tr,r.ref,'ref');
+ for(const modeName of ['pcba','loose']){const td=cell(tr,''),box=document.createElement('input');box.type='checkbox';box.setAttribute('aria-label',r.ref+' '+modeName);box.checked=mode===modeName;box.disabled=!r[modeName+'_allowed']||expired();box.addEventListener('change',()=>{selection.choices[r.ref]=box.checked?modeName:'none';render()});td.append(box);}
+ cell(tr,selection.boards);cell(tr,r.value+'\n'+r.footprint);cell(tr,(r.mpn||'Unspecified MPN')+'\n'+(r.lcsc||'No LCSC code'));
+ const tier=cell(tr,r.tier+'\n'+(r.assembly||'Manual / not tagged SMT'));if(r.tier==='unknown')tier.className='unknown';
+ const notes=cell(tr,''),details=document.createElement('details'),summary=document.createElement('summary'),pre=document.createElement('pre');summary.textContent=r.reason;pre.textContent=JSON.stringify({schematic_tier:r.schematic_tier,catalog:r.evidence,schematic_properties:r.properties},null,2);details.append(summary,pre);notes.append(details);$('rows').append(tr);
+ }
+ $('counts').textContent=`${pcba} PCBA references · ${loose} loose references (${loose*selection.boards} pieces) · ${manual} unresolved manual references`;
+ $('quantity').textContent=model.quantity_note;
+ if(expired())fail('Tier evidence has expired. Refresh the catalog and regenerate this page.');
+}
+$('boards').value=selection.boards;$('boards').addEventListener('input',()=>{selection.boards=Number($('boards').value);try{validate(selection);$('error').textContent=''}catch(e){fail(e)}render()});
+for(const id of ['search','filter'])$(id).addEventListener('input',render);
+$('reset').addEventListener('click',()=>{selection.choices=Object.fromEntries(model.rows.map(r=>[r.ref,r.default]));render()});
+$('load').addEventListener('click',()=>$('file').click());$('file').addEventListener('change',async()=>{try{const next=JSON.parse(await $('file').files[0].text());validate(next);selection=next;$('boards').value=next.boards;$('error').textContent='';render()}catch(e){fail(e)}});
+for(const button of document.querySelectorAll('[data-download]'))button.addEventListener('click',()=>{try{const name=button.dataset.download;download(name,buildFiles()[name],name.endsWith('.json')?'application/json':'text/csv;charset=utf-8')}catch(e){fail(e)}});
+$('zip').addEventListener('click',()=>{try{download('ulva-order-selection.zip',zip(buildFiles()),'application/zip')}catch(e){fail(e)}});
+$('provenance').textContent=JSON.stringify({generated_at:model.generated_at,source_digest:model.source_digest,source_files_sha256:model.source_files_sha256,catalog_sha256:model.catalog_sha256,catalog_max_age_days:model.catalog_max_age_days},null,2);
+$('fabrication').textContent=model.fabrication?`Separate matching fabrication bundle: ${model.fabrication.file} · SHA-256 ${model.fabrication.sha256}`:'Fabrication Gerbers are not in this selection ZIP. Generate a separate matching bundle with --gerbers.';
+render();
+// Testable local export logic; contains no network or purchase functionality.
+window.orderSelector={model,getSelection:()=>structuredClone(selection),buildFiles,validate,zip};
+</script></body></html>

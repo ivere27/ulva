@@ -1,0 +1,20 @@
+(version 1)
+(rule "24VAC clearance"
+  (condition "A.NetClass == 'AC_24V'")
+  (constraint clearance (min 0.5mm)))
+(rule "24VAC copper width"
+  (condition "A.NetClass == 'AC_24V'")
+  (constraint track_width (min 2mm)))
+(rule "DC command return width"
+  (condition "A.NetClass == 'DC_Return'")
+  (constraint track_width (min 1mm)))
+(rule "DC_ZONE_RETURN main bus width"
+  (condition "A.NetName == 'DC_ZONE_RETURN'")
+  (constraint track_width (min 2mm)))
+(rule "DRIVER COM bottom main bus width"
+  (condition "A.NetName == 'DC_DRIVER_COM' && A.Layer == 'B.Cu'")
+  (constraint track_width (min 2mm)))
+
+(rule "CAN 24V fuse escape minimum"
+  (condition "(A.NetName == 'CAN_24V' || A.NetName == 'CAN2_24V')")
+  (constraint track_width (min 0.8mm)))

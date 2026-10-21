@@ -1,0 +1,1126 @@
+(kicad_sch (version 20250114) (generator "eeschema") (generator_version "9.0")
+(uuid "4ad477ec-2ae0-511c-84d2-c9810f3ad3a6")
+(paper "A4")
+(title_block (title "Ulva / 24V to 5V logic supply") (date "2026-10-13") (rev "v0.42") (company "Ulva") (comment 1 "Separate power return and DRIVER COM"))
+(lib_symbols
+(symbol "Device:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "Device:C"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762)
+						(xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762)
+						(xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "Connector:Screw_Terminal_01x01"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "J"
+			(at 0 2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Screw_Terminal_01x01"
+			(at 0 -2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic screw terminal, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "screw terminal"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "TerminalBlock*:*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "Screw_Terminal_01x01_1_1"
+			(rectangle
+				(start -1.27 1.27)
+				(end 1.27 -1.27)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(polyline
+				(pts
+					(xy -0.5334 0.3302) (xy 0.3302 -0.508)
+				)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -0.3556 0.508) (xy 0.508 -0.3302)
+				)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 0 0)
+				(radius 0.635)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "power:PWR_FLAG"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0)
+						(xy 0 1.27)
+						(xy -1.016 1.905)
+						(xy 0 2.54)
+						(xy 1.016 1.905)
+						(xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "Device:L"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "L"
+			(at -1.27 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "L"
+			(at 1.905 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Inductor"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "inductor choke coil reactor magnetic"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "Choke_* *Coil* Inductor_* L_*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "L_0_1"
+			(arc
+				(start 0 2.54)
+				(mid 0.6323 1.905)
+				(end 0 1.27)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 0 1.27)
+				(mid 0.6323 0.635)
+				(end 0 0)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 0 0)
+				(mid 0.6323 -0.635)
+				(end 0 -1.27)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 0 -1.27)
+				(mid 0.6323 -1.905)
+				(end 0 -2.54)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "L_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "Device:D_Schottky"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "D"
+			(at 0 2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "D_Schottky"
+			(at 0 -2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Schottky diode"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "diode Schottky"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "D_Schottky_0_1"
+			(polyline
+				(pts
+					(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 0) (xy -1.27 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "D_Schottky_1_1"
+			(pin passive line
+				(at -3.81 0 0)
+				(length 2.54)
+				(name "K"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 3.81 0 180)
+				(length 2.54)
+				(name "A"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "Device:NetTie_2"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(property "Reference" "NT"
+			(at 0 1.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NetTie_2"
+			(at 0 -1.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Net tie, 2 pins"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "net tie short"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "Net*Tie*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "NetTie_2_0_1"
+			(polyline
+				(pts
+					(xy -1.27 0) (xy 1.27 0)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "NetTie_2_1_1"
+			(pin passive line
+				(at -2.54 0 0)
+				(length 2.54)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 2.54 0 180)
+				(length 2.54)
+				(name "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "Ulva:SY8301ABC" (pin_names (offset 0.762)) (exclude_from_sim no) (in_bom yes) (on_board yes)
+(property "Reference" "U" (at 0 12.7 0) (effects (font (size 1.27 1.27))))(property "Value" "SY8301ABC" (at 0 -15.24 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6_Handsoldering" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.silergy.com/zh/download/downloadFile?ftype=note&id=3828&type=product" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Description" "Silergy SY8301ABC, 4.5-40V, 1A synchronous buck, 2MHz, FB=0.8V; SOT23-6 top-view pinout." (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(symbol "SY8301ABC_0_1" (rectangle (start -7.62 10.16) (end 7.62 -10.16) (stroke (width 0.254) (type default)) (fill (type background))))
+(symbol "SY8301ABC_1_1"
+(pin passive line (at 12.7 7.62 180) (length 5.08) (name "BS" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+(pin power_in line (at 0 -12.7 90) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+(pin input line (at 12.7 -7.62 180) (length 5.08) (name "FB" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))
+(pin input line (at -12.7 0 0) (length 5.08) (name "EN" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))
+(pin power_in line (at -12.7 7.62 0) (length 5.08) (name "IN" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))
+(pin power_out line (at 12.7 0 180) (length 5.08) (name "LX" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))
+)))
+(symbol (lib_id "Connector:Screw_Terminal_01x01") (at 25.4 55.88 180) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "9e513e52-4308-5819-a9a3-5dd55a62e2cc")
+(property "Reference" "J24" (at 25.4 45.72 0) (effects (font (size 1.27 1.27))))(property "Value" "24V DC +" (at 25.4 49.53 0) (effects (font (size 1.27 1.27))))(property "Footprint" "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_360272_1x01_Horizontal_ScrewM2.6" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.metz-connect.com/externalfiles/360272/863849.PDF" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "360272" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "METZ CONNECT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Assembly" "Manual THT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(pin "1" (uuid "24901f97-7769-5317-aa89-115d3c4dc736"))
+(instances (project "ulva_controller" (path "/3da05633-c880-4edd-9149-3930d166f2d5/8281a446-217d-5a22-9f1e-98985a80dedd" (reference "J24") (unit 1)))))
+(symbol (lib_id "Ulva:SY8301ABC") (at 106.68 63.5 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "a2e79fe2-d644-5dd8-a28c-bc54b07212a7")
+(property "Reference" "U2" (at 106.68 43.18 0) (effects (font (size 1.27 1.27))))(property "Value" "SY8301ABC" (at 106.68 48.26 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6_Handsoldering" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.silergy.com/zh/download/downloadFile?ftype=note&id=3828&type=product" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "SY8301ABC" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Silergy" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C2927130" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "JLCPCB_Library" "Extended" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Assembly" "Manual SMT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(pin "1" (uuid "e96b16c7-5d46-5190-80a2-b9966e4eb931"))
+(pin "2" (uuid "11542bef-c3d8-5bfb-8c45-ee9abca9f126"))
+(pin "3" (uuid "24989989-efb5-5c8f-82d3-2523709b0c28"))
+(pin "4" (uuid "0cda9a55-f057-5c74-aeed-9d216d6f2d69"))
+(pin "5" (uuid "1b2ab289-7c2b-5954-a779-5e9727da67da"))
+(pin "6" (uuid "fc728a97-ecf7-540f-b23a-4aa194776363"))
+(instances (project "ulva_controller" (path "/3da05633-c880-4edd-9149-3930d166f2d5/8281a446-217d-5a22-9f1e-98985a80dedd" (reference "U2") (unit 1)))))
+(symbol (lib_id "Device:L") (at 144.78 63.5 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "7e4aad08-fed8-5abc-b120-81b2a19dcf24")
+(property "Reference" "L1" (at 144.78 53.34 90) (effects (font (size 1.27 1.27))))(property "Value" "4.7uH" (at 144.78 57.15 90) (effects (font (size 1.27 1.27))))(property "Footprint" "Ulva:L_Sunlord_SWPA6045_6x6mm" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.sunlordinc.com/uploads/files/20221122/SWPA%20series%20of%20SMD%20Power%20Inductor.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "SWPA6045S4R7MT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Sunlord" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C78804" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "JLCPCB_Library" "Extended" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Assembly" "Manual SMT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(pin "1" (uuid "4a530fab-735b-5335-951d-020ee6dbdf8c"))
+(pin "2" (uuid "6c1966b6-e258-55a6-97a9-31ef384e7468"))
+(instances (project "ulva_controller" (path "/3da05633-c880-4edd-9149-3930d166f2d5/8281a446-217d-5a22-9f1e-98985a80dedd" (reference "L1") (unit 1)))))
+(symbol (lib_id "Device:D_Schottky") (at 208.28 63.5 180) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "144ac3b4-844b-5217-a726-43bc9d24da2f")
+(property "Reference" "D4" (at 208.28 53.34 0) (effects (font (size 1.27 1.27))))(property "Value" "SS34" (at 208.28 57.15 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Diode_SMD:D_SMA" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.lcsc.com/datasheet/C8678.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "SS34" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "MDD" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C8678" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "JLCPCB_Library" "Basic" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Assembly" "JLC PCBA SMT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(pin "1" (uuid "9f4e09aa-c8f7-55fb-b15d-6a404b43a01a"))
+(pin "2" (uuid "99cba4e2-1de7-5981-a197-1e0b95536ce6"))
+(instances (project "ulva_controller" (path "/3da05633-c880-4edd-9149-3930d166f2d5/8281a446-217d-5a22-9f1e-98985a80dedd" (reference "D4") (unit 1)))))
+(symbol (lib_id "Device:C") (at 50.8 66.04 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "b988f9d0-82d1-5583-8ca9-42cfaebe02d7")
+(property "Reference" "C3" (at 50.8 76.2 0) (effects (font (size 1.27 1.27))))(property "Value" "2.2uF / 50V" (at 50.8 80.01 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_1206_3216Metric" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://product.samsungsem.com/mlcc/CL31B225KBHNNN.do" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL31B225KBHNNNE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C50254" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "JLCPCB_Library" "Basic" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Assembly" "JLC PCBA SMT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(pin "1" (uuid "320c980c-80c9-5706-9575-c07fbc5d2ac5"))
+(pin "2" (uuid "f0072eea-7c70-5116-800d-3d476de208c4"))
+(instances (project "ulva_controller" (path "/3da05633-c880-4edd-9149-3930d166f2d5/8281a446-217d-5a22-9f1e-98985a80dedd" (reference "C3") (unit 1)))))
+(symbol (lib_id "Device:C") (at 66.04 66.04 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "0f4fc6ac-c849-5f91-892e-58c180b80ebb")
+(property "Reference" "C4" (at 66.04 76.2 0) (effects (font (size 1.27 1.27))))(property "Value" "2.2uF / 50V" (at 66.04 80.01 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_1206_3216Metric" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://product.samsungsem.com/mlcc/CL31B225KBHNNN.do" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL31B225KBHNNNE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C50254" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "JLCPCB_Library" "Basic" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Assembly" "JLC PCBA SMT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(pin "1" (uuid "ace97142-98ff-5c57-a83f-04c15146c3bb"))
+(pin "2" (uuid "d7ad10a3-6332-56c4-b085-827445adbbd1"))
+(instances (project "ulva_controller" (path "/3da05633-c880-4edd-9149-3930d166f2d5/8281a446-217d-5a22-9f1e-98985a80dedd" (reference "C4") (unit 1)))))
+(symbol (lib_id "Device:C") (at 127 59.69 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "6feb0e96-bdf9-52a7-ba61-7ab4822f4672")
+(property "Reference" "C5" (at 134.62 43.18 0) (effects (font (size 1.27 1.27))))(property "Value" "100nF / 50V" (at 143.51 48.26 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.lcsc.com/datasheet/C14663.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CC0603KRX7R9BB104" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "YAGEO" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C14663" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "JLCPCB_Library" "Basic" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Assembly" "JLC PCBA SMT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(pin "1" (uuid "854c7df3-1726-5413-9262-e9bd3c69ef3e"))
+(pin "2" (uuid "bc02c11d-ed9a-547e-b3e9-3ceed856ac27"))
+(instances (project "ulva_controller" (path "/3da05633-c880-4edd-9149-3930d166f2d5/8281a446-217d-5a22-9f1e-98985a80dedd" (reference "C5") (unit 1)))))
+(symbol (lib_id "Device:C") (at 160.02 76.2 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "6fae55c5-7334-5879-a143-0eac74a381b7")
+(property "Reference" "C6" (at 160.02 96.52 0) (effects (font (size 1.27 1.27))))(property "Value" "47uF / 10V" (at 160.02 100.33 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_1206_3216Metric" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://product.samsungsem.com/mlcc/CL31A476MPHNNN.do" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL31A476MPHNNNE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C96123" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "JLCPCB_Library" "Basic" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Assembly" "JLC PCBA SMT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(pin "1" (uuid "1d098bc0-cb70-5487-81b9-b74209a5b819"))
+(pin "2" (uuid "7c42e558-a7f4-50bd-8bc3-c087fb4e3a51"))
+(instances (project "ulva_controller" (path "/3da05633-c880-4edd-9149-3930d166f2d5/8281a446-217d-5a22-9f1e-98985a80dedd" (reference "C6") (unit 1)))))
+(symbol (lib_id "Device:C") (at 177.8 76.2 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "4470d639-0445-5e92-a268-f747bf12658a")
+(property "Reference" "C7" (at 177.8 96.52 0) (effects (font (size 1.27 1.27))))(property "Value" "47uF / 10V" (at 177.8 100.33 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_1206_3216Metric" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://product.samsungsem.com/mlcc/CL31A476MPHNNN.do" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL31A476MPHNNNE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C96123" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "JLCPCB_Library" "Basic" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Assembly" "JLC PCBA SMT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(pin "1" (uuid "8e3e10e2-329f-5e66-8d53-4f55c651c471"))
+(pin "2" (uuid "ed369974-841c-5ebd-96ab-aed6edc15286"))
+(instances (project "ulva_controller" (path "/3da05633-c880-4edd-9149-3930d166f2d5/8281a446-217d-5a22-9f1e-98985a80dedd" (reference "C7") (unit 1)))))
+(symbol (lib_id "Device:R") (at 193.04 81.28 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "24130745-8515-5ef9-b6c2-cd3d98e8f8ed")
+(property "Reference" "R21" (at 201.93 80.01 0) (effects (font (size 1.27 1.27))))(property "Value" "51k" (at 201.93 83.82000000000001 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.lcsc.com/datasheet/C23196.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "0603WAF5102T5E" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "UNI-ROYAL" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C23196" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "JLCPCB_Library" "Basic" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Assembly" "JLC PCBA SMT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(pin "1" (uuid "cc9eb0b2-6376-50a2-8769-dafdb0476b91"))
+(pin "2" (uuid "37717ca0-dc0e-593b-b3fe-7efda96667ca"))
+(instances (project "ulva_controller" (path "/3da05633-c880-4edd-9149-3930d166f2d5/8281a446-217d-5a22-9f1e-98985a80dedd" (reference "R21") (unit 1)))))
+(symbol (lib_id "Device:R") (at 193.04 96.52 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "154269b5-6d15-556e-974e-ebe8d02884ab")
+(property "Reference" "R22" (at 201.93 95.25 0) (effects (font (size 1.27 1.27))))(property "Value" "2.7k" (at 201.93 99.06 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.lcsc.com/datasheet/C13167.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "0603WAF2701T5E" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "UNI-ROYAL" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C13167" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "JLCPCB_Library" "Basic" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Assembly" "JLC PCBA SMT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(pin "1" (uuid "41d6b222-d19b-57b4-96fa-0dbd3adf51c7"))
+(pin "2" (uuid "483fe2b0-fdf9-5501-a842-76ef0939a8d1"))
+(instances (project "ulva_controller" (path "/3da05633-c880-4edd-9149-3930d166f2d5/8281a446-217d-5a22-9f1e-98985a80dedd" (reference "R22") (unit 1)))))
+(symbol (lib_id "Device:R") (at 193.04 121.92 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "80e85a2b-4c85-59c9-93e7-9f5e6a058eac")
+(property "Reference" "R23" (at 201.93 120.65 0) (effects (font (size 1.27 1.27))))(property "Value" "10k" (at 201.93 124.46000000000001 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.lcsc.com/datasheet/C25804.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "0603WAF1002T5E" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "UNI-ROYAL" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C25804" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "JLCPCB_Library" "Basic" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Assembly" "JLC PCBA SMT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(pin "1" (uuid "900c56b9-20e1-5a17-a3c1-7aa3a3b50d5b"))
+(pin "2" (uuid "82e26d21-978b-56d1-945c-a9878005b0cd"))
+(instances (project "ulva_controller" (path "/3da05633-c880-4edd-9149-3930d166f2d5/8281a446-217d-5a22-9f1e-98985a80dedd" (reference "R23") (unit 1)))))
+(symbol (lib_id "Device:NetTie_2") (at 55.88 119.38 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "44bd2162-421e-58fc-ba6a-c27dfcb57aba")
+(property "Reference" "NT1" (at 55.88 113.03 0) (effects (font (size 1.27 1.27))))(property "Value" "POWER_0V-GND bond" (at 55.88 125.73 0) (effects (font (size 1.27 1.27))))(property "Footprint" "NetTie:NetTie-2_SMD_Pad2.0mm" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Assembly" "PCB copper; no purchased part" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(pin "1" (uuid "3f587b20-18c5-528a-8d41-bb43056208b8"))
+(pin "2" (uuid "d885407e-dd36-597e-be4e-e88913c18602"))
+(instances (project "ulva_controller" (path "/3da05633-c880-4edd-9149-3930d166f2d5/8281a446-217d-5a22-9f1e-98985a80dedd" (reference "NT1") (unit 1)))))
+(symbol (lib_id "power:PWR_FLAG") (at 73.66 55.88 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "f5347d50-a7d7-5402-8b33-3e84d220fe71")
+(property "Reference" "#FLG04" (at 73.66 50.800000000000004 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Value" "PWR_FLAG" (at 73.66 60.96 0) (effects (font (size 1.27 1.27)) (hide yes)))(pin "1" (uuid "b13dd1a6-669a-54f6-a85f-cc8e496d613b"))
+(instances (project "ulva_controller" (path "/3da05633-c880-4edd-9149-3930d166f2d5/8281a446-217d-5a22-9f1e-98985a80dedd" (reference "#FLG04") (unit 1)))))
+(symbol (lib_id "power:PWR_FLAG") (at 228.6 63.5 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "e34f04b6-1e37-508b-88d7-f80660cb580c")
+(property "Reference" "#FLG05" (at 228.6 58.42 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Value" "PWR_FLAG" (at 228.6 68.58 0) (effects (font (size 1.27 1.27)) (hide yes)))(pin "1" (uuid "4c26997f-b587-568b-bfac-c705dbc0752e"))
+(instances (project "ulva_controller" (path "/3da05633-c880-4edd-9149-3930d166f2d5/8281a446-217d-5a22-9f1e-98985a80dedd" (reference "#FLG05") (unit 1)))))
+(wire (pts (xy 30.48 55.88) (xy 35.56 55.88)) (stroke (width 0) (type default)) (uuid "65312f45-6b82-5ad9-b1ed-bad5a42de9b3"))
+(wire (pts (xy 35.56 55.88) (xy 50.8 55.88)) (stroke (width 0) (type default)) (uuid "38036756-2030-5105-a2b5-8ae41394e629"))
+(wire (pts (xy 50.8 55.88) (xy 66.04 55.88)) (stroke (width 0) (type default)) (uuid "e2bf13a0-4ac1-5b34-882a-3443e02213f4"))
+(wire (pts (xy 66.04 55.88) (xy 73.66 55.88)) (stroke (width 0) (type default)) (uuid "416225b1-15b1-58dd-b0d7-6e30c6a079f1"))
+(wire (pts (xy 73.66 55.88) (xy 81.28 55.88)) (stroke (width 0) (type default)) (uuid "b807a465-1294-5233-9337-3aa5c58af196"))
+(wire (pts (xy 81.28 55.88) (xy 86.36 55.88)) (stroke (width 0) (type default)) (uuid "60c50e14-f79f-5867-89b5-e2f3df49e1d5"))
+(wire (pts (xy 86.36 55.88) (xy 93.98 55.88)) (stroke (width 0) (type default)) (uuid "602c6167-fe9c-5d57-9e97-f9824452da56"))
+(global_label "VIN_24V" (shape input) (at 38.1 55.88 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "b3e2fc79-f82b-5ea2-9e43-2cbca6893fa5"))
+(wire (pts (xy 50.8 55.88) (xy 50.8 62.23)) (stroke (width 0) (type default)) (uuid "d1212d23-fe91-5fa9-ba42-d1576a2e0f29"))
+(wire (pts (xy 50.8 69.85) (xy 50.8 88.9)) (stroke (width 0) (type default)) (uuid "6f2536d9-dccf-5160-8152-8bead57c81ed"))
+(junction (at 50.8 55.88) (diameter 0) (color 0 0 0 0) (uuid "4df834c4-4eaa-5b5a-8f4f-19cd7139aa9f"))
+(wire (pts (xy 66.04 55.88) (xy 66.04 62.23)) (stroke (width 0) (type default)) (uuid "16acf267-ae32-506c-ae3d-b58078e59623"))
+(wire (pts (xy 66.04 69.85) (xy 66.04 88.9)) (stroke (width 0) (type default)) (uuid "ad3998a8-bb79-5f61-bc95-9e318adee341"))
+(junction (at 66.04 55.88) (diameter 0) (color 0 0 0 0) (uuid "3d6e077d-5980-5fa6-a02f-43153291c400"))
+(wire (pts (xy 50.8 88.9) (xy 66.04 88.9)) (stroke (width 0) (type default)) (uuid "3fefe82c-e216-53d3-8ad8-e2b468f236aa"))
+(wire (pts (xy 66.04 88.9) (xy 81.28 88.9)) (stroke (width 0) (type default)) (uuid "787a9f5e-9378-5d0b-b77c-1384c1d33031"))
+(wire (pts (xy 81.28 88.9) (xy 106.68 88.9)) (stroke (width 0) (type default)) (uuid "d032c067-3bab-5343-9fb0-205006bae885"))
+(junction (at 66.04 88.9) (diameter 0) (color 0 0 0 0) (uuid "6206b065-748f-598b-837c-e0464a4bafbd"))
+(wire (pts (xy 106.68 76.2) (xy 106.68 88.9)) (stroke (width 0) (type default)) (uuid "8c23da2c-f3fc-56ad-97e5-d0234b5a0569"))
+(global_label "GND" (shape input) (at 106.68 88.9 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "03f2afff-1cc8-5436-a108-1de636445981"))
+(wire (pts (xy 86.36 55.88) (xy 86.36 63.5)) (stroke (width 0) (type default)) (uuid "9033a318-9bc3-5c58-a15e-9309548695ba"))
+(wire (pts (xy 86.36 63.5) (xy 93.98 63.5)) (stroke (width 0) (type default)) (uuid "91a3ec4d-034d-5567-90c5-667aa47396c7"))
+(junction (at 86.36 55.88) (diameter 0) (color 0 0 0 0) (uuid "e2496a21-21c9-5d40-9834-e3518da65ba5"))
+(junction (at 73.66 55.88) (diameter 0) (color 0 0 0 0) (uuid "e48f2576-877a-557c-968a-4e1d11cfc71f"))
+(wire (pts (xy 119.38 55.88) (xy 127 55.88)) (stroke (width 0) (type default)) (uuid "07e1e21d-c994-5b25-8383-b16af371cc23"))
+(label "BUCK_BS" (at 119.38 55.88 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "91f45371-025b-529b-8c68-75db370e77b9"))
+(wire (pts (xy 119.38 63.5) (xy 127 63.5)) (stroke (width 0) (type default)) (uuid "9f330b8e-f20c-5b3b-aa5e-2556cbe829cf"))
+(wire (pts (xy 127 63.5) (xy 140.97 63.5)) (stroke (width 0) (type default)) (uuid "5106f54e-9e41-5c37-92e3-32fb1a9e26f0"))
+(junction (at 127 63.5) (diameter 0) (color 0 0 0 0) (uuid "3c78af78-c108-57c4-ba11-9d9657dba192"))
+(label "BUCK_LX" (at 127 63.5 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "91a9005e-2493-50df-a0fd-c170fc93b46c"))
+(wire (pts (xy 148.59 63.5) (xy 160.02 63.5)) (stroke (width 0) (type default)) (uuid "a126f3e8-ddd2-58fa-ab3d-77345d987d0f"))
+(wire (pts (xy 160.02 63.5) (xy 177.8 63.5)) (stroke (width 0) (type default)) (uuid "5c36ce4a-70af-57de-8193-025dab97ad26"))
+(wire (pts (xy 177.8 63.5) (xy 193.04 63.5)) (stroke (width 0) (type default)) (uuid "7855da4a-4558-52fe-b1e5-c9ea58ff630a"))
+(wire (pts (xy 193.04 63.5) (xy 204.47 63.5)) (stroke (width 0) (type default)) (uuid "d35cc411-d6c6-5931-b42a-bc5198bbd680"))
+(label "BUCK_5V1" (at 163.83 63.5 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "1ecedfa6-d3a5-59c1-a3b5-f9dbcc30c89a"))
+(wire (pts (xy 160.02 63.5) (xy 160.02 72.39)) (stroke (width 0) (type default)) (uuid "b89e5e4f-bb2d-5bf7-b181-e28055a60a11"))
+(wire (pts (xy 160.02 80.01) (xy 160.02 88.9)) (stroke (width 0) (type default)) (uuid "4fed5512-764d-5f67-b58e-3da59fdca180"))
+(junction (at 160.02 63.5) (diameter 0) (color 0 0 0 0) (uuid "170dc986-ddd3-57a5-a18f-480915137276"))
+(wire (pts (xy 177.8 63.5) (xy 177.8 72.39)) (stroke (width 0) (type default)) (uuid "2b1663a8-2a8c-5318-b2e2-dc115e974420"))
+(wire (pts (xy 177.8 80.01) (xy 177.8 88.9)) (stroke (width 0) (type default)) (uuid "de72e8dd-4ed3-5515-8b60-c7257b51034f"))
+(junction (at 177.8 63.5) (diameter 0) (color 0 0 0 0) (uuid "3da51652-41a9-56ae-a71f-f4fea382f552"))
+(wire (pts (xy 160.02 88.9) (xy 177.8 88.9)) (stroke (width 0) (type default)) (uuid "faef5beb-a312-5f27-83f0-7ebc5b3915b0"))
+(global_label "GND" (shape input) (at 177.8 88.9 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "c01c0b61-0502-5c47-8a89-966eb6cc96c7"))
+(wire (pts (xy 193.04 63.5) (xy 193.04 77.47)) (stroke (width 0) (type default)) (uuid "5bbe3def-8879-5ef9-bf3c-998eff803ad7"))
+(junction (at 193.04 63.5) (diameter 0) (color 0 0 0 0) (uuid "641ccd0b-fa42-5e7d-a085-fbbd32dedaa9"))
+(wire (pts (xy 193.04 85.09) (xy 193.04 92.71)) (stroke (width 0) (type default)) (uuid "97d11ab3-7044-5505-862b-1bc6a01dda77"))
+(label "BUCK_DIV_TOP" (at 193.04 88.9 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "57dbe029-c1f3-5df2-99ab-507939e5378c"))
+(wire (pts (xy 193.04 100.33) (xy 193.04 107.95)) (stroke (width 0) (type default)) (uuid "94765a46-211b-5ac8-b0a5-cef3322d79d0"))
+(wire (pts (xy 193.04 107.95) (xy 193.04 118.11)) (stroke (width 0) (type default)) (uuid "410e8ce1-0480-5268-bb72-8b1141bc2a13"))
+(junction (at 193.04 107.95) (diameter 0) (color 0 0 0 0) (uuid "b9567b28-de8d-5deb-b60e-25c9cae4d570"))
+(wire (pts (xy 119.38 71.12) (xy 129.54 71.12)) (stroke (width 0) (type default)) (uuid "98c0f7a5-1eca-5c11-b517-659242917567"))
+(wire (pts (xy 129.54 71.12) (xy 129.54 107.95)) (stroke (width 0) (type default)) (uuid "81849906-003d-5831-9b1d-e669a4554ba2"))
+(wire (pts (xy 129.54 107.95) (xy 193.04 107.95)) (stroke (width 0) (type default)) (uuid "0728711f-cd12-5175-a2f4-63013c737f24"))
+(label "BUCK_FB" (at 129.54 107.95 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "2ca97a9d-845e-50ed-917c-d48edce7f565"))
+(wire (pts (xy 193.04 125.73) (xy 193.04 132.08)) (stroke (width 0) (type default)) (uuid "dba8a4ba-9b47-5e9b-82e9-60281a2ebee7"))
+(global_label "GND" (shape input) (at 193.04 132.08 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "9fa1a218-8cac-52ad-ba06-678adc3f62f2"))
+(wire (pts (xy 212.09 63.5) (xy 228.6 63.5)) (stroke (width 0) (type default)) (uuid "ca389370-b332-5fc9-beaf-e7ba596c73e4"))
+(wire (pts (xy 228.6 63.5) (xy 243.84 63.5)) (stroke (width 0) (type default)) (uuid "8bd373a4-017b-5ebd-8bde-6f7b40ab2cbc"))
+(junction (at 228.6 63.5) (diameter 0) (color 0 0 0 0) (uuid "1fbddf6c-6b46-5f58-8799-d066278c19fb"))
+(global_label "EXP_5V" (shape input) (at 243.84 63.5 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "0fef31d1-7efd-598e-9399-36072a537f93"))
+(wire (pts (xy 30.48 119.38) (xy 53.34 119.38)) (stroke (width 0) (type default)) (uuid "5f1d7fc8-e00e-5820-8c0f-f6af01a9db3a"))
+(global_label "POWER_0V" (shape input) (at 30.48 119.38 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "32d8458b-1672-5a7f-929e-99ef6f0613f5"))
+(wire (pts (xy 58.42 119.38) (xy 78.74 119.38)) (stroke (width 0) (type default)) (uuid "646bcb1f-1112-5140-8e97-16a2962821be"))
+(global_label "GND" (shape input) (at 78.74 119.38 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "34711858-49d2-5255-8697-0ab35c663f86"))
+(text "24V DC input / DevKit + controller power" (at 12 18 0) (effects (font (size 1.8 1.8)) (justify left)) (uuid "e7e65559-80f1-5e32-8807-de8d78c0b664"))
+(text "J24: +24V. J25: POWER_0V supply negative. DRIVER COM uses separate terminals; motor power stays external." (at 12 25 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "7d81947e-c549-5eb4-9c81-cfa10d7650fd"))
+(text "5.096V before D4" (at 216 77.47 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "014c0208-c23e-5c3a-9cf1-955f48fc54dc"))
+(text "EXP_5V approx. 4.7-4.9V at load" (at 216 82.55 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "33608810-23b2-54bb-a26c-ab85898fa69c"))
+(text "To J6.14 + existing expansion rail" (at 216 87.63 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "130cf77b-043f-56a0-8a0b-c0c069d3f5b8"))
+(text "1A converter capability; budget:" (at 216 99.06 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "07e71614-192c-55ae-851c-826f0d7fed1c"))
+(text "MCU / local logic approx. 482mA" (at 216 104.14 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "3304b98f-3879-5de4-981e-261e74f8e986"))
+(text "Expansion + relay <=210mA" (at 216 109.22 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "caef3171-e139-5482-93fb-8d5731a330c3"))
+(text "Confirm Wi-Fi peak / thermal margin." (at 216 114.3 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "5b8887db-9d68-5bd8-a906-bd976cc95e9b"))
+(text "Existing J25 / 24V negative" (at 18 137.16 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "d87dd97c-9916-5fa6-8ad7-4ba520881c76"))
+(text "NT1 is a copper connection, no part to buy." (at 18 142.24 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "f89f23ce-32a3-54de-99f1-480464d6c2d9"))
+(text "DC_ZONE_RETURN remains switched by Q2." (at 18 147.32 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "61a391c0-e0be-5f9a-97c0-7d78bba47433"))
+(text "Common GND changes external OFF-current paths." (at 18 152.4 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "fcc2ba7d-3dfe-5f85-bff3-03ea54c7fe75"))
+(text "Verify actual driver command release with the expander." (at 18 157.48 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "e27a96c1-1807-54b9-9103-e54070454241"))
+(text "Assembly / PCB placement" (at 112 144.78 0) (effects (font (size 1.5 1.5)) (justify left)) (uuid "40410b7d-0592-5357-99e0-d9c390d04b7e"))
+(text "U2 + L1: hand solder. Other added SMT: Basic." (at 112 150.0 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "3d163a99-e7c8-5bfd-b6a9-c796e62a346c"))
+(text "U2 / L1 / capacitors: right of ESP32; J24: TOP-RIGHT." (at 112 155.08 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "58afbb35-7049-5f20-9b50-fb671c908cc5"))
+(text "Keep CIN-IN-GND and LX loops short; keep FB away from LX." (at 112 160.16 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "c24ef8c3-bb01-5d5e-a3d4-c3ba8c686c37"))
+(text "USB: D4 blocks USB -> buck. Official DevKit D1/D7 block VBUS backfeed; verify fitted board revision." (at 12 171.45 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "a73e90e4-1190-527c-936f-4bf8577ce252"))
+(text "EN follows VIN, independent of ZONE_ENABLE. Controller remains powered when command enable is LOW." (at 12 176.53 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "34c691d5-7308-57bc-a9a2-3f36b318f2f0"))
+(text "PCB routed; power/USB/load and thermal tests remain." (at 12 187.96 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "bfd9526f-bbea-53fc-9c99-6b19366a6c7a"))
+(embedded_fonts no)
+(symbol (lib_id "Device:C") (at 35.56 66.04 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "a8137af6-4842-5dd7-a209-17eda00815cd")
+(property "Reference" "C8" (at 35.56 76.2 0) (effects (font (size 1.27 1.27))))(property "Value" "2.2uF / 50V" (at 35.56 80.01 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_1206_3216Metric" (at -15.24 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://product.samsungsem.com/mlcc/CL31B225KBHNNN.do" (at -15.24 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL31B225KBHNNNE" (at -15.24 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at -15.24 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C50254" (at -15.24 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "JLCPCB_Library" "Basic" (at -15.24 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Assembly" "JLC PCBA SMT" (at -15.24 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(pin "1" (uuid "9a89943b-40a3-579f-8518-63fe7490e87b"))
+(pin "2" (uuid "d2b7a7c2-e428-5039-a6a3-c249c6d56be5"))
+(instances (project "ulva_controller" (path "/3da05633-c880-4edd-9149-3930d166f2d5/8281a446-217d-5a22-9f1e-98985a80dedd" (reference "C8") (unit 1)))))
+(wire (pts (xy 35.56 55.88) (xy 35.56 62.23)) (stroke (width 0) (type default)) (uuid "a421e522-e786-5aaa-89d8-e60f11085d6e"))
+(wire (pts (xy 35.56 69.85) (xy 35.56 88.9)) (stroke (width 0) (type default)) (uuid "ef0f36d2-b301-5a60-8ef6-fec16e4b1e83"))
+(junction (at 35.56 55.88) (diameter 0) (color 0 0 0 0) (uuid "fd5e6ef0-9b1b-52c9-a9a2-eea2b43a748d"))
+(symbol (lib_id "Device:C") (at 81.28 66.04 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "403f15db-ab0d-5ded-adfa-f85c6f637ed9")
+(property "Reference" "C9" (at 81.28 76.2 0) (effects (font (size 1.27 1.27))))(property "Value" "2.2uF / 50V" (at 81.28 80.01 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_1206_3216Metric" (at 30.48 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://product.samsungsem.com/mlcc/CL31B225KBHNNN.do" (at 30.48 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CL31B225KBHNNNE" (at 30.48 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "Samsung Electro-Mechanics" (at 30.48 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C50254" (at 30.48 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "JLCPCB_Library" "Basic" (at 30.48 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Assembly" "JLC PCBA SMT" (at 30.48 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(pin "1" (uuid "693fd82a-c8e9-5dc9-b398-d9867a1402ba"))
+(pin "2" (uuid "ded1c644-b4ad-5300-8953-7988c3edb129"))
+(instances (project "ulva_controller" (path "/3da05633-c880-4edd-9149-3930d166f2d5/8281a446-217d-5a22-9f1e-98985a80dedd" (reference "C9") (unit 1)))))
+(wire (pts (xy 81.28 55.88) (xy 81.28 62.23)) (stroke (width 0) (type default)) (uuid "93abf2a0-9b0e-52a5-ba06-785cf9144ec6"))
+(wire (pts (xy 81.28 69.85) (xy 81.28 88.9)) (stroke (width 0) (type default)) (uuid "c5c13167-c6b6-5065-952b-c0f82577c9b8"))
+(junction (at 81.28 55.88) (diameter 0) (color 0 0 0 0) (uuid "1951d93f-e330-5451-b18c-90ce7480c092"))
+(wire (pts (xy 35.56 88.9) (xy 50.8 88.9)) (stroke (width 0) (type default)) (uuid "562144e1-340c-5fb7-9da2-0489412e4d2b"))
+(junction (at 50.8 88.9) (diameter 0) (color 0 0 0 0) (uuid "66ceec5e-2e07-5bb0-a63a-4a1e7df62482"))
+(junction (at 81.28 88.9) (diameter 0) (color 0 0 0 0) (uuid "c8381e32-b530-5bc7-841b-f199a4835945"))
+)

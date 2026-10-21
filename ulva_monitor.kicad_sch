@@ -1,0 +1,650 @@
+(kicad_sch (version 20250114) (generator "eeschema") (generator_version "9.0")
+(uuid "39ae8575-5e69-5571-a40a-15bbc58523ec")
+(paper "A4")
+(title_block (title "Ulva / 24V ADC monitor") (date "2026-10-13") (rev "v0.42") (company "Ulva"))
+(lib_symbols
+(symbol "Device:R"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "R"
+			(at 2.032 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R"
+			(at 0 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at -1.778 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "R res resistor"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "R_*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "R_0_1"
+			(rectangle
+				(start -1.016 -2.54)
+				(end 1.016 2.54)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "R_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "Device:C"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "C"
+			(at 0.635 2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 0.635 -2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0.9652 -3.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "cap capacitor"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "C_*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "C_0_1"
+			(polyline
+				(pts
+					(xy -2.032 0.762) (xy 2.032 0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.032 -0.762) (xy 2.032 -0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "C_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 2.794)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 2.794)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "Diode:BAT54S"
+		(pin_names
+			(offset 0)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "D"
+			(at 2.54 -5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BAT54S"
+			(at -6.35 3.175 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 1.905 3.175 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds11005.pdf"
+			(at -3.048 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Vr 30V, If 200mA, Dual schottky barrier diode, in series, SOT-323"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "schottky diode"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "SOT?23*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "BAT54S_0_1"
+			(polyline
+				(pts
+					(xy -4.445 1.27) (xy -4.445 -1.27) (xy -2.54 0) (xy -4.445 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -3.81 0) (xy -1.27 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -3.175 -1.27) (xy -3.175 -1.016)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.54 1.27) (xy -1.905 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.54 -1.27) (xy -3.175 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.54 -1.27) (xy -2.54 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.905 1.27) (xy -1.905 1.016)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.905 0) (xy 1.905 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 0 0)
+				(radius 0.254)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 0) (xy 3.81 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.905 1.27) (xy 1.905 -1.27) (xy 3.81 0) (xy 1.905 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.175 -1.27) (xy 3.175 -1.016)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.81 1.27) (xy 4.445 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.81 -1.27) (xy 3.175 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.81 -1.27) (xy 3.81 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 4.445 1.27) (xy 4.445 1.016)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "BAT54S_1_1"
+			(pin passive line
+				(at -7.62 0 0)
+				(length 3.81)
+				(name "A"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -5.08 90)
+				(length 5.08)
+				(name "COM"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 7.62 0 180)
+				(length 3.81)
+				(name "K"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+)
+(symbol (lib_id "Device:R") (at 63.5 66.04 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "fa5e364f-d62f-5bd6-972a-4e17ea3b1659")
+(property "Reference" "R31" (at 63.5 55.88 90) (effects (font (size 1.27 1.27))))(property "Value" "150k" (at 63.5 59.69 90) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.lcsc.com/datasheet/C22807.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "0603WAF1503T5E" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "UNI-ROYAL" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C22807" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "JLCPCB_Library" "Basic" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Assembly" "JLC PCBA SMT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(pin "1" (uuid "082c8f16-2860-5f96-984a-68dc4b530cf2"))
+(pin "2" (uuid "5780b6a8-6c42-5f2b-948f-afb3ee07f3e8"))
+(instances (project "ulva_controller" (path "/3da05633-c880-4edd-9149-3930d166f2d5/6ac82bd8-d63d-50c2-809d-064da4cad8d7" (reference "R31") (unit 1)))))
+(symbol (lib_id "Device:R") (at 86.36 86.36 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "9b353426-b1c4-530c-8b53-0922b74fd19f")
+(property "Reference" "R32" (at 96.52 83.82 0) (effects (font (size 1.27 1.27))))(property "Value" "10k" (at 96.52 87.63 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.lcsc.com/datasheet/C25804.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "0603WAF1002T5E" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "UNI-ROYAL" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C25804" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "JLCPCB_Library" "Basic" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Assembly" "JLC PCBA SMT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(pin "1" (uuid "ef29d5b1-6d64-58d5-bd52-0710ef75f56c"))
+(pin "2" (uuid "b68b962a-8aeb-54d3-88b8-90e0e26192a0"))
+(instances (project "ulva_controller" (path "/3da05633-c880-4edd-9149-3930d166f2d5/6ac82bd8-d63d-50c2-809d-064da4cad8d7" (reference "R32") (unit 1)))))
+(symbol (lib_id "Device:R") (at 116.84 66.04 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "e27ca4d5-7d1e-5730-8478-1b70bcb70316")
+(property "Reference" "R33" (at 116.84 55.88 90) (effects (font (size 1.27 1.27))))(property "Value" "1k" (at 116.84 59.69 90) (effects (font (size 1.27 1.27))))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.lcsc.com/datasheet/C21190.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "0603WAF1001T5E" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "UNI-ROYAL" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C21190" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "JLCPCB_Library" "Basic" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Assembly" "JLC PCBA SMT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(pin "1" (uuid "77fb7e50-a7b3-5d99-9899-8b7ec7d43bb0"))
+(pin "2" (uuid "663354c6-7f7e-5768-aafc-57255b4e1c4b"))
+(instances (project "ulva_controller" (path "/3da05633-c880-4edd-9149-3930d166f2d5/6ac82bd8-d63d-50c2-809d-064da4cad8d7" (reference "R33") (unit 1)))))
+(symbol (lib_id "Device:C") (at 147.32 86.36 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "e1fab941-e680-50c9-b6ea-515c0d76c633")
+(property "Reference" "C16" (at 157.48 81.28 0) (effects (font (size 1.27 1.27))))(property "Value" "100nF" (at 157.48 85.09 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.lcsc.com/datasheet/C14663.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "CC0603KRX7R9BB104" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "YAGEO" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C14663" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "JLCPCB_Library" "Basic" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Assembly" "JLC PCBA SMT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(pin "1" (uuid "ba204ffe-6fc0-56ef-982d-1336fad3bad5"))
+(pin "2" (uuid "800aae91-728e-5662-ac65-a4926f7b1c1d"))
+(instances (project "ulva_controller" (path "/3da05633-c880-4edd-9149-3930d166f2d5/6ac82bd8-d63d-50c2-809d-064da4cad8d7" (reference "C16") (unit 1)))))
+(symbol (lib_id "Diode:BAT54S") (at 180.34 91.44 180) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "149b3d75-0aa1-59b5-82b4-ba4313032e46")
+(property "Reference" "D7" (at 218.44 88.9 0) (effects (font (size 1.27 1.27))))(property "Value" "BAT54S" (at 218.44 92.71 0) (effects (font (size 1.27 1.27))))(property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.lcsc.com/datasheet/C7420333.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Description" "HJC BAT54S dual-series Schottky; SOT-23; 1=A,3=COM,2=K" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "MPN" "BAT54S" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Manufacturer" "hongjiacheng" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "LCSC" "C7420333" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "JLCPCB_Library" "Preferred Extended" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Assembly" "JLC PCBA SMT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(pin "1" (uuid "3adf4dde-e798-5bea-9882-d95dfe2258f7"))
+(pin "3" (uuid "a0e50aa1-834d-52a9-9687-ec9d378c101e"))
+(pin "2" (uuid "7202eb67-f010-556b-8728-111b96448f31"))
+(instances (project "ulva_controller" (path "/3da05633-c880-4edd-9149-3930d166f2d5/6ac82bd8-d63d-50c2-809d-064da4cad8d7" (reference "D7") (unit 1)))))
+(wire (pts (xy 38.1 66.04) (xy 59.69 66.04)) (stroke (width 0) (type default)) (uuid "30b3aa5e-8aa4-51ad-955f-7892fb950d1c"))
+(global_label "VIN_24V" (shape input) (at 38.1 66.04 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "075597d9-ad79-598b-9b8b-652e650f319e"))
+(wire (pts (xy 67.31 66.04) (xy 86.36 66.04)) (stroke (width 0) (type default)) (uuid "1b60fb2b-a4b6-5083-a184-2f826abae42a"))
+(wire (pts (xy 86.36 66.04) (xy 113.03 66.04)) (stroke (width 0) (type default)) (uuid "a96e15a3-e4bb-5374-a96d-fa68dec13bbe"))
+(wire (pts (xy 86.36 66.04) (xy 86.36 82.55)) (stroke (width 0) (type default)) (uuid "f59fada2-a476-5d55-842f-5d25c1c70e3e"))
+(junction (at 86.36 66.04) (diameter 0) (color 0 0 0 0) (uuid "ba185dfc-d7a4-5b28-9e5d-ef3083534b77"))
+(global_label "VIN24_DIV" (shape input) (at 86.36 50.8 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "e52fb593-a931-52f6-996c-6df10758281a"))
+(wire (pts (xy 120.65 66.04) (xy 147.32 66.04)) (stroke (width 0) (type default)) (uuid "b572cec2-5770-5037-9be8-2807b3098be1"))
+(wire (pts (xy 147.32 66.04) (xy 180.34 66.04)) (stroke (width 0) (type default)) (uuid "4257c2aa-6339-5b6d-bf68-1652ba47ad8f"))
+(wire (pts (xy 180.34 66.04) (xy 218.44 66.04)) (stroke (width 0) (type default)) (uuid "69bd3eb2-bc69-52fa-b227-1c2d111f28bd"))
+(wire (pts (xy 147.32 66.04) (xy 147.32 82.55)) (stroke (width 0) (type default)) (uuid "f515fc75-1346-5542-9064-8a99accdc554"))
+(junction (at 147.32 66.04) (diameter 0) (color 0 0 0 0) (uuid "bf62fc7e-c46b-5376-84e4-e0e3c0be66a4"))
+(wire (pts (xy 180.34 66.04) (xy 180.34 86.36)) (stroke (width 0) (type default)) (uuid "8cd912d3-9e61-536d-91b9-77457aace01d"))
+(junction (at 180.34 66.04) (diameter 0) (color 0 0 0 0) (uuid "36c8034c-3f37-5d59-92f9-f88c1c62a3fc"))
+(global_label "VIN24_ADC" (shape input) (at 218.44 66.04 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "79802323-6d0b-5b67-a02b-99f4660494b1"))
+(wire (pts (xy 86.36 90.17) (xy 86.36 101.6)) (stroke (width 0) (type default)) (uuid "0de68af1-15b1-52be-8b9b-f38a9b5676dc"))
+(wire (pts (xy 147.32 90.17) (xy 147.32 101.6)) (stroke (width 0) (type default)) (uuid "b734a1be-3c6b-5761-ba87-4ee3a477bfa8"))
+(wire (pts (xy 86.36 101.6) (xy 147.32 101.6)) (stroke (width 0) (type default)) (uuid "aab22867-33fe-5bdb-b75b-03d369d1a9c5"))
+(wire (pts (xy 147.32 101.6) (xy 198.12 101.6)) (stroke (width 0) (type default)) (uuid "d1cf4127-f7fa-54c6-bd85-d5346e6aa048"))
+(junction (at 147.32 101.6) (diameter 0) (color 0 0 0 0) (uuid "9be55697-0d0a-58f4-94e0-53e9f0ea36c1"))
+(wire (pts (xy 187.96 91.44) (xy 198.12 91.44)) (stroke (width 0) (type default)) (uuid "a25cc01b-3a97-5fdd-a6ec-5f27d9d7b647"))
+(wire (pts (xy 198.12 91.44) (xy 198.12 101.6)) (stroke (width 0) (type default)) (uuid "f65f05cb-46d5-5b0d-8f85-fb791448afa6"))
+(wire (pts (xy 86.36 101.6) (xy 86.36 109.22)) (stroke (width 0) (type default)) (uuid "7999a9b1-9e98-55ca-9b85-a7511b3c0e37"))
+(global_label "GND" (shape input) (at 86.36 109.22 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "02616e72-6420-5d37-86f0-52bd09a41066"))
+(wire (pts (xy 172.72 91.44) (xy 167.64 91.44)) (stroke (width 0) (type default)) (uuid "76f2a48f-e641-558f-9645-7a031887b51b"))
+(global_label "3V3" (shape input) (at 167.64 91.44 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "320bece8-87ff-5548-90ae-b68869b03cc8"))
+(text "24V input monitor / GPIO5 ADC1_CH4 / J7.9" (at 12 18 0) (effects (font (size 2 2)) (justify left)) (uuid "a5c8ce9e-679e-50ca-ac22-ea859419d9bb"))
+(text "VIN_24V is sensed against logic GND. Existing regulator and ZONE_ENABLE are independent." (at 12 27 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "6290156d-4295-5109-b638-7099484f1380"))
+(text "Nominal: 24V -> 1.500V, 36V -> 2.250V; multiply calibrated ADC voltage by16." (at 12 127 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "b583696c-247c-56e8-b551-43a3de026a1a"))
+(text "Rth=150k||10k+1k=10.375k; C16=100nF; tau=1.0375ms, fc=153.4Hz." (at 12 133.35 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "2b5d8eaf-b394-50b2-aa44-25049adf21c9"))
+(text "D7: pin1 GND -> diode -> pin3 ADC -> diode -> pin2 3V3 (manufacturer verified)." (at 12 139.7 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "708e7e58-fc2a-589d-82c8-72d1255f03a9"))
+(text "Rail clamp is not power-off isolation. If24V remains while3V3 is off, upper diode can backfeed3V3." (at 12 146.05 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "b39da4f2-7ac5-572c-a3cc-78df00f198fd"))
+(text "Calibration, leakage/temperature, actual ADC noise and startup/shutdown tests remain pending." (at 12 152.4 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "0ede1337-2f24-52b6-b19d-9ba5c82099d4"))
+(text "GPIO5 must remain an ADC input; no output drive or internal pulls. Shared ADC1 handle with buttons/DIP." (at 12 158.75 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "57d51a9a-3f69-5ded-b7ff-5bedf38364c0"))
+(text "Four Basic passives + HJC C7420333 Preferred Extended. Monitor does not increase board input rating." (at 12 165.1 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "393fcd95-d118-59f7-b0f0-d0caefa40d7a"))
+(embedded_fonts no)
+(wire (pts (xy 86.36 66.04) (xy 86.36 50.8)) (stroke (width 0) (type default)) (uuid "27762ee9-823b-41a6-94c3-8b96cd9faaf2"))
+)

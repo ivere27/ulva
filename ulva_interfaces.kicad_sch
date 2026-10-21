@@ -1,0 +1,3624 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "11876612-1379-5ea4-80d2-79145720ffeb")
+	(paper "A4")
+	(title_block (title "Ulva / I2C and mounting") (date "2026-10-13") (rev "v0.42") (company "Ulva") (comment 1 "Functional schematic / 24V field control"))
+	(lib_symbols
+		(symbol "Connector:TestPoint"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Connector_Generic:Conn_01x02"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x02"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Conn_01x02_1_1"
+				(rectangle
+					(start -1.27 1.27)
+					(end 1.27 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Connector_Generic:Conn_02x05_Odd_Even"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 1.27 7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_02x05_Odd_Even"
+				(at 1.27 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic connector, double row, 02x05, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_2x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Conn_02x05_Odd_Even_1_1"
+				(rectangle
+					(start -1.27 6.35)
+					(end 3.81 -6.35)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 5.207)
+					(end 0 4.953)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -4.953)
+					(end 0 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.81 5.207)
+					(end 2.54 4.953)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.81 2.667)
+					(end 2.54 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.81 0.127)
+					(end 2.54 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.81 -2.413)
+					(end 2.54 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.81 -4.953)
+					(end 2.54 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 5.08 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -5.08 0)
+					(length 3.81)
+					(name "Pin_9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 5.08 180)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 2.54 180)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 0 180)
+					(length 3.81)
+					(name "Pin_6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 3.81)
+					(name "Pin_8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -5.08 180)
+					(length 3.81)
+					(name "Pin_10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Mechanical:MountingHole"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(property "Reference" "H"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MountingHole"
+				(at 0 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Mounting Hole without connection"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MountingHole_0_1"
+				(circle
+					(center 0 0)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+
+	(symbol "Connector:Screw_Terminal_01x02"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "J"
+			(at 0 2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Screw_Terminal_01x02"
+			(at 0 -5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "screw terminal"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "TerminalBlock*:*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "Screw_Terminal_01x02_1_1"
+			(rectangle
+				(start -1.27 1.27)
+				(end 1.27 -3.81)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(polyline
+				(pts
+					(xy -0.5334 0.3302) (xy 0.3302 -0.508)
+				)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -0.5334 -2.2098) (xy 0.3302 -3.048)
+				)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -0.3556 0.508) (xy 0.508 -0.3302)
+				)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -0.3556 -2.032) (xy 0.508 -2.8702)
+				)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 0 0)
+				(radius 0.635)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 0 -2.54)
+				(radius 0.635)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+
+(symbol "Connector:Screw_Terminal_01x01"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "J"
+			(at 0 2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Screw_Terminal_01x01"
+			(at 0 -2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic screw terminal, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "screw terminal"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "TerminalBlock*:*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "Screw_Terminal_01x01_1_1"
+			(rectangle
+				(start -1.27 1.27)
+				(end 1.27 -1.27)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(polyline
+				(pts
+					(xy -0.5334 0.3302) (xy 0.3302 -0.508)
+				)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -0.3556 0.508) (xy 0.508 -0.3302)
+				)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 0 0)
+				(radius 0.635)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+)
+	(symbol
+		(lib_id "Connector_Generic:Conn_02x05_Odd_Even")
+		(at 177.8 46.99 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ef0b8800-3110-5c96-92c7-2f8d6d8bf073")
+		(property "Reference" "J8"
+			(at 177.8 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "EXP0 AC ONLY"
+			(at 177.8 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Ulva:ZHOURI_DC3-2.54-10PAS_IDC_2x05_P2.54mm"
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://datasheet.sisoog.com/DC3-2-54-10PAS/file/7a657573/datasheet/a3fe457d21b4b07654296a6bcf6d076b5ec9c1b5.pdf"
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C2977596" (at 0 0 0) (effects (font (size 0.9 0.9)) (hide yes)))
+		(property "MPN" "DC3-2.54-10PAS"
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Fuse_MPN" ""
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+
+		(pin "1"
+			(uuid "33d6c2e2-ec24-597c-8dbc-f4bf6c0df326")
+		)
+		(pin "3"
+			(uuid "a7bc367b-608c-5e01-ae3f-bd15e7bbb5bd")
+		)
+		(pin "5"
+			(uuid "02509a4b-e69b-510f-8c1d-240c243013ce")
+		)
+		(pin "7"
+			(uuid "4726c212-2686-5e8c-8afa-de7f08333838")
+		)
+		(pin "9"
+			(uuid "edf26df8-a68b-5bac-a296-f3f726ed4816")
+		)
+		(pin "2"
+			(uuid "3dcace5e-c55d-5266-8e13-51fd9b621d18")
+		)
+		(pin "4"
+			(uuid "a0825849-dbcb-5020-aee9-94de31a2ab21")
+		)
+		(pin "6"
+			(uuid "59fa27f4-370e-56cd-92e1-a34a93e7153f")
+		)
+		(pin "8"
+			(uuid "261c2dd8-5afe-5490-b66e-d0c1ca7cd889")
+		)
+		(pin "10"
+			(uuid "3191c30c-b6ca-5426-8aa6-b7907cf42f99")
+		)
+		(instances
+			(project "ulva_controller"
+				(path "/3da05633-c880-4edd-9149-3930d166f2d5/61997f82-9830-5e3c-9cc9-695e6d354eec"
+					(reference "J8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_02x05_Odd_Even")
+		(at 246.38 46.99 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8f8fd44c-5584-53c7-82bc-96d9440bdeb2")
+		(property "Reference" "J10"
+			(at 246.38 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "EXP0 DC ONLY"
+			(at 246.38 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Ulva:ZHOURI_DC3-2.54-10PAS_IDC_2x05_P2.54mm"
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://datasheet.sisoog.com/DC3-2-54-10PAS/file/7a657573/datasheet/a3fe457d21b4b07654296a6bcf6d076b5ec9c1b5.pdf"
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C2977596" (at 0 0 0) (effects (font (size 0.9 0.9)) (hide yes)))
+		(property "MPN" "DC3-2.54-10PAS"
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Fuse_MPN" ""
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+
+		(pin "1"
+			(uuid "4a891cf2-7c66-5a2e-b0b5-f8eec5159744")
+		)
+		(pin "3"
+			(uuid "7da93388-2dad-529c-87b2-ae4981b78399")
+		)
+		(pin "5"
+			(uuid "c85ae573-7323-50b0-9fef-9bbca506d6f8")
+		)
+		(pin "7"
+			(uuid "89f086b3-a7ed-54c2-8fae-758cfaf4c874")
+		)
+		(pin "9"
+			(uuid "50a7eadc-c211-5c7e-a0d5-35d4bc5fb9aa")
+		)
+		(pin "2"
+			(uuid "70e713b8-8149-56f2-ae74-3c71ef04dbcd")
+		)
+		(pin "4"
+			(uuid "7dee2807-fd02-5492-b75d-598ea653098d")
+		)
+		(pin "6"
+			(uuid "e0b532e8-591c-57ce-92d2-1a403a59bba7")
+		)
+		(pin "8"
+			(uuid "2db853e5-a346-5610-b165-1ab9f3b7e11c")
+		)
+		(pin "10"
+			(uuid "440e4967-b165-51dd-b2f0-2442e5c3ec5b")
+		)
+		(instances
+			(project "ulva_controller"
+				(path "/3da05633-c880-4edd-9149-3930d166f2d5/61997f82-9830-5e3c-9cc9-695e6d354eec"
+					(reference "J10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 44.45 43.18 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b46717c6-f3f1-5fc3-b970-734073c32dea")
+		(property "Reference" "R1"
+			(at 53.34 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "4.7k"
+			(at 53.34 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C23162.pdf"
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "0603WAF4701T5E"
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Fuse_MPN" ""
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+
+		(pin "1"
+			(uuid "7589c7af-6c3e-5ebc-8853-b2a58257d371")
+		)
+		(pin "2"
+			(uuid "73b9dc4c-8729-5a54-8efd-230b506126e1")
+		)
+		(instances
+			(project "ulva_controller"
+				(path "/3da05633-c880-4edd-9149-3930d166f2d5/61997f82-9830-5e3c-9cc9-695e6d354eec"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+
+		(property "LCSC" "C23162" (at 0 0 0) (effects (font (size 0.9 0.9)) (hide yes)))
+
+		(property "Manufacturer" "UNI-ROYAL" (at 0 0 0) (effects (font (size 0.9 0.9)) (hide yes)))
+
+		(property "JLCPCB_Library" "Basic" (at 0 0 0) (effects (font (size 0.9 0.9)) (hide yes)))
+
+		(property "Assembly" "JLC PCBA SMT" (at 0 0 0) (effects (font (size 0.9 0.9)) (hide yes)))
+)
+	(symbol
+		(lib_id "Device:R")
+		(at 85.09 43.18 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fc0c734a-2c4c-5882-81c8-4490db116261")
+		(property "Reference" "R2"
+			(at 93.98 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "4.7k"
+			(at 93.98 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C23162.pdf"
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "0603WAF4701T5E"
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Fuse_MPN" ""
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+
+		(pin "1"
+			(uuid "72dcb51b-f784-5c78-95a6-eb22f1b21ad9")
+		)
+		(pin "2"
+			(uuid "255e2717-20b1-5fab-bff3-5e466eba729c")
+		)
+		(instances
+			(project "ulva_controller"
+				(path "/3da05633-c880-4edd-9149-3930d166f2d5/61997f82-9830-5e3c-9cc9-695e6d354eec"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+
+		(property "LCSC" "C23162" (at 0 0 0) (effects (font (size 0.9 0.9)) (hide yes)))
+
+		(property "Manufacturer" "UNI-ROYAL" (at 0 0 0) (effects (font (size 0.9 0.9)) (hide yes)))
+
+		(property "JLCPCB_Library" "Basic" (at 0 0 0) (effects (font (size 0.9 0.9)) (hide yes)))
+
+		(property "Assembly" "JLC PCBA SMT" (at 0 0 0) (effects (font (size 0.9 0.9)) (hide yes)))
+)
+	(symbol
+		(lib_id "Connector_Generic:Conn_02x05_Odd_Even")
+		(at 177.8 100.33 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "80ed01af-76bb-5e1c-b7e3-cb0b01d3e13f")
+		(property "Reference" "J9"
+			(at 177.8 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "EXP1 AC ONLY"
+			(at 177.8 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Ulva:ZHOURI_DC3-2.54-10PAS_IDC_2x05_P2.54mm"
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://datasheet.sisoog.com/DC3-2-54-10PAS/file/7a657573/datasheet/a3fe457d21b4b07654296a6bcf6d076b5ec9c1b5.pdf"
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C2977596" (at 0 0 0) (effects (font (size 0.9 0.9)) (hide yes)))
+		(property "MPN" "DC3-2.54-10PAS"
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Fuse_MPN" ""
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+
+		(pin "1"
+			(uuid "a1e79131-5c08-5de8-9b3a-e91d4456deb1")
+		)
+		(pin "3"
+			(uuid "096d44ec-71c7-5ac2-a3b3-3b9dc850e9cd")
+		)
+		(pin "5"
+			(uuid "a38231d5-1421-5980-ab2c-43bfad815bb8")
+		)
+		(pin "7"
+			(uuid "daba71ed-bca5-5a4b-b2af-38b27886526c")
+		)
+		(pin "9"
+			(uuid "aad96e5c-6137-5da4-b559-56eb3a61d975")
+		)
+		(pin "2"
+			(uuid "d82897e3-e028-5050-870a-bdfc495f23c1")
+		)
+		(pin "4"
+			(uuid "6a39aa61-f887-51d5-a484-67fc5d1db9a8")
+		)
+		(pin "6"
+			(uuid "c34ebe97-aab5-5637-8ddb-8642ab412f31")
+		)
+		(pin "8"
+			(uuid "c38ef6b3-4ae1-59a1-afb1-6a7c4c4fec22")
+		)
+		(pin "10"
+			(uuid "0af381ab-513e-519f-a66f-8f397861d874")
+		)
+		(instances
+			(project "ulva_controller"
+				(path "/3da05633-c880-4edd-9149-3930d166f2d5/61997f82-9830-5e3c-9cc9-695e6d354eec"
+					(reference "J9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_02x05_Odd_Even")
+		(at 246.38 100.33 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "114c670e-9926-58fd-8480-3533b43dc90b")
+		(property "Reference" "J11"
+			(at 246.38 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "EXP1 DC ONLY"
+			(at 246.38 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Ulva:ZHOURI_DC3-2.54-10PAS_IDC_2x05_P2.54mm"
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://datasheet.sisoog.com/DC3-2-54-10PAS/file/7a657573/datasheet/a3fe457d21b4b07654296a6bcf6d076b5ec9c1b5.pdf"
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C2977596" (at 0 0 0) (effects (font (size 0.9 0.9)) (hide yes)))
+		(property "MPN" "DC3-2.54-10PAS"
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Fuse_MPN" ""
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+
+		(pin "1"
+			(uuid "6f31de60-f0c8-55f8-a7f8-51ae2cad7ac6")
+		)
+		(pin "3"
+			(uuid "e6811ca0-84ef-5c4c-84f7-9595f29255f2")
+		)
+		(pin "5"
+			(uuid "f9c31189-ec5e-5d7e-9833-b7906a08e988")
+		)
+		(pin "7"
+			(uuid "393bd15e-532e-571c-af29-a3c825634739")
+		)
+		(pin "9"
+			(uuid "db964cc6-4560-5857-bd1d-7f55cfb440ae")
+		)
+		(pin "2"
+			(uuid "0c1fd9cf-2c5a-5f73-91f9-f813f62a273a")
+		)
+		(pin "4"
+			(uuid "d5c7d9d1-cc55-5056-ad8a-565ecad4853e")
+		)
+		(pin "6"
+			(uuid "f7f15591-a8a3-5b53-b14b-9b60753b6693")
+		)
+		(pin "8"
+			(uuid "6eed41b6-a4f4-53c6-8d43-df99f821c60a")
+		)
+		(pin "10"
+			(uuid "00369feb-edda-5c9b-a2af-ab6a007137ed")
+		)
+		(instances
+			(project "ulva_controller"
+				(path "/3da05633-c880-4edd-9149-3930d166f2d5/61997f82-9830-5e3c-9cc9-695e6d354eec"
+					(reference "J11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 44.45 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "83a48204-ea00-519c-866a-17425186cdb0")
+		(property "Reference" "R3"
+			(at 53.34 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "4.7k"
+			(at 53.34 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C23162.pdf"
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "0603WAF4701T5E"
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Fuse_MPN" ""
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+
+		(pin "1"
+			(uuid "dad90b33-ca43-51af-8dca-63f17ba0f627")
+		)
+		(pin "2"
+			(uuid "3e0dabc4-ca74-504f-91cc-a571b5898761")
+		)
+		(instances
+			(project "ulva_controller"
+				(path "/3da05633-c880-4edd-9149-3930d166f2d5/61997f82-9830-5e3c-9cc9-695e6d354eec"
+					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+
+		(property "LCSC" "C23162" (at 0 0 0) (effects (font (size 0.9 0.9)) (hide yes)))
+
+		(property "Manufacturer" "UNI-ROYAL" (at 0 0 0) (effects (font (size 0.9 0.9)) (hide yes)))
+
+		(property "JLCPCB_Library" "Basic" (at 0 0 0) (effects (font (size 0.9 0.9)) (hide yes)))
+
+		(property "Assembly" "JLC PCBA SMT" (at 0 0 0) (effects (font (size 0.9 0.9)) (hide yes)))
+)
+	(symbol
+		(lib_id "Device:R")
+		(at 85.09 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6d649681-7fa5-5cda-ae90-d1a9bfdf2daa")
+		(property "Reference" "R4"
+			(at 93.98 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "4.7k"
+			(at 93.98 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C23162.pdf"
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "0603WAF4701T5E"
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Fuse_MPN" ""
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+
+		(pin "1"
+			(uuid "a1dfda3a-4263-5784-8421-23c7a4921a89")
+		)
+		(pin "2"
+			(uuid "d0bb12b6-cb95-5c62-b1e7-08179b62b5d6")
+		)
+		(instances
+			(project "ulva_controller"
+				(path "/3da05633-c880-4edd-9149-3930d166f2d5/61997f82-9830-5e3c-9cc9-695e6d354eec"
+					(reference "R4")
+					(unit 1)
+				)
+			)
+		)
+
+		(property "LCSC" "C23162" (at 0 0 0) (effects (font (size 0.9 0.9)) (hide yes)))
+
+		(property "Manufacturer" "UNI-ROYAL" (at 0 0 0) (effects (font (size 0.9 0.9)) (hide yes)))
+
+		(property "JLCPCB_Library" "Basic" (at 0 0 0) (effects (font (size 0.9 0.9)) (hide yes)))
+
+		(property "Assembly" "JLC PCBA SMT" (at 0 0 0) (effects (font (size 0.9 0.9)) (hide yes)))
+)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 20.32 156.21 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c3ee9dbd-7f54-5379-842b-4896b21cb94b")
+		(property "Reference" "H1"
+			(at 20.32 152.4 0)
+			(effects
+				(font
+					(size 1.0 1.0)
+				)
+			)
+		)
+		(property "Value" "M3 NPTH"
+			(at 20.32 162.46 0)
+			(effects (hide yes)
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at -10.16 -2.54 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at -10.16 -2.54 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" ""
+			(at -10.16 -2.54 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Fuse_MPN" ""
+			(at -10.16 -2.54 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+
+		(instances
+			(project "ulva_controller"
+				(path "/3da05633-c880-4edd-9149-3930d166f2d5/61997f82-9830-5e3c-9cc9-695e6d354eec"
+					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 38.1 156.21 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b9fe5020-391f-5d51-8863-05e9df809469")
+		(property "Reference" "H2"
+			(at 38.1 152.4 0)
+			(effects
+				(font
+					(size 1.0 1.0)
+				)
+			)
+		)
+		(property "Value" "M3 NPTH"
+			(at 38.1 162.46 0)
+			(effects (hide yes)
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at -30.48 -2.54 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at -30.48 -2.54 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" ""
+			(at -30.48 -2.54 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Fuse_MPN" ""
+			(at -30.48 -2.54 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+
+		(instances
+			(project "ulva_controller"
+				(path "/3da05633-c880-4edd-9149-3930d166f2d5/61997f82-9830-5e3c-9cc9-695e6d354eec"
+					(reference "H2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 55.88 156.21 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "dff9aa5c-5e91-559c-add6-06a04bcd800f")
+		(property "Reference" "H3"
+			(at 55.88 152.4 0)
+			(effects
+				(font
+					(size 1.0 1.0)
+				)
+			)
+		)
+		(property "Value" "M3 NPTH"
+			(at 55.88 162.46 0)
+			(effects (hide yes)
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at -50.8 -2.54 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at -50.8 -2.54 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" ""
+			(at -50.8 -2.54 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Fuse_MPN" ""
+			(at -50.8 -2.54 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+
+		(instances
+			(project "ulva_controller"
+				(path "/3da05633-c880-4edd-9149-3930d166f2d5/61997f82-9830-5e3c-9cc9-695e6d354eec"
+					(reference "H3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 73.66 156.21 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7ea3becc-9d12-5167-ab3b-65ebf5fc88d2")
+		(property "Reference" "H4"
+			(at 73.66 152.4 0)
+			(effects
+				(font
+					(size 1.0 1.0)
+				)
+			)
+		)
+		(property "Value" "M3 NPTH"
+			(at 73.66 162.46 0)
+			(effects (hide yes)
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at -71.12 -2.54 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at -71.12 -2.54 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" ""
+			(at -71.12 -2.54 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Fuse_MPN" ""
+			(at -71.12 -2.54 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+
+		(instances
+			(project "ulva_controller"
+				(path "/3da05633-c880-4edd-9149-3930d166f2d5/61997f82-9830-5e3c-9cc9-695e6d354eec"
+					(reference "H4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 20.32 171.45 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0c7090a3-9994-50dc-8416-6c0c3b4e7c35")
+		(property "Reference" "H5"
+			(at 20.32 167.64 0)
+			(effects
+				(font
+					(size 1.0 1.0)
+				)
+			)
+		)
+		(property "Value" "OLED M2 SLOT"
+			(at 20.32 178.03 0)
+			(effects (hide yes)
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Ulva:MountingSlot_4.0x2.7mm_M2_OLED"
+			(at -10.16 -13.97 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at -10.16 -13.97 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" ""
+			(at -10.16 -13.97 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Fuse_MPN" ""
+			(at -10.16 -13.97 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+
+		(instances
+			(project "ulva_controller"
+				(path "/3da05633-c880-4edd-9149-3930d166f2d5/61997f82-9830-5e3c-9cc9-695e6d354eec"
+					(reference "H5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 38.1 171.45 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0d7b8e9e-84e8-5330-949f-00e7da597c29")
+		(property "Reference" "H6"
+			(at 38.1 167.64 0)
+			(effects
+				(font
+					(size 1.0 1.0)
+				)
+			)
+		)
+		(property "Value" "OLED M2 SLOT"
+			(at 38.1 178.03 0)
+			(effects (hide yes)
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Ulva:MountingSlot_4.0x2.7mm_M2_OLED"
+			(at -30.48 -13.97 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at -30.48 -13.97 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" ""
+			(at -30.48 -13.97 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Fuse_MPN" ""
+			(at -30.48 -13.97 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+
+		(instances
+			(project "ulva_controller"
+				(path "/3da05633-c880-4edd-9149-3930d166f2d5/61997f82-9830-5e3c-9cc9-695e6d354eec"
+					(reference "H6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 55.88 171.45 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "166fddd6-1584-53c2-8291-81aa42cfd3c3")
+		(property "Reference" "H7"
+			(at 55.88 167.64 0)
+			(effects
+				(font
+					(size 1.0 1.0)
+				)
+			)
+		)
+		(property "Value" "OLED M2 SLOT"
+			(at 55.88 178.03 0)
+			(effects (hide yes)
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Ulva:MountingSlot_4.0x2.7mm_M2_OLED"
+			(at -50.8 -13.97 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at -50.8 -13.97 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" ""
+			(at -50.8 -13.97 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Fuse_MPN" ""
+			(at -50.8 -13.97 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+
+		(instances
+			(project "ulva_controller"
+				(path "/3da05633-c880-4edd-9149-3930d166f2d5/61997f82-9830-5e3c-9cc9-695e6d354eec"
+					(reference "H7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 73.66 171.45 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "05b89756-2355-5413-a29c-41a6b4d0d67e")
+		(property "Reference" "H8"
+			(at 73.66 167.64 0)
+			(effects
+				(font
+					(size 1.0 1.0)
+				)
+			)
+		)
+		(property "Value" "OLED M2 SLOT"
+			(at 73.66 178.03 0)
+			(effects (hide yes)
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Ulva:MountingSlot_4.0x2.7mm_M2_OLED"
+			(at -71.12 -13.97 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at -71.12 -13.97 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" ""
+			(at -71.12 -13.97 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Fuse_MPN" ""
+			(at -71.12 -13.97 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+
+		(instances
+			(project "ulva_controller"
+				(path "/3da05633-c880-4edd-9149-3930d166f2d5/61997f82-9830-5e3c-9cc9-695e6d354eec"
+					(reference "H8")
+					(unit 1)
+				)
+			)
+		)
+	)
+
+	(text "Expander buses, AC terminals and mounting" (at 12 18 0) (effects (font (size 2.3 2.3)) (justify left)) (uuid "69585543-295b-5a79-94bf-c442f298f662"))
+	(text "I2C0 / EXP0: J8 AC + J10 DC / four addresses 0x24..0x27 TOTAL" (at 12 30 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "0d1d9f31-b8be-5256-8dc8-43792edb28fe"))
+	(global_label "I2C0_SDA" (shape input) (at 111.76 57.15 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "e410b3ec-0ffc-50b7-935b-300ea0ed31da"))
+	(global_label "I2C0_SCL" (shape input) (at 137.16 63.5 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "e8b9ce6b-1691-5987-9d69-0ecd04c5d481"))
+	(text "I2C1 (HP) / EXP1: J9 AC + J11 DC / four addresses 0x24..0x27 TOTAL" (at 12 78.34 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "38ecf461-3f44-5c8c-a441-a8c112376410"))
+	(global_label "I2C1_SDA" (shape input) (at 111.76 110.49 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "59e56dea-916e-5d2a-8507-59c7a1f2deb1"))
+	(global_label "I2C1_SCL" (shape input) (at 137.16 116.84 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "f73b44ea-b1fa-52e5-b1ea-09662d1a3ffc"))
+	(text "SDA/SCL: 3.3V pull-ups. EVIN (pin 9): EXP_5V. Pin 10: GND." (at 12 127 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "08d3ba85-2b39-5013-a59f-df2be95177db"))
+	(text "EACRET: AC load return (pins 5/6). DC_ZONE_RETURN: command return (pins 3/4)." (at 12 133 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "2c03b28e-c713-52de-a224-1b7b085244d0"))
+	(text "POWER_0V is bonded to GND by NT1. DRIVER COM is separate on PCB; external common reference required." (at 12 139 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "c6faafe8-4c34-5015-a713-3f63d5ed7997"))
+	(text "H1-H4 / M3 non-plated mounting holes" (at 15 148 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "ac4a866c-e2f0-553d-9660-1b80f68436e6"))
+	(text "H5-H8 / OLED M2 slots, nylon hardware" (at 15 165.1 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "41c75d28-1d78-5267-8f1b-bcee4c5570af"))
+
+
+
+	(no_connect (at 172.72 41.91) (uuid "62a007c5-710e-5ac0-91fa-ac4cde8ecd8c"))
+	(no_connect (at 172.72 44.45) (uuid "a358ce5a-84cb-5974-b047-e8ce1a819621"))
+
+	(global_label "EXP_5V" (shape input) (at 167.64 52.07 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "8afe4cbd-7023-5d94-9d95-78b58e44f3d9"))
+	(no_connect (at 185.42 41.91) (uuid "ad3152c9-34ef-517d-91e6-d09c10467b81"))
+	(no_connect (at 185.42 44.45) (uuid "91c9e00d-06fb-5df5-bb4c-8a18637232d3"))
+
+	(global_label "GND" (shape input) (at 190.5 52.07 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "351e7e95-97d3-5c95-a14e-f52c5ebc5451"))
+	(no_connect (at 241.3 41.91) (uuid "41b7506a-399a-5de8-9527-f241f048baa4"))
+
+	(no_connect (at 241.3 46.99) (uuid "b4460b6c-2d92-5669-b28e-158770151bc2"))
+	(global_label "EXP_5V" (shape input) (at 236.22 52.07 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "17b53503-a253-56fe-9dea-dbb4552e6dae"))
+	(no_connect (at 254 41.91) (uuid "ffc12cba-2bd4-58c2-adea-e69f06524d86"))
+
+	(no_connect (at 254 46.99) (uuid "13c33c0a-a329-5a93-a622-f8e5be17d1f7"))
+	(global_label "GND" (shape input) (at 259.08 52.07 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "57069f72-1adf-5472-9850-33995be8c726"))
+	(global_label "3V3" (shape input) (at 44.45 34.29 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "23a690a4-1946-559d-8ac5-8d7552b903e7"))
+	(global_label "3V3" (shape input) (at 85.09 34.29 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "964e46de-b70e-58f5-a380-4329673ce97f"))
+	(no_connect (at 172.72 95.25) (uuid "a0943ffe-328e-5dce-85c6-e2881f81178c"))
+	(no_connect (at 172.72 97.79) (uuid "4e265295-6a93-51ab-947a-6e96df5238a3"))
+
+	(global_label "EXP_5V" (shape input) (at 167.64 105.41 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "17c315ba-b7b8-5fcc-b1a1-beefdcacf972"))
+	(no_connect (at 185.42 95.25) (uuid "f253772b-7c6d-5c4a-94a9-b74f3cd9549f"))
+	(no_connect (at 185.42 97.79) (uuid "6bdf96fa-3e85-5fcb-bd44-2d42282f8cac"))
+
+	(global_label "GND" (shape input) (at 190.5 105.41 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "a3563d82-2bf0-59a9-a848-4d0812a98e02"))
+	(no_connect (at 241.3 95.25) (uuid "ba3bccd9-f299-59c5-915c-93fbc389200d"))
+
+	(no_connect (at 241.3 100.33) (uuid "1199bef1-af43-5eaf-bfce-6a49b3fd58ae"))
+	(global_label "EXP_5V" (shape input) (at 236.22 105.41 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "994d8917-4a9a-58ac-be7e-8ec5e6045b1a"))
+	(no_connect (at 254 95.25) (uuid "f780a0f7-f3c5-59dd-b02e-0792119c8f3e"))
+
+	(no_connect (at 254 100.33) (uuid "fe7f7311-a33f-549c-98d2-de816dc0bea6"))
+	(global_label "GND" (shape input) (at 259.08 105.41 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "2a413bf1-e082-5a09-9fce-3169c71be619"))
+	(global_label "3V3" (shape input) (at 44.45 87.63 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "3894eadc-beb9-53c5-bc3f-b065e29c4cb6"))
+	(global_label "3V3" (shape input) (at 85.09 87.63 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "fc97fc0a-d759-59ce-8bc6-e40fdf39d320"))
+	(wire (pts (xy 44.45 34.29) (xy 44.45 39.37)) (stroke (width 0) (type default)) (uuid "8b75ed1d-2f62-5911-9d03-decfc8a50d7d"))
+	(wire (pts (xy 44.45 46.99) (xy 44.45 60.96)) (stroke (width 0) (type default)) (uuid "b70e893d-db0a-504d-9191-bd2bb8fb2675"))
+	(wire (pts (xy 44.45 60.96) (xy 111.76 60.96)) (stroke (width 0) (type default)) (uuid "e332fdd5-ca86-56a5-ad64-1b577d9683a5"))
+	(wire (pts (xy 44.45 87.63) (xy 44.45 92.71)) (stroke (width 0) (type default)) (uuid "e0c1284c-1d64-549a-a793-e06711940b53"))
+	(wire (pts (xy 44.45 100.33) (xy 44.45 114.3)) (stroke (width 0) (type default)) (uuid "b8aabc9e-ba60-59e6-821b-e25e42f95605"))
+	(wire (pts (xy 44.45 114.3) (xy 111.76 114.3)) (stroke (width 0) (type default)) (uuid "efb98553-3d8e-57cf-adf3-eafb16a06253"))
+	(wire (pts (xy 85.09 34.29) (xy 85.09 39.37)) (stroke (width 0) (type default)) (uuid "8778297f-c108-535e-bed9-7cf42704da01"))
+	(wire (pts (xy 85.09 46.99) (xy 85.09 67.31)) (stroke (width 0) (type default)) (uuid "1a943db6-950f-534f-b67a-e2e1d77d6d31"))
+	(wire (pts (xy 85.09 67.31) (xy 137.16 67.31)) (stroke (width 0) (type default)) (uuid "c4ad40b5-0538-58fb-b39a-8f1fa23d31d2"))
+	(wire (pts (xy 85.09 87.63) (xy 85.09 92.71)) (stroke (width 0) (type default)) (uuid "7c221667-267e-5355-8493-adeec8136df2"))
+	(wire (pts (xy 85.09 100.33) (xy 85.09 120.65)) (stroke (width 0) (type default)) (uuid "48ea0de0-ecde-5119-b8d4-8c563e003735"))
+	(wire (pts (xy 85.09 120.65) (xy 137.16 120.65)) (stroke (width 0) (type default)) (uuid "c28fdc59-abbb-557d-b6ac-edd08fd6cb3b"))
+	(wire (pts (xy 111.76 57.15) (xy 111.76 60.96)) (stroke (width 0) (type default)) (uuid "3ade5730-0cb4-506c-a6b6-ddee51a6b430"))
+	(wire (pts (xy 111.76 60.96) (xy 163.83 60.96)) (stroke (width 0) (type default)) (uuid "6f77264c-fe41-5caf-9097-50ad99e8bd93"))
+	(wire (pts (xy 111.76 110.49) (xy 111.76 114.3)) (stroke (width 0) (type default)) (uuid "bbb55039-a89b-58e4-a1fa-6de35dd7f8fe"))
+	(wire (pts (xy 111.76 114.3) (xy 163.83 114.3)) (stroke (width 0) (type default)) (uuid "96146d50-ebfa-509a-9dae-56d2b709a9cb"))
+	(wire (pts (xy 137.16 63.5) (xy 137.16 67.31)) (stroke (width 0) (type default)) (uuid "4311ae88-6e21-5978-982f-9af00fe2872b"))
+	(wire (pts (xy 137.16 67.31) (xy 198.12 67.31)) (stroke (width 0) (type default)) (uuid "a027ed37-dc14-5e2e-9c73-aeeac2068cec"))
+	(wire (pts (xy 137.16 116.84) (xy 137.16 120.65)) (stroke (width 0) (type default)) (uuid "6aa2f834-a093-5034-803a-6164f2cc4da0"))
+	(wire (pts (xy 137.16 120.65) (xy 198.12 120.65)) (stroke (width 0) (type default)) (uuid "0c917562-8592-5ced-8ef9-d87bc935e17e"))
+	(wire (pts (xy 163.83 49.53) (xy 163.83 60.96)) (stroke (width 0) (type default)) (uuid "e46813d3-fb6d-5ca4-af4f-cd9776cf1d25"))
+	(wire (pts (xy 163.83 49.53) (xy 172.72 49.53)) (stroke (width 0) (type default)) (uuid "4fcba1cc-05b7-5404-9dce-7afaa53366ea"))
+	(wire (pts (xy 163.83 60.96) (xy 232.41 60.96)) (stroke (width 0) (type default)) (uuid "56267a1b-2d92-5d40-8631-b9088d096531"))
+	(wire (pts (xy 163.83 102.87) (xy 163.83 114.3)) (stroke (width 0) (type default)) (uuid "0ebac250-7882-5bcf-a3b0-9b3b5e36c3eb"))
+	(wire (pts (xy 163.83 102.87) (xy 172.72 102.87)) (stroke (width 0) (type default)) (uuid "6ef0c0fa-c965-5de4-b343-813cab01f52d"))
+	(wire (pts (xy 163.83 114.3) (xy 232.41 114.3)) (stroke (width 0) (type default)) (uuid "8df0d281-f1ed-55f2-92ea-ee5994cec71a"))
+	(wire (pts (xy 167.64 46.99) (xy 172.72 46.99)) (stroke (width 0) (type default)) (uuid "e2c3bc9b-bea5-50d8-a210-b5834f037d31"))
+	(wire (pts (xy 167.64 52.07) (xy 172.72 52.07)) (stroke (width 0) (type default)) (uuid "87e16918-193e-5239-a8dd-845be86412c1"))
+	(wire (pts (xy 167.64 100.33) (xy 172.72 100.33)) (stroke (width 0) (type default)) (uuid "b4f74789-8d10-5b2a-b896-d2fbc1c34569"))
+	(wire (pts (xy 167.64 105.41) (xy 172.72 105.41)) (stroke (width 0) (type default)) (uuid "3b4e7277-918d-5104-99b6-b879078622cb"))
+	(wire (pts (xy 185.42 46.99) (xy 190.5 46.99)) (stroke (width 0) (type default)) (uuid "080839b0-934b-5afa-8389-accc90284761"))
+	(wire (pts (xy 185.42 49.53) (xy 198.12 49.53)) (stroke (width 0) (type default)) (uuid "bfc22881-2f5e-5127-b22b-344f2f3bbf60"))
+	(wire (pts (xy 185.42 52.07) (xy 190.5 52.07)) (stroke (width 0) (type default)) (uuid "5ca8cf1f-0523-5f1b-a4ad-6d20f74f21ff"))
+	(wire (pts (xy 185.42 100.33) (xy 190.5 100.33)) (stroke (width 0) (type default)) (uuid "44b2c545-bd30-5914-b1ac-dac68ffaa766"))
+	(wire (pts (xy 185.42 102.87) (xy 198.12 102.87)) (stroke (width 0) (type default)) (uuid "63f41766-129d-59a0-8478-f09d8436d0eb"))
+	(wire (pts (xy 185.42 105.41) (xy 190.5 105.41)) (stroke (width 0) (type default)) (uuid "657a7591-43e3-5e4c-ae42-4c08793df63d"))
+	(wire (pts (xy 198.12 49.53) (xy 198.12 67.31)) (stroke (width 0) (type default)) (uuid "c891a234-b70b-5171-8535-01ccfda48651"))
+	(wire (pts (xy 198.12 67.31) (xy 266.7 67.31)) (stroke (width 0) (type default)) (uuid "3ccd6e90-f299-5fdd-bed6-9c102a813379"))
+	(wire (pts (xy 198.12 102.87) (xy 198.12 120.65)) (stroke (width 0) (type default)) (uuid "d3ef454f-1586-5444-bbf9-5a14167b6519"))
+	(wire (pts (xy 198.12 120.65) (xy 266.7 120.65)) (stroke (width 0) (type default)) (uuid "83ab5d38-2f42-5d8e-8aba-d606fd424bac"))
+
+
+
+
+	(wire (pts (xy 232.41 49.53) (xy 232.41 60.96)) (stroke (width 0) (type default)) (uuid "b190c4f6-5c07-53d9-9d56-b3f6d289bc74"))
+	(wire (pts (xy 232.41 49.53) (xy 241.3 49.53)) (stroke (width 0) (type default)) (uuid "a39263f7-0375-5e91-87d1-5814ddd784d3"))
+	(wire (pts (xy 232.41 102.87) (xy 232.41 114.3)) (stroke (width 0) (type default)) (uuid "793d3553-8926-5925-8aa1-4b3d7957a8b0"))
+	(wire (pts (xy 232.41 102.87) (xy 241.3 102.87)) (stroke (width 0) (type default)) (uuid "16177f31-577d-5fa7-a6a0-984cdc61cf75"))
+
+
+	(wire (pts (xy 236.22 44.45) (xy 241.3 44.45)) (stroke (width 0) (type default)) (uuid "39ed56d6-70d2-546e-83fe-09eb1413c927"))
+	(wire (pts (xy 236.22 52.07) (xy 241.3 52.07)) (stroke (width 0) (type default)) (uuid "1c1bb4bf-d15b-539a-a042-1e13884fd373"))
+	(wire (pts (xy 236.22 97.79) (xy 241.3 97.79)) (stroke (width 0) (type default)) (uuid "913f5348-bf2d-5b24-adc5-d65ec8754d62"))
+	(wire (pts (xy 236.22 105.41) (xy 241.3 105.41)) (stroke (width 0) (type default)) (uuid "43f979fc-d607-50ca-b394-fb1b57bf818d"))
+	(wire (pts (xy 254 44.45) (xy 259.08 44.45)) (stroke (width 0) (type default)) (uuid "4db9ebb8-5f81-53db-842e-bb3f877d0825"))
+	(wire (pts (xy 254 49.53) (xy 266.7 49.53)) (stroke (width 0) (type default)) (uuid "a59fc108-ffc4-57ca-ba13-4f7cf7e805c3"))
+	(wire (pts (xy 254 52.07) (xy 259.08 52.07)) (stroke (width 0) (type default)) (uuid "339e5929-ab8e-5a5c-9990-daab1cbff557"))
+	(wire (pts (xy 254 97.79) (xy 259.08 97.79)) (stroke (width 0) (type default)) (uuid "dd4ea9e9-bc2f-5589-9931-a8591916ee32"))
+	(wire (pts (xy 254 102.87) (xy 266.7 102.87)) (stroke (width 0) (type default)) (uuid "c9ce17b3-e184-5f48-9673-4197db8b1283"))
+	(wire (pts (xy 254 105.41) (xy 259.08 105.41)) (stroke (width 0) (type default)) (uuid "3e0b4b9c-a9a2-590b-be7e-4b19c3d81a51"))
+
+	(wire (pts (xy 266.7 49.53) (xy 266.7 67.31)) (stroke (width 0) (type default)) (uuid "7c7a02ed-0284-5c16-8596-57446b5c77ae"))
+	(wire (pts (xy 266.7 102.87) (xy 266.7 120.65)) (stroke (width 0) (type default)) (uuid "c3050200-5468-587b-a05d-0f285d5cf1c6"))
+	(junction (at 111.76 60.96) (diameter 0) (color 0 0 0 0) (uuid "f964c31c-cbfb-5b52-94ed-9a95aee440de"))
+	(junction (at 111.76 114.3) (diameter 0) (color 0 0 0 0) (uuid "73d0d884-9f63-5a1e-b097-7e5b68340558"))
+	(junction (at 137.16 67.31) (diameter 0) (color 0 0 0 0) (uuid "8349c455-9757-599a-8e42-1b4e4a1110ba"))
+	(junction (at 137.16 120.65) (diameter 0) (color 0 0 0 0) (uuid "3783ef8b-1deb-5c5d-8542-e1a2e5138188"))
+	(junction (at 163.83 60.96) (diameter 0) (color 0 0 0 0) (uuid "708f5270-704a-525b-9858-48d6e510530a"))
+	(junction (at 163.83 114.3) (diameter 0) (color 0 0 0 0) (uuid "ee190f64-ef7a-5cc6-9c11-01f92a6661e4"))
+	(junction (at 198.12 67.31) (diameter 0) (color 0 0 0 0) (uuid "8f2920e5-bc72-5110-8ae3-59edaf90ca9c"))
+	(junction (at 198.12 120.65) (diameter 0) (color 0 0 0 0) (uuid "22792be8-2dab-5213-8fde-ad637d7b0405"))
+
+
+	(embedded_fonts no)
+
+	(symbol
+		(lib_id "Connector:Screw_Terminal_01x01")
+		(at 139.7 43.18 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fb9eb7ef-7ad3-5ffc-8c48-1b0cd1ea7934")
+		(property "Reference" "J15"
+			(at 139.7 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "24VAC / I2C0"
+			(at 139.7 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_360272_1x01_Horizontal_ScrewM2.6"
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.metz-connect.com/externalfiles/360272/863849.PDF"
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "360272"
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Fuse_MPN" ""
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+
+		(pin "1"
+			(uuid "cced2050-9361-5c31-ad0f-42874cfca10a")
+		)
+
+		(instances
+			(project "ulva_controller"
+				(path "/3da05633-c880-4edd-9149-3930d166f2d5/61997f82-9830-5e3c-9cc9-695e6d354eec"
+					(reference "J15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire (pts (xy 129.54 43.18) (xy 134.62 43.18)) (stroke (width 0) (type default)) (uuid "cab89877-cc89-53ab-ab12-6fd2f018a0e1"))
+	(global_label "AC2_IN" (shape input) (at 129.54 43.18 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "44f008dd-f9c5-5db9-ae9e-19facf0356be"))
+
+	(text "J15 beside J8" (at 139.7 57.15 0) (effects (font (size 1.27 1.27))) (uuid "fd5f16ea-8267-5149-b624-0e6f1248dbbd"))
+	(symbol
+		(lib_id "Connector:Screw_Terminal_01x01")
+		(at 139.7 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bef884c6-f58e-529f-b431-65fb2a9b0446")
+		(property "Reference" "J12"
+			(at 139.7 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "24VAC / I2C1 (HP)"
+			(at 139.7 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_360272_1x01_Horizontal_ScrewM2.6"
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.metz-connect.com/externalfiles/360272/863849.PDF"
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "360272"
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Fuse_MPN" ""
+			(at 0.0 0.0 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+
+		(pin "1"
+			(uuid "8f7558fc-09de-58fc-9fa7-0ae50e1c45e8")
+		)
+
+		(instances
+			(project "ulva_controller"
+				(path "/3da05633-c880-4edd-9149-3930d166f2d5/61997f82-9830-5e3c-9cc9-695e6d354eec"
+					(reference "J12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire (pts (xy 129.54 96.52) (xy 134.62 96.52)) (stroke (width 0) (type default)) (uuid "73bdf7e2-c5a1-5704-93f0-60e9d323fa2b"))
+	(global_label "AC2_IN" (shape input) (at 129.54 96.52 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "f2dd802d-fa90-536b-bba4-3d647e788478"))
+
+	(text "J12 beside J9" (at 139.7 110.49 0) (effects (font (size 1.27 1.27))) (uuid "0d10a1d4-694b-5419-89a4-0754df793a78"))
+	(text "J12–J17: AC2_IN. J18/J19/J20–J23: six DRIVER COM inputs. J25: POWER_0V supply return." (at 12 25 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "108ecc35-e88b-57a9-8bb2-29a6c8eef3d5"))
+
+(wire (pts (xy 167.64 46.99) (xy 167.64 29.21)) (stroke (width 0) (type default)) (uuid "4a63de20-4ad6-40f3-819d-177621dc1bb0"))
+(wire (pts (xy 167.64 29.21) (xy 190.5 29.21)) (stroke (width 0) (type default)) (uuid "2aa856da-21f1-4e73-affa-0d3c36deb948"))
+(wire (pts (xy 190.5 29.21) (xy 190.5 46.99)) (stroke (width 0) (type default)) (uuid "9458a79c-4bb7-43ef-94d9-b325deec5bee"))
+(global_label "EACRET" (shape input) (at 190.5 29.21 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "10d501af-3e9e-463a-a6bd-90cc16fc6810"))
+
+(wire (pts (xy 236.22 44.45) (xy 236.22 29.21)) (stroke (width 0) (type default)) (uuid "2a3da937-74a0-493d-a88c-62fdfc74ee8d"))
+(wire (pts (xy 236.22 29.21) (xy 259.08 29.21)) (stroke (width 0) (type default)) (uuid "f8c0fac3-f9bd-4bc9-9334-870047a08e27"))
+(wire (pts (xy 259.08 29.21) (xy 259.08 44.45)) (stroke (width 0) (type default)) (uuid "f5f973f4-c3f5-484b-b6f7-6988e60e3582"))
+(global_label "DC_ZONE_RETURN" (shape input) (at 259.08 29.21 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "2fc84e2d-a434-46d0-bf96-b767edc06040"))
+
+(wire (pts (xy 167.64 100.33) (xy 167.64 82.55)) (stroke (width 0) (type default)) (uuid "00d5fabf-ee3f-4a19-a058-408bc13d0038"))
+(wire (pts (xy 167.64 82.55) (xy 190.5 82.55)) (stroke (width 0) (type default)) (uuid "d645f0e8-bd6d-404d-83b1-63ca1579c632"))
+(wire (pts (xy 190.5 82.55) (xy 190.5 100.33)) (stroke (width 0) (type default)) (uuid "4671f7ed-b9b5-44af-94a1-aa91517a6258"))
+(global_label "EACRET" (shape input) (at 190.5 82.55 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "016b5eec-a3e9-46f5-a141-82f4b2eeb9a2"))
+
+(wire (pts (xy 236.22 97.79) (xy 236.22 82.55)) (stroke (width 0) (type default)) (uuid "55da259d-bdde-4b65-b82f-1cb9e30309d0"))
+(wire (pts (xy 236.22 82.55) (xy 259.08 82.55)) (stroke (width 0) (type default)) (uuid "0089f60f-25e2-4465-acb7-abe8ce482691"))
+(wire (pts (xy 259.08 82.55) (xy 259.08 97.79)) (stroke (width 0) (type default)) (uuid "810cec24-18b4-4702-8d80-b9e59e7725d4"))
+(global_label "DC_ZONE_RETURN" (shape input) (at 259.08 82.55 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid "e95e0a88-fd82-4b01-b39a-25b711b0a15b"))
+
+
+
+(symbol
+		(lib_id "Connector:Screw_Terminal_01x01")
+		(at 110.4900 153.6700 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ed0021a7-4dd5-4a8b-a13f-40eb3bf00c49")
+		(property "Reference" "J16"
+			(at 110.4900 147.3200 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "AC2_IN"
+			(at 110.4900 162.5600 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_360272_1x01_Horizontal_ScrewM2.6"
+			(at -29.2100 110.4900 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.metz-connect.com/externalfiles/360272/863849.PDF"
+			(at -29.2100 110.4900 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "360272"
+			(at -29.2100 110.4900 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Fuse_MPN" ""
+			(at -29.2100 110.4900 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+
+		(pin "1"
+			(uuid "c7909d9a-4ac8-465b-9728-047741f37bf3")
+		)
+
+		(instances
+			(project "ulva_controller"
+				(path "/3da05633-c880-4edd-9149-3930d166f2d5/61997f82-9830-5e3c-9cc9-695e6d354eec"
+					(reference "J16")
+					(unit 1)
+				)
+			)
+		)
+	)
+(wire (pts (xy 105.4100 153.6700) (xy 102.8700 153.6700)) (stroke (width 0) (type default)) (uuid "31daffcf-21b8-4429-a299-71e74ee9f26d"))
+(global_label "AC2_IN" (shape input) (at 102.8700 153.6700 180) (effects (font (size 1.0 1.0)) (justify right)) (uuid "313350ca-4501-44c7-b067-1b554bfc3bf8"))
+(symbol
+		(lib_id "Connector:Screw_Terminal_01x01")
+		(at 138.4300 153.6700 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1dac5841-5259-4d95-9667-a476194bcc18")
+		(property "Reference" "J17"
+			(at 138.4300 147.3200 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "AC2_IN"
+			(at 138.4300 162.5600 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_360272_1x01_Horizontal_ScrewM2.6"
+			(at -1.2700 110.4900 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.metz-connect.com/externalfiles/360272/863849.PDF"
+			(at -1.2700 110.4900 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "360272"
+			(at -1.2700 110.4900 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Fuse_MPN" ""
+			(at -1.2700 110.4900 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+
+		(pin "1"
+			(uuid "82e98437-0945-4bd9-8641-ef3ea724d2a6")
+		)
+
+		(instances
+			(project "ulva_controller"
+				(path "/3da05633-c880-4edd-9149-3930d166f2d5/61997f82-9830-5e3c-9cc9-695e6d354eec"
+					(reference "J17")
+					(unit 1)
+				)
+			)
+		)
+	)
+(wire (pts (xy 133.3500 153.6700) (xy 130.8100 153.6700)) (stroke (width 0) (type default)) (uuid "190a4778-1909-44b2-8f22-5cafe9bbc0a5"))
+(global_label "AC2_IN" (shape input) (at 130.8100 153.6700 180) (effects (font (size 1.0 1.0)) (justify right)) (uuid "139818e8-e262-451a-bb92-8c9208733250"))
+(symbol
+		(lib_id "Connector:Screw_Terminal_01x01")
+		(at 166.3700 153.6700 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c2104feb-5ff2-4107-9119-6f404f67c430")
+		(property "Reference" "J13"
+			(at 166.3700 147.3200 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "AC2_IN"
+			(at 166.3700 162.5600 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_360272_1x01_Horizontal_ScrewM2.6"
+			(at 26.6700 110.4900 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.metz-connect.com/externalfiles/360272/863849.PDF"
+			(at 26.6700 110.4900 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "360272"
+			(at 26.6700 110.4900 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Fuse_MPN" ""
+			(at 26.6700 110.4900 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+
+		(pin "1"
+			(uuid "f0334caa-4a04-4664-9f55-ac013e03d344")
+		)
+
+		(instances
+			(project "ulva_controller"
+				(path "/3da05633-c880-4edd-9149-3930d166f2d5/61997f82-9830-5e3c-9cc9-695e6d354eec"
+					(reference "J13")
+					(unit 1)
+				)
+			)
+		)
+	)
+(wire (pts (xy 161.2900 153.6700) (xy 158.7500 153.6700)) (stroke (width 0) (type default)) (uuid "bc5dae9d-1c39-4139-9b06-48ff2e478cb6"))
+(global_label "AC2_IN" (shape input) (at 158.7500 153.6700 180) (effects (font (size 1.0 1.0)) (justify right)) (uuid "5c91e5b3-ea23-467f-a5f7-9ac9903d0789"))
+(symbol
+		(lib_id "Connector:Screw_Terminal_01x01")
+		(at 194.3100 153.6700 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0ea47583-7d4f-4563-b069-2d76b8ac56df")
+		(property "Reference" "J14"
+			(at 194.3100 147.3200 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "AC2_IN"
+			(at 194.3100 162.5600 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_360272_1x01_Horizontal_ScrewM2.6"
+			(at 54.6100 110.4900 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.metz-connect.com/externalfiles/360272/863849.PDF"
+			(at 54.6100 110.4900 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "360272"
+			(at 54.6100 110.4900 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Fuse_MPN" ""
+			(at 54.6100 110.4900 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+
+		(pin "1"
+			(uuid "e46c4534-4faf-4765-bc0b-998366f702ee")
+		)
+
+		(instances
+			(project "ulva_controller"
+				(path "/3da05633-c880-4edd-9149-3930d166f2d5/61997f82-9830-5e3c-9cc9-695e6d354eec"
+					(reference "J14")
+					(unit 1)
+				)
+			)
+		)
+	)
+(wire (pts (xy 189.2300 153.6700) (xy 186.6900 153.6700)) (stroke (width 0) (type default)) (uuid "06d943ae-4c68-49c5-83e2-ff213cf7be09"))
+(global_label "AC2_IN" (shape input) (at 186.6900 153.6700 180) (effects (font (size 1.0 1.0)) (justify right)) (uuid "5fe81856-698c-44dc-858f-c1fd6c7366ca"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+(symbol
+		(lib_id "Connector:Screw_Terminal_01x01")
+		(at 106.68 173.99 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1059bfcb-3987-44c8-9c23-47d05aa78992")
+		(property "Reference" "J18"
+			(at 106.68 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "DRIVER COM"
+			(at 106.68 177.8 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_360272_1x01_Horizontal_ScrewM2.6"
+			(at -33.02 130.81 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.metz-connect.com/externalfiles/360272/863849.PDF"
+			(at -33.02 130.81 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "360272"
+			(at -33.02 130.81 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Fuse_MPN" ""
+			(at -33.02 130.81 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+
+		(pin "1"
+			(uuid "e4921eda-41e3-4856-9e46-de9db789885c")
+		)
+
+		(instances
+			(project "ulva_controller"
+				(path "/3da05633-c880-4edd-9149-3930d166f2d5/61997f82-9830-5e3c-9cc9-695e6d354eec"
+					(reference "J18")
+					(unit 1)
+				)
+			)
+		)
+
+(property "Manufacturer" "METZ CONNECT" (at -7.62 -5.08 0) (effects (font (size 1 1)) (hide yes)))
+
+(property "Assembly" "Manual THT" (at -7.62 -5.08 0) (effects (font (size 1 1)) (hide yes)))
+)
+
+
+
+(symbol
+		(lib_id "Connector:Screw_Terminal_01x01")
+		(at 139.7 173.99 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e042484c-7f19-4974-bd0c-35060873c96f")
+		(property "Reference" "J19"
+			(at 139.7 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "DRIVER COM"
+			(at 139.7 177.8 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_360272_1x01_Horizontal_ScrewM2.6"
+			(at 1.59872e-14 130.81 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.metz-connect.com/externalfiles/360272/863849.PDF"
+			(at 1.59872e-14 130.81 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "360272"
+			(at 1.59872e-14 130.81 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Fuse_MPN" ""
+			(at 1.59872e-14 130.81 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+
+		(pin "1"
+			(uuid "b58f9f7f-9f78-4194-b164-dad2bec45c97")
+		)
+
+		(instances
+			(project "ulva_controller"
+				(path "/3da05633-c880-4edd-9149-3930d166f2d5/61997f82-9830-5e3c-9cc9-695e6d354eec"
+					(reference "J19")
+					(unit 1)
+				)
+			)
+		)
+
+(property "Manufacturer" "METZ CONNECT" (at -5.08 -5.08 0) (effects (font (size 1 1)) (hide yes)))
+
+(property "Assembly" "Manual THT" (at -5.08 -5.08 0) (effects (font (size 1 1)) (hide yes)))
+)
+
+
+
+(symbol
+		(lib_id "Connector:Screw_Terminal_01x01")
+		(at 168.91 173.99 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "89aad1cb-fb91-574b-a097-b149081f40a9")
+		(property "Reference" "J20"
+			(at 168.91 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "DRIVER COM"
+			(at 168.91 177.8 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_360272_1x01_Horizontal_ScrewM2.6"
+			(at 29.21 130.81 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.metz-connect.com/externalfiles/360272/863849.PDF"
+			(at 29.21 130.81 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "360272"
+			(at 29.21 130.81 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Fuse_MPN" ""
+			(at 29.21 130.81 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+
+		(pin "1"
+			(uuid "e2fba509-33d5-53df-ac62-24177a31b4c6")
+		)
+
+		(instances
+			(project "ulva_controller"
+				(path "/3da05633-c880-4edd-9149-3930d166f2d5/61997f82-9830-5e3c-9cc9-695e6d354eec"
+					(reference "J20")
+					(unit 1)
+				)
+			)
+		)
+
+(property "Manufacturer" "METZ CONNECT" (at -6.35 -5.08 0) (effects (font (size 1 1)) (hide yes)))
+
+(property "Assembly" "Manual THT" (at -6.35 -5.08 0) (effects (font (size 1 1)) (hide yes)))
+)
+
+
+
+(symbol
+		(lib_id "Connector:Screw_Terminal_01x01")
+		(at 106.68 187.96 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "246d2fd1-e94e-575a-90d6-144530c3c373")
+		(property "Reference" "J21"
+			(at 106.68 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "DRIVER COM"
+			(at 106.68 191.77 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_360272_1x01_Horizontal_ScrewM2.6"
+			(at -33.02 144.78 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.metz-connect.com/externalfiles/360272/863849.PDF"
+			(at -33.02 144.78 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "360272"
+			(at -33.02 144.78 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Fuse_MPN" ""
+			(at -33.02 144.78 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+
+		(pin "1"
+			(uuid "5951778c-c61e-5118-90ed-216c3c6816df")
+		)
+
+		(instances
+			(project "ulva_controller"
+				(path "/3da05633-c880-4edd-9149-3930d166f2d5/61997f82-9830-5e3c-9cc9-695e6d354eec"
+					(reference "J21")
+					(unit 1)
+				)
+			)
+		)
+
+(property "Manufacturer" "METZ CONNECT" (at -99.06 8.89 0) (effects (font (size 1 1)) (hide yes)))
+
+(property "Assembly" "Manual THT" (at -99.06 8.89 0) (effects (font (size 1 1)) (hide yes)))
+)
+
+
+
+(symbol
+		(lib_id "Connector:Screw_Terminal_01x01")
+		(at 139.7 187.96 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "528d08be-0ff4-52ed-b17e-ee3c71770c9c")
+		(property "Reference" "J22"
+			(at 139.7 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "DRIVER COM"
+			(at 139.7 191.77 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_360272_1x01_Horizontal_ScrewM2.6"
+			(at 1.42109e-14 144.78 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.metz-connect.com/externalfiles/360272/863849.PDF"
+			(at 1.42109e-14 144.78 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "360272"
+			(at 1.42109e-14 144.78 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Fuse_MPN" ""
+			(at 1.42109e-14 144.78 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+
+		(pin "1"
+			(uuid "6c5411a5-bacc-5abe-bbae-00d958d83419")
+		)
+
+		(instances
+			(project "ulva_controller"
+				(path "/3da05633-c880-4edd-9149-3930d166f2d5/61997f82-9830-5e3c-9cc9-695e6d354eec"
+					(reference "J22")
+					(unit 1)
+				)
+			)
+		)
+
+(property "Manufacturer" "METZ CONNECT" (at -96.52 8.89 0) (effects (font (size 1 1)) (hide yes)))
+
+(property "Assembly" "Manual THT" (at -96.52 8.89 0) (effects (font (size 1 1)) (hide yes)))
+)
+
+
+
+(symbol
+		(lib_id "Connector:Screw_Terminal_01x01")
+		(at 168.91 187.96 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "405d0e79-c5d3-510a-bd6a-5b0395c4ce8b")
+		(property "Reference" "J23"
+			(at 168.91 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "DRIVER COM"
+			(at 168.91 191.77 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_360272_1x01_Horizontal_ScrewM2.6"
+			(at 29.21 144.78 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.metz-connect.com/externalfiles/360272/863849.PDF"
+			(at 29.21 144.78 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "360272"
+			(at 29.21 144.78 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+		(property "Fuse_MPN" ""
+			(at 29.21 144.78 0)
+			(effects
+				(font
+					(size 0.9 0.9)
+				)
+				(hide yes)
+			)
+		)
+
+		(pin "1"
+			(uuid "97c9dc9f-accf-5141-85d0-86b1013a3450")
+		)
+
+		(instances
+			(project "ulva_controller"
+				(path "/3da05633-c880-4edd-9149-3930d166f2d5/61997f82-9830-5e3c-9cc9-695e6d354eec"
+					(reference "J23")
+					(unit 1)
+				)
+			)
+		)
+
+(property "Manufacturer" "METZ CONNECT" (at -97.79 8.89 0) (effects (font (size 1 1)) (hide yes)))
+
+(property "Assembly" "Manual THT" (at -97.79 8.89 0) (effects (font (size 1 1)) (hide yes)))
+)
+
+
+
+(wire (pts (xy 99.06 173.99) (xy 101.6 173.99)) (stroke (width 0) (type default)) (uuid "9eb8a84b-b715-5861-a9de-876d803bcfe6"))
+(global_label "DC_DRIVER_COM" (shape input) (at 99.06 173.99 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "4270290d-f3ec-56b9-ab72-be606d25d619"))
+
+(wire (pts (xy 132.08 173.99) (xy 134.62 173.99)) (stroke (width 0) (type default)) (uuid "ab8aae1e-145f-5879-89d7-1aa412af09ec"))
+(global_label "DC_DRIVER_COM" (shape input) (at 132.08 173.99 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "c26a302e-8833-55dc-a2fe-df3f56234e13"))
+
+(wire (pts (xy 161.29 173.99) (xy 163.83 173.99)) (stroke (width 0) (type default)) (uuid "70004f6f-f7b5-5e13-900f-ad3c9fe949d9"))
+(global_label "DC_DRIVER_COM" (shape input) (at 161.29 173.99 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "4a0fdb54-50cb-56f4-8df1-aa3ba5ae69e4"))
+
+(wire (pts (xy 99.06 187.96) (xy 101.6 187.96)) (stroke (width 0) (type default)) (uuid "0375df06-7311-589f-a2de-109ba015df37"))
+(global_label "DC_DRIVER_COM" (shape input) (at 99.06 187.96 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "0db3ae9a-9316-5b8c-825d-8a294b9bb054"))
+
+(wire (pts (xy 132.08 187.96) (xy 134.62 187.96)) (stroke (width 0) (type default)) (uuid "362c84ba-9674-5350-836b-1cba8300d476"))
+(global_label "DC_DRIVER_COM" (shape input) (at 132.08 187.96 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "fce82221-679b-5a36-a374-a6bc9e386e49"))
+
+(wire (pts (xy 161.29 187.96) (xy 163.83 187.96)) (stroke (width 0) (type default)) (uuid "4fe8e239-fb42-54e6-91b5-fa5b1ff9ffd3"))
+(global_label "DC_DRIVER_COM" (shape input) (at 161.29 187.96 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "fdc17424-d8ee-5db5-a8e4-e3972f2b1b7c"))
+)

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24mm" height="24mm" viewBox="0 0 240 240">
+  <title>ULVA — three sea lettuce fronds</title>
+  <desc>Single-color outline artwork with a transparent background for PCB silkscreen.</desc>
+  <g fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M112 186 C93 175 70 172 58 155 C49 143 58 136 46 124 C34 112 26 104 34 94 C42 84 32 74 37 65 C51 59 60 75 72 75 C86 74 91 89 91 100 C91 112 106 116 105 131 C103 146 118 158 112 186 Z"/>
+    <path d="M121 164 C108 146 119 136 111 121 C101 104 112 97 108 83 C103 68 115 65 112 50 C110 39 120 28 128 27 C139 35 132 47 140 58 C150 71 140 81 146 94 C154 110 140 119 140 134 C140 147 130 154 121 164 Z"/>
+    <path d="M135 185 C131 166 143 155 144 141 C144 127 160 123 160 109 C160 96 173 92 182 94 C193 95 198 79 211 84 C217 96 205 103 209 115 C215 129 198 133 196 146 C194 161 177 161 168 171 C159 180 145 178 135 185 Z"/>
+    <path d="M104 205 Q123 195 143 205"/>
+  </g>
+</svg>

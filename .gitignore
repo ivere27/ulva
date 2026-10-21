@@ -1,0 +1,30 @@
+# Generated outputs and local references
+/build/
+/preview/
+/manufacturing/
+/datasheets/
+
+# KiCad local state
+*.kicad_prl
+~*.lck
+_autosave-*
+*-backups/
+*.bak
+*.dsn
+*.ses
+
+# Firmware and Python build state
+**/build/
+**/managed_components/
+sdkconfig
+sdkconfig.old
+__pycache__/
+*.py[cod]
+.venv/
+
+# Editor and machine-local files
+.vscode/
+.idea/
+.DS_Store
+.env
+.env.*

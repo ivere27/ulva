@@ -1,0 +1,1 @@
+(sym_lib_table (version 7) (lib (name "Ulva") (type "KiCad") (uri "${KIPRJMOD}/Ulva.kicad_sym") (options "") (descr "DevKit functional socket symbols")))

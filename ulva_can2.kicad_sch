@@ -1,0 +1,838 @@
+(kicad_sch (version 20250114) (generator "eeschema") (generator_version "9.0")
+(uuid "58495a4f-f75b-5d51-a038-0eba8c0b139f")
+(paper "A4")
+(title_block (title "Ulva / CAN FD channel 2 + fused 24V power") (date "2026-10-13") (rev "v0.42") (company "Ulva"))
+(lib_symbols (symbol "Device:R"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "R"
+			(at 2.032 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R"
+			(at 0 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at -1.778 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "R res resistor"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "R_*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "R_0_1"
+			(rectangle
+				(start -1.016 -2.54)
+				(end 1.016 2.54)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "R_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	) (symbol "Device:C"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "C"
+			(at 0.635 2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 0.635 -2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0.9652 -3.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "cap capacitor"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "C_*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "C_0_1"
+			(polyline
+				(pts
+					(xy -2.032 0.762) (xy 2.032 0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.032 -0.762) (xy 2.032 -0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "C_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 2.794)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 2.794)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	) (symbol "Device:Fuse"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "F"
+			(at 2.032 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Fuse"
+			(at -1.905 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at -1.778 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Fuse"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "fuse"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "*Fuse*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "Fuse_0_1"
+			(rectangle
+				(start -0.762 -2.54)
+				(end 0.762 2.54)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 2.54) (xy 0 -2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "Fuse_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	) (symbol "Jumper:SolderJumper_2_Bridged"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(property "Reference" "JP"
+			(at 0 2.032 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SolderJumper_2_Bridged"
+			(at 0 -2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Solder Jumper, 2-pole, closed/bridged"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "solder jumper SPST"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "SolderJumper*Bridged*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "SolderJumper_2_Bridged_0_1"
+			(rectangle
+				(start -0.508 0.508)
+				(end 0.508 -0.508)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy -0.254 1.016) (xy -0.254 -1.016)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -0.254 -1.016)
+				(mid -1.2656 0)
+				(end -0.254 1.016)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -0.254 -1.016)
+				(mid -1.2656 0)
+				(end -0.254 1.016)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(arc
+				(start 0.254 1.016)
+				(mid 1.2656 0)
+				(end 0.254 -1.016)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 0.254 1.016)
+				(mid 1.2656 0)
+				(end 0.254 -1.016)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.254 1.016) (xy 0.254 -1.016)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "SolderJumper_2_Bridged_1_1"
+			(pin passive line
+				(at -3.81 0 0)
+				(length 2.54)
+				(name "A"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 3.81 0 180)
+				(length 2.54)
+				(name "B"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	) (symbol "Ulva:TPT1334_SO1R" (pin_names (offset 0.7)) (in_bom yes) (on_board yes)
+    (property "Reference" "U" (at 0 20.32 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "TPT1334_SO1R" (at 0 17.78 0) (effects (font (size 1.27 1.27))))
+    (property "Description" "3PEAK TPT1334-SO1R, SOP-8, 3.3V CAN FD 5Mbps; SHDN and STB active high." (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (symbol "TPT1334_SO1R_0_1" (rectangle (start -10.16 12.7) (end 10.16 -12.7) (stroke (width 0.254) (type default)) (fill (type background))))
+    (symbol "TPT1334_SO1R_1_1"
+    (pin input line (at -15.24 5.08 0) (length 5.08) (name "TXD" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+(pin power_in line (at 0 -17.78 90) (length 5.08) (name "GND" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+(pin power_in line (at 0 17.78 270) (length 5.08) (name "VCC" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))
+(pin output line (at -15.24 0 0) (length 5.08) (name "RXD" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))
+(pin input line (at -15.24 -5.08 0) (length 5.08) (name "SHDN" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))
+(pin bidirectional line (at 15.24 0 180) (length 5.08) (name "CANL" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))
+(pin bidirectional line (at 15.24 5.08 180) (length 5.08) (name "CANH" (effects (font (size 1.27 1.27)))) (number "7" (effects (font (size 1.27 1.27)))))
+(pin input line (at -15.24 -10.16 0) (length 5.08) (name "STB" (effects (font (size 1.27 1.27)))) (number "8" (effects (font (size 1.27 1.27)))))
+)) (symbol "Ulva:XT30PW_2plus2_M" (pin_names (offset 0.7)) (in_bom yes) (on_board yes)
+    (property "Reference" "J" (at 0 20.32 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "XT30PW_2plus2_M" (at 0 17.78 0) (effects (font (size 1.27 1.27))))
+    (property "Description" "AMASS horizontal male power+CAN; ULVA pinout follows CubeMars GL II." (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (symbol "XT30PW_2plus2_M_0_1" (rectangle (start -7.62 12.7) (end 7.62 -15.24) (stroke (width 0.254) (type default)) (fill (type background))))
+    (symbol "XT30PW_2plus2_M_1_1"
+    (pin passive line (at -12.7 7.62 0) (length 5.08) (name "+24V" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+(pin passive line (at -12.7 2.54 0) (length 5.08) (name "0V" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+(pin passive line (at -12.7 -5.08 0) (length 5.08) (name "CAN_H" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))
+(pin passive line (at -12.7 -10.16 0) (length 5.08) (name "CAN_L" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))
+)) (symbol "Ulva:PESD2CANFD24V_T" (pin_names (offset 0.7)) (in_bom yes) (on_board yes)
+    (property "Reference" "D" (at 0 20.32 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "PESD2CANFD24V_T" (at 0 17.78 0) (effects (font (size 1.27 1.27))))
+    (property "Description" "Nexperia two-line bidirectional CAN FD ESD protector, SOT23; pin3 common to GND." (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (symbol "PESD2CANFD24V_T_0_1" (rectangle (start -10.16 7.62) (end 10.16 -5.08) (stroke (width 0.254) (type default)) (fill (type background))))
+    (symbol "PESD2CANFD24V_T_1_1"
+    (pin passive line (at -15.24 2.54 0) (length 5.08) (name "CAN_H" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+(pin passive line (at -15.24 -2.54 0) (length 5.08) (name "CAN_L" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+(pin passive line (at 5.08 -10.16 90) (length 5.08) (name "GND" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))
+)))
+
+(symbol (lib_id "Ulva:TPT1334_SO1R") (at 101.6 76.2 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "feb83c50-d3bd-538f-956d-037006dd7ccd")
+(property "Reference" "U4" (at 107.6 51.2 0) (effects (font (size 1.27 1.27)) (justify left)))
+(property "Value" "TPT1334-SO1R" (at 107.6 54.2 0) (effects (font (size 1.27 1.27)) (justify left)))
+(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "TPT1334-SO1R" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "3PEAK" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "LCSC" "C44859616" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "JLCPCB_Library" "Extended" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Assembly" "JLC PCBA SMT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+(property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/99d0d8d8382801b021c7fd666b0ab9fa.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "08a52779-8940-59e0-b46d-c6e6700b870b"))
+(pin "2" (uuid "7050820b-161b-558c-9f97-1f8776f98689"))
+(pin "3" (uuid "377cffda-2ba3-548f-9ccd-e098b5c92156"))
+(pin "4" (uuid "74088fec-86e9-5836-afc9-9f8843fe30bc"))
+(pin "5" (uuid "0a67bd3b-0432-5481-97ed-7deb8e50a887"))
+(pin "6" (uuid "0973582d-b7f3-5920-bb7d-3519997a649a"))
+(pin "7" (uuid "12ba7693-da28-55f8-85ef-75a088a8fa38"))
+(pin "8" (uuid "05aea741-a3fc-51a9-b563-577d9b5b4ee3"))
+(instances (project "ulva_controller" (path "/3da05633-c880-4edd-9149-3930d166f2d5/3c60da13-7b06-5f78-9efe-fd0455a31cdf" (reference "U4") (unit 1)))))
+(wire (pts (xy 81.28 71.12) (xy 86.36 71.12)) (stroke (width 0) (type default)) (uuid "18b4a467-e13a-5e60-ba18-e8484647b05a"))
+(global_label "CAN2_TX" (shape input) (at 81.28 71.12 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "895bc90a-116c-57a5-bf0e-66b571a109f2"))
+(wire (pts (xy 101.6 93.98) (xy 101.6 99.06)) (stroke (width 0) (type default)) (uuid "fb7d84cb-5a0b-5f2d-9c19-f03f81ee0824"))
+(global_label "GND" (shape input) (at 101.6 99.06 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "a6e94f3c-3e4c-56ad-9855-94ec78e94a26"))
+(wire (pts (xy 101.6 58.42) (xy 101.6 53.34)) (stroke (width 0) (type default)) (uuid "5749451e-9a50-5296-8c22-cbb1d15f9653"))
+(global_label "3V3" (shape input) (at 101.6 53.34 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "dcaeb152-5e60-5404-9511-51a8b7b722f0"))
+(wire (pts (xy 81.28 76.2) (xy 86.36 76.2)) (stroke (width 0) (type default)) (uuid "67d63f2e-44e8-5979-8fc8-4c1120be0365"))
+(global_label "CAN2_RX" (shape input) (at 81.28 76.2 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "04280b7a-cc43-5201-be0e-39ee826be184"))
+(wire (pts (xy 81.28 81.28) (xy 86.36 81.28)) (stroke (width 0) (type default)) (uuid "224359ca-4a4e-5de3-9880-4cb558d86c7e"))
+(global_label "GND" (shape input) (at 81.28 81.28 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "b53425ca-c9ac-507e-b089-cd1ea4c9d25f"))
+(wire (pts (xy 116.84 76.2) (xy 121.92 76.2)) (stroke (width 0) (type default)) (uuid "dfcd5d5d-d54c-56f1-8d80-30c78617b281"))
+(global_label "CAN2_L" (shape input) (at 121.92 76.2 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "546142c2-428a-5d6a-b72d-b0d21776e4c7"))
+(wire (pts (xy 116.84 71.12) (xy 121.92 71.12)) (stroke (width 0) (type default)) (uuid "43a51b68-6ff4-52a5-a3e7-19d9e0bb5fd6"))
+(global_label "CAN2_H" (shape input) (at 121.92 71.12 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "e480d253-55f0-5472-917b-511717fd80fd"))
+(wire (pts (xy 81.28 86.36) (xy 86.36 86.36)) (stroke (width 0) (type default)) (uuid "f5e68794-c301-5f0b-a03d-1f5b89a07412"))
+(global_label "GND" (shape input) (at 81.28 86.36 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "6954c41a-524a-5613-ab53-7337a7561256"))
+
+(symbol (lib_id "Device:C") (at 35.56 60.96 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "27132eca-214a-56d4-87a2-026f1f378b5b")
+(property "Reference" "C13" (at 41.56 55.96 0) (effects (font (size 1.27 1.27)) (justify left)))
+(property "Value" "100nF" (at 41.56 58.96 0) (effects (font (size 1.27 1.27)) (justify left)))
+(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CC0603KRX7R9BB104" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "YAGEO" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "LCSC" "C14663" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "JLCPCB_Library" "Basic" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Assembly" "JLC PCBA SMT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+(property "Datasheet" "https://www.lcsc.com/datasheet/C14663.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "361a8a0f-7891-575d-8fc7-32487718e24a"))
+(pin "2" (uuid "1ce26a85-bf61-5cff-8e21-45aca31a8cb4"))
+(instances (project "ulva_controller" (path "/3da05633-c880-4edd-9149-3930d166f2d5/3c60da13-7b06-5f78-9efe-fd0455a31cdf" (reference "C13") (unit 1)))))
+(wire (pts (xy 35.56 57.15) (xy 35.56 52.07)) (stroke (width 0) (type default)) (uuid "0ecd6d82-a249-50ae-957b-82cb65a8d6bc"))
+(global_label "3V3" (shape input) (at 35.56 52.07 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "169d28ad-abf5-585e-9ef6-af2d7d34ff21"))
+(wire (pts (xy 35.56 64.77) (xy 35.56 69.85)) (stroke (width 0) (type default)) (uuid "d7633f41-9f6b-5af3-811d-946e660ccaf0"))
+(global_label "GND" (shape input) (at 35.56 69.85 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "c0fe8fbc-587a-5b6d-8e04-4e4a1f640a43"))
+
+(symbol (lib_id "Device:C") (at 55.88 60.96 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "240b2d1b-8044-572d-821e-f0be084cb6ae")
+(property "Reference" "C14" (at 61.88 55.96 0) (effects (font (size 1.27 1.27)) (justify left)))
+(property "Value" "1uF" (at 61.88 58.96 0) (effects (font (size 1.27 1.27)) (justify left)))
+(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL10A105KB8NNNC" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung Electro-Mechanics" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "LCSC" "C15849" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "JLCPCB_Library" "Basic" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Assembly" "JLC PCBA SMT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+(property "Datasheet" "https://www.lcsc.com/datasheet/C15849.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "b6df036b-e6ac-5c7b-b48d-332f65ef9514"))
+(pin "2" (uuid "d10c4b55-6d5f-59bc-a1b7-d26e582d8a5e"))
+(instances (project "ulva_controller" (path "/3da05633-c880-4edd-9149-3930d166f2d5/3c60da13-7b06-5f78-9efe-fd0455a31cdf" (reference "C14") (unit 1)))))
+(wire (pts (xy 55.88 57.15) (xy 55.88 52.07)) (stroke (width 0) (type default)) (uuid "7d522270-1027-58b0-8079-cc614251ce1f"))
+(global_label "3V3" (shape input) (at 55.88 52.07 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "79bbd947-f5b2-5e0e-b2fa-54eedbb22d39"))
+(wire (pts (xy 55.88 64.77) (xy 55.88 69.85)) (stroke (width 0) (type default)) (uuid "e29bdb4e-6566-5a92-af87-2a4cfcb331b4"))
+(global_label "GND" (shape input) (at 55.88 69.85 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "5c916ce0-b3d2-5483-b7e4-a2949df14d7c"))
+
+(symbol (lib_id "Device:R") (at 40.64 91.44 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "ee050037-9d3f-560f-8bc8-99fcf52175a7")
+(property "Reference" "R30" (at 46.64 86.44 0) (effects (font (size 1.27 1.27)) (justify left)))
+(property "Value" "10k" (at 46.64 89.44 0) (effects (font (size 1.27 1.27)) (justify left)))
+(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "0603WAF1002T5E" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "UNI-ROYAL" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "LCSC" "C25804" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "JLCPCB_Library" "Basic" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Assembly" "JLC PCBA SMT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+(property "Datasheet" "https://www.lcsc.com/datasheet/C25804.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "18cacff4-c4f4-5c80-a4d3-71ac503f0886"))
+(pin "2" (uuid "fe8bb45c-d5cc-54cc-8386-7d80665afcc6"))
+(instances (project "ulva_controller" (path "/3da05633-c880-4edd-9149-3930d166f2d5/3c60da13-7b06-5f78-9efe-fd0455a31cdf" (reference "R30") (unit 1)))))
+(wire (pts (xy 40.64 87.63) (xy 40.64 82.55)) (stroke (width 0) (type default)) (uuid "28cd756b-e4ff-5d28-828b-33f11b7680dd"))
+(global_label "3V3" (shape input) (at 40.64 82.55 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "5f22fc34-5ea6-5ee4-b181-1a66ce65c78e"))
+(wire (pts (xy 40.64 95.25) (xy 40.64 100.33)) (stroke (width 0) (type default)) (uuid "28403c10-6a3b-5bb8-9e69-6badd0729339"))
+(global_label "CAN2_TX" (shape input) (at 40.64 100.33 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "af7cebfe-fbc2-506e-9878-563549e0ec06"))
+
+(symbol (lib_id "Ulva:PESD2CANFD24V_T") (at 165.1 66.04 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "5ddb2943-31d6-5d25-8062-0b848e6c5b9c")
+(property "Reference" "D6" (at 171.1 51.040000000000006 0) (effects (font (size 1.27 1.27)) (justify left)))
+(property "Value" "PESD2CANFD24V-TR" (at 171.1 54.040000000000006 0) (effects (font (size 1.27 1.27)) (justify left)))
+(property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "PESD2CANFD24V-TR" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Nexperia" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "LCSC" "C552486" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "JLCPCB_Library" "Extended" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Assembly" "JLC PCBA SMT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PESD2CANFD24V-T.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "d117a9fb-deb6-5715-a7f9-bd25b12788ca"))
+(pin "2" (uuid "f0b7207e-2150-5b0b-a748-0517948ef3fe"))
+(pin "3" (uuid "1e3c05f4-e62f-5eb1-a960-c72ba8e179bc"))
+(instances (project "ulva_controller" (path "/3da05633-c880-4edd-9149-3930d166f2d5/3c60da13-7b06-5f78-9efe-fd0455a31cdf" (reference "D6") (unit 1)))))
+(wire (pts (xy 144.78 63.5) (xy 149.86 63.5)) (stroke (width 0) (type default)) (uuid "64731871-fc41-5376-8060-48ed008ac3d7"))
+(global_label "CAN2_H" (shape input) (at 144.78 63.5 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "8c095763-cd5a-5565-b298-10dfedef389f"))
+(wire (pts (xy 144.78 68.58) (xy 149.86 68.58)) (stroke (width 0) (type default)) (uuid "c87a5337-009e-5539-956c-48509c1ec8e8"))
+(global_label "CAN2_L" (shape input) (at 144.78 68.58 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "e22038eb-a5a2-56c3-b9bc-74933e71e9ec"))
+(wire (pts (xy 170.18 76.2) (xy 170.18 81.28)) (stroke (width 0) (type default)) (uuid "bb375a14-1db0-519a-a0c9-4d301c597d97"))
+(global_label "GND" (shape input) (at 170.18 81.28 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "d9f155c5-a2a4-55ba-8c65-7392c4426026"))
+
+(symbol (lib_id "Device:R") (at 165.1 109.22 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "b3ccdd56-3105-5ef6-8a41-58d82d434c07")
+(property "Reference" "R29" (at 171.1 104.22 0) (effects (font (size 1.27 1.27)) (justify left)))
+(property "Value" "120" (at 171.1 107.22 0) (effects (font (size 1.27 1.27)) (justify left)))
+(property "Footprint" "Resistor_SMD:R_1206_3216Metric" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "1206W4F1200T5E" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "UNI-ROYAL" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "LCSC" "C17909" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "JLCPCB_Library" "Basic" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Assembly" "JLC PCBA SMT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+(property "Datasheet" "https://www.lcsc.com/datasheet/C17909.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "41984f1b-eb01-5f7a-a5c0-0e3c602cfc5c"))
+(pin "2" (uuid "a17c9479-6719-5427-8810-7ea24b672bad"))
+(instances (project "ulva_controller" (path "/3da05633-c880-4edd-9149-3930d166f2d5/3c60da13-7b06-5f78-9efe-fd0455a31cdf" (reference "R29") (unit 1)))))
+(wire (pts (xy 165.1 105.41) (xy 165.1 100.33)) (stroke (width 0) (type default)) (uuid "04e13c76-81dd-5cd9-83a4-213d07a9cde3"))
+(global_label "CAN2_H" (shape input) (at 165.1 100.33 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "fc0cb4e3-9c79-55f2-ac45-4c3e7c5c1323"))
+(wire (pts (xy 165.1 113.03) (xy 165.1 118.11)) (stroke (width 0) (type default)) (uuid "ba9957bd-568b-542c-9a8f-ba3aa4e18bfe"))
+(global_label "CAN2_TERM" (shape input) (at 165.1 118.11 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "da275869-77b4-5aa1-b397-cb836bff3558"))
+
+(symbol (lib_id "Jumper:SolderJumper_2_Bridged") (at 165.1 134.62 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid "aac417a9-0cb5-5c20-8003-c00253416daa")
+(property "Reference" "JP2" (at 171.1 129.62 0) (effects (font (size 1.27 1.27)) (justify left)))
+(property "Value" "TERM ON" (at 171.1 132.62 0) (effects (font (size 1.27 1.27)) (justify left)))
+(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Assembly" "PCB copper; no purchased part" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+(pin "1" (uuid "ccd72480-a1b8-5812-994a-c651b324945b"))
+(pin "2" (uuid "f13667c4-ea24-5820-b8e1-d6cc92b4d38a"))
+(instances (project "ulva_controller" (path "/3da05633-c880-4edd-9149-3930d166f2d5/3c60da13-7b06-5f78-9efe-fd0455a31cdf" (reference "JP2") (unit 1)))))
+(wire (pts (xy 156.21 134.62) (xy 161.29 134.62)) (stroke (width 0) (type default)) (uuid "59c5d52a-15b8-52f5-b1ff-1676b7f97c71"))
+(global_label "CAN2_TERM" (shape input) (at 156.21 134.62 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "2f4d396f-a38d-5c32-967e-c764ec76cc3d"))
+(wire (pts (xy 168.91 134.62) (xy 173.99 134.62)) (stroke (width 0) (type default)) (uuid "34a62061-7ece-5e9d-8877-fc117c7625ee"))
+(global_label "CAN2_L" (shape input) (at 173.99 134.62 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "2a4c9f2e-f8ca-545e-99db-cb1297147cf4"))
+
+(symbol (lib_id "Device:Fuse") (at 231.14 48.26 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "4357deb7-dc6b-5bed-8272-b4d07759625c")
+(property "Reference" "F3" (at 237.14 43.26 0) (effects (font (size 1.27 1.27)) (justify left)))
+(property "Value" "1.5A fast" (at 237.14 46.26 0) (effects (font (size 1.27 1.27)) (justify left)))
+(property "Footprint" "Ulva:Fuse_Littelfuse_467_0603" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "046701.5NRHF" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Littelfuse" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "LCSC" "C187608" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "JLCPCB_Library" "Extended" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Assembly" "JLC PCBA SMT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+(property "Datasheet" "https://www.littelfuse.com/assetdocs/fuse-467-datasheet?assetguid=4a59f034-1cca-460e-a5ba-e1e66247c76d" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "b7d75730-eaf9-51cf-92dc-c3853b499442"))
+(pin "2" (uuid "820b72a3-697d-538d-94f7-bbd62516eac5"))
+(instances (project "ulva_controller" (path "/3da05633-c880-4edd-9149-3930d166f2d5/3c60da13-7b06-5f78-9efe-fd0455a31cdf" (reference "F3") (unit 1)))))
+(wire (pts (xy 231.14 44.45) (xy 231.14 39.37)) (stroke (width 0) (type default)) (uuid "5211da9e-d16f-5e00-8263-6ae543234e13"))
+(global_label "VIN_24V" (shape input) (at 231.14 39.37 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "c07c5986-235c-5bb3-b735-55183e6ae4e2"))
+(wire (pts (xy 231.14 52.07) (xy 231.14 57.15)) (stroke (width 0) (type default)) (uuid "e15c0df4-7dd0-5c27-90ab-4682738c9f73"))
+(global_label "CAN2_24V" (shape input) (at 231.14 57.15 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "06766453-4e9e-5611-bf1a-99d1df1ffe20"))
+
+(symbol (lib_id "Ulva:XT30PW_2plus2_M") (at 246.38 91.44 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "94fdeac2-c692-5758-98d9-b652c1f98b12")
+(property "Reference" "J27" (at 238.76 69.44 0) (effects (font (size 1.27 1.27)) (justify left)))
+(property "Value" "XT30PW(2+2)-M.G.B" (at 238.76 72.44 0) (effects (font (size 1.27 1.27)) (justify left)))
+(property "Footprint" "Ulva:AMASS_XT30PW_2plus2_M_Horizontal" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "XT30PW(2+2)-M.G.B" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "AMASS" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "LCSC" "C19268030" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "JLCPCB_Library" "Extended" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Assembly" "Manual THT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+(property "Datasheet" "https://www.china-amass.com/public/upload/20240608/de5851c8aab643bce61911b73c16e601.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "96280af3-73dd-510d-8edb-691a3b0098f6"))
+(pin "2" (uuid "d7b83cff-a6ef-57b0-b9b4-cacfe3c9b282"))
+(pin "3" (uuid "27db06ea-5563-58a1-a2ff-ff155a88972e"))
+(pin "4" (uuid "aa2c9e4b-45f9-51c7-abab-165744347407"))
+(instances (project "ulva_controller" (path "/3da05633-c880-4edd-9149-3930d166f2d5/3c60da13-7b06-5f78-9efe-fd0455a31cdf" (reference "J27") (unit 1)))))
+(wire (pts (xy 228.6 83.82) (xy 233.68 83.82)) (stroke (width 0) (type default)) (uuid "229dc3f1-d555-5438-8072-c7840ddadb24"))
+(global_label "CAN2_24V" (shape input) (at 228.6 83.82 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "f2535bc2-d700-58c0-bbd7-02ab958fe5fb"))
+(wire (pts (xy 228.6 88.9) (xy 233.68 88.9)) (stroke (width 0) (type default)) (uuid "e368e00c-cb1a-5ada-bd19-25d3fabf3eb9"))
+(global_label "POWER_0V" (shape input) (at 228.6 88.9 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "a7e90c9f-c18a-5179-8156-e921a32fac77"))
+(wire (pts (xy 228.6 96.52) (xy 233.68 96.52)) (stroke (width 0) (type default)) (uuid "04fe4bb4-d888-53ac-894a-a61d8dc4474c"))
+(global_label "CAN2_H" (shape input) (at 228.6 96.52 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "46c634b5-ad69-5215-8f37-87e532606317"))
+(wire (pts (xy 228.6 101.6) (xy 233.68 101.6)) (stroke (width 0) (type default)) (uuid "35432c80-e36e-5a5f-a060-8d53bce91bd9"))
+(global_label "CAN2_L" (shape input) (at 228.6 101.6 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "cfae8960-7270-5ef0-bfb7-dd31b67afd19"))
+
+(text "CAN FD 2 / independent bus / ESP32-C5 second native controller" (at 12 18 0) (effects (font (size 1.8 1.8)) (justify left)) (uuid "f1449519-4c99-5742-a195-3483e51bf5aa"))
+
+(text "TX=GPIO7 (J6.8), RX=GPIO8 (J6.9). SHDN/STB fixed LOW; RGB and PSRAM retained." (at 12 26 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "e3b59838-c1ea-5ec9-8cb1-4e58dd2cd51e"))
+
+(text "JP2 closed: 120ohm across H/L. Endpoints only; no termination on intermediate motion extenders." (at 12 151 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "8cf7963d-a400-5ecb-894b-cfdda44ff7ed"))
+
+(text "J24 +24V -> F3 -> J27.1. J27.2 returns directly to J25/POWER_0V; NT1 bonds logic GND." (at 12 159 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "1a16a02a-154d-543e-bb5d-0ca32c891be4"))
+
+(text "Design assumption: both CAN ports combined <=1A total, <=40C. Separate motor power. Fuse does not block reverse feed." (at 12 167 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "2506146c-129d-5f47-8694-6ed39c8bf144"))
+
+(text "One source for the chain. Firmware, cable inrush, ESD, hot-plug and physical connector fit remain untested." (at 12 175 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "31ad14da-7f57-57b3-a08e-caebc3da90da"))
+
+(text "Independent H/L from CAN1. Shared GND / 3V3 / 24V source; no galvanic isolation." (at 12 183 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid "3dc32e14-7197-57b4-83f1-65e5a4a50e24"))
+)

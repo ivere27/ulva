@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Ulva")(type "KiCad")(uri "${KIPRJMOD}/Ulva.pretty")(options "")(descr "Ulva manufacturer-dimension footprints"))
+)

@@ -1,0 +1,517 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-21T10:14:54.273719+00:00",
+  "scope": "JLCPCB tier and exact MPN snapshot. JLCPCB stock is separate from LCSC stock; check pricing, stock, purchase multiples and shipping at checkout.",
+  "parts": {
+    "C2297": {
+      "tier": "basic",
+      "verified": true,
+      "identity_verified": true,
+      "checked_at": "2026-10-21T10:14:24.214554+00:00",
+      "source_url": "https://jlcpcb.com/partdetail/C2297",
+      "tier_source_url": "https://jlcpcb.com/api/overseas-pcb-order/v1/shoppingCart/smtGood/selectSmtComponentList/v2",
+      "tier_request": {
+        "keyword": "C2297",
+        "currentPage": 1,
+        "pageSize": 10
+      },
+      "mpn": "KT-0805G",
+      "manufacturer": "Hubei KENTO Elec",
+      "package": "0805",
+      "jlcpcb_stock_at_check": 2532444
+    },
+    "C4184": {
+      "tier": "basic",
+      "verified": true,
+      "identity_verified": true,
+      "checked_at": "2026-10-21T10:14:25.434261+00:00",
+      "source_url": "https://jlcpcb.com/partdetail/C4184",
+      "tier_source_url": "https://jlcpcb.com/api/overseas-pcb-order/v1/shoppingCart/smtGood/selectSmtComponentList/v2",
+      "tier_request": {
+        "keyword": "C4184",
+        "currentPage": 1,
+        "pageSize": 10
+      },
+      "mpn": "0603WAF2002T5E",
+      "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+      "package": "0603",
+      "jlcpcb_stock_at_check": 7283805
+    },
+    "C4190": {
+      "tier": "basic",
+      "verified": true,
+      "identity_verified": true,
+      "checked_at": "2026-10-21T10:14:26.470758+00:00",
+      "source_url": "https://jlcpcb.com/partdetail/C4190",
+      "tier_source_url": "https://jlcpcb.com/api/overseas-pcb-order/v1/shoppingCart/smtGood/selectSmtComponentList/v2",
+      "tier_request": {
+        "keyword": "C4190",
+        "currentPage": 1,
+        "pageSize": 10
+      },
+      "mpn": "0603WAF2201T5E",
+      "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+      "package": "0603",
+      "jlcpcb_stock_at_check": 6256920
+    },
+    "C8678": {
+      "tier": "basic",
+      "verified": true,
+      "identity_verified": true,
+      "checked_at": "2026-10-21T10:14:27.530518+00:00",
+      "source_url": "https://jlcpcb.com/partdetail/C8678",
+      "tier_source_url": "https://jlcpcb.com/api/overseas-pcb-order/v1/shoppingCart/smtGood/selectSmtComponentList/v2",
+      "tier_request": {
+        "keyword": "C8678",
+        "currentPage": 1,
+        "pageSize": 10
+      },
+      "mpn": "SS34",
+      "manufacturer": "MDD(Microdiode Semiconductor)",
+      "package": "SMA(DO-214AC)",
+      "jlcpcb_stock_at_check": 3711131
+    },
+    "C13167": {
+      "tier": "basic",
+      "verified": true,
+      "identity_verified": true,
+      "checked_at": "2026-10-21T10:14:28.547805+00:00",
+      "source_url": "https://jlcpcb.com/partdetail/C13167",
+      "tier_source_url": "https://jlcpcb.com/api/overseas-pcb-order/v1/shoppingCart/smtGood/selectSmtComponentList/v2",
+      "tier_request": {
+        "keyword": "C13167",
+        "currentPage": 1,
+        "pageSize": 10
+      },
+      "mpn": "0603WAF2701T5E",
+      "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+      "package": "0603",
+      "jlcpcb_stock_at_check": 1013715
+    },
+    "C14663": {
+      "tier": "basic",
+      "verified": true,
+      "identity_verified": true,
+      "checked_at": "2026-10-21T10:14:29.587236+00:00",
+      "source_url": "https://jlcpcb.com/partdetail/C14663",
+      "tier_source_url": "https://jlcpcb.com/api/overseas-pcb-order/v1/shoppingCart/smtGood/selectSmtComponentList/v2",
+      "tier_request": {
+        "keyword": "C14663",
+        "currentPage": 1,
+        "pageSize": 10
+      },
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO",
+      "package": "0603",
+      "jlcpcb_stock_at_check": 40114029
+    },
+    "C15849": {
+      "tier": "basic",
+      "verified": true,
+      "identity_verified": true,
+      "checked_at": "2026-10-21T10:14:30.568422+00:00",
+      "source_url": "https://jlcpcb.com/partdetail/C15849",
+      "tier_source_url": "https://jlcpcb.com/api/overseas-pcb-order/v1/shoppingCart/smtGood/selectSmtComponentList/v2",
+      "tier_request": {
+        "keyword": "C15849",
+        "currentPage": 1,
+        "pageSize": 10
+      },
+      "mpn": "CL10A105KB8NNNC",
+      "manufacturer": "Samsung Electro-Mechanics",
+      "package": "0603",
+      "jlcpcb_stock_at_check": 14664480
+    },
+    "C17909": {
+      "tier": "basic",
+      "verified": true,
+      "identity_verified": true,
+      "checked_at": "2026-10-21T10:14:31.819527+00:00",
+      "source_url": "https://jlcpcb.com/partdetail/C17909",
+      "tier_source_url": "https://jlcpcb.com/api/overseas-pcb-order/v1/shoppingCart/smtGood/selectSmtComponentList/v2",
+      "tier_request": {
+        "keyword": "C17909",
+        "currentPage": 1,
+        "pageSize": 10
+      },
+      "mpn": "1206W4F1200T5E",
+      "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+      "package": "1206",
+      "jlcpcb_stock_at_check": 579469
+    },
+    "C20917": {
+      "tier": "basic",
+      "verified": true,
+      "identity_verified": true,
+      "checked_at": "2026-10-21T10:14:32.817385+00:00",
+      "source_url": "https://jlcpcb.com/partdetail/C20917",
+      "tier_source_url": "https://jlcpcb.com/api/overseas-pcb-order/v1/shoppingCart/smtGood/selectSmtComponentList/v2",
+      "tier_request": {
+        "keyword": "C20917",
+        "currentPage": 1,
+        "pageSize": 10
+      },
+      "mpn": "AO3400A",
+      "manufacturer": "Alpha & Omega Semicon",
+      "package": "SOT-23",
+      "jlcpcb_stock_at_check": 1313108
+    },
+    "C21190": {
+      "tier": "basic",
+      "verified": true,
+      "identity_verified": true,
+      "checked_at": "2026-10-21T10:14:33.899723+00:00",
+      "source_url": "https://jlcpcb.com/partdetail/C21190",
+      "tier_source_url": "https://jlcpcb.com/api/overseas-pcb-order/v1/shoppingCart/smtGood/selectSmtComponentList/v2",
+      "tier_request": {
+        "keyword": "C21190",
+        "currentPage": 1,
+        "pageSize": 10
+      },
+      "mpn": "0603WAF1001T5E",
+      "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+      "package": "0603",
+      "jlcpcb_stock_at_check": 21587585
+    },
+    "C22807": {
+      "tier": "basic",
+      "verified": true,
+      "identity_verified": true,
+      "checked_at": "2026-10-21T10:14:34.918790+00:00",
+      "source_url": "https://jlcpcb.com/partdetail/C22807",
+      "tier_source_url": "https://jlcpcb.com/api/overseas-pcb-order/v1/shoppingCart/smtGood/selectSmtComponentList/v2",
+      "tier_request": {
+        "keyword": "C22807",
+        "currentPage": 1,
+        "pageSize": 10
+      },
+      "mpn": "0603WAF1503T5E",
+      "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+      "package": "0603",
+      "jlcpcb_stock_at_check": 990611
+    },
+    "C23138": {
+      "tier": "basic",
+      "verified": true,
+      "identity_verified": true,
+      "checked_at": "2026-10-21T10:14:35.875681+00:00",
+      "source_url": "https://jlcpcb.com/partdetail/C23138",
+      "tier_source_url": "https://jlcpcb.com/api/overseas-pcb-order/v1/shoppingCart/smtGood/selectSmtComponentList/v2",
+      "tier_request": {
+        "keyword": "C23138",
+        "currentPage": 1,
+        "pageSize": 10
+      },
+      "mpn": "0603WAF3300T5E",
+      "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+      "package": "0603",
+      "jlcpcb_stock_at_check": 4000653
+    },
+    "C23162": {
+      "tier": "basic",
+      "verified": true,
+      "identity_verified": true,
+      "checked_at": "2026-10-21T10:14:36.843171+00:00",
+      "source_url": "https://jlcpcb.com/partdetail/C23162",
+      "tier_source_url": "https://jlcpcb.com/api/overseas-pcb-order/v1/shoppingCart/smtGood/selectSmtComponentList/v2",
+      "tier_request": {
+        "keyword": "C23162",
+        "currentPage": 1,
+        "pageSize": 10
+      },
+      "mpn": "0603WAF4701T5E",
+      "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+      "package": "0603",
+      "jlcpcb_stock_at_check": 17830533
+    },
+    "C23196": {
+      "tier": "basic",
+      "verified": true,
+      "identity_verified": true,
+      "checked_at": "2026-10-21T10:14:37.836381+00:00",
+      "source_url": "https://jlcpcb.com/partdetail/C23196",
+      "tier_source_url": "https://jlcpcb.com/api/overseas-pcb-order/v1/shoppingCart/smtGood/selectSmtComponentList/v2",
+      "tier_request": {
+        "keyword": "C23196",
+        "currentPage": 1,
+        "pageSize": 10
+      },
+      "mpn": "0603WAF5102T5E",
+      "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+      "package": "0603",
+      "jlcpcb_stock_at_check": 2321824
+    },
+    "C25804": {
+      "tier": "basic",
+      "verified": true,
+      "identity_verified": true,
+      "checked_at": "2026-10-21T10:14:38.874102+00:00",
+      "source_url": "https://jlcpcb.com/partdetail/C25804",
+      "tier_source_url": "https://jlcpcb.com/api/overseas-pcb-order/v1/shoppingCart/smtGood/selectSmtComponentList/v2",
+      "tier_request": {
+        "keyword": "C25804",
+        "currentPage": 1,
+        "pageSize": 10
+      },
+      "mpn": "0603WAF1002T5E",
+      "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+      "package": "0603",
+      "jlcpcb_stock_at_check": 37522296
+    },
+    "C25819": {
+      "tier": "basic",
+      "verified": true,
+      "identity_verified": true,
+      "checked_at": "2026-10-21T10:14:39.812711+00:00",
+      "source_url": "https://jlcpcb.com/partdetail/C25819",
+      "tier_source_url": "https://jlcpcb.com/api/overseas-pcb-order/v1/shoppingCart/smtGood/selectSmtComponentList/v2",
+      "tier_request": {
+        "keyword": "C25819",
+        "currentPage": 1,
+        "pageSize": 10
+      },
+      "mpn": "0603WAF4702T5E",
+      "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+      "package": "0603",
+      "jlcpcb_stock_at_check": 1717468
+    },
+    "C50254": {
+      "tier": "basic",
+      "verified": true,
+      "identity_verified": true,
+      "checked_at": "2026-10-21T10:14:40.987018+00:00",
+      "source_url": "https://jlcpcb.com/partdetail/C50254",
+      "tier_source_url": "https://jlcpcb.com/api/overseas-pcb-order/v1/shoppingCart/smtGood/selectSmtComponentList/v2",
+      "tier_request": {
+        "keyword": "C50254",
+        "currentPage": 1,
+        "pageSize": 10
+      },
+      "mpn": "CL31B225KBHNNNE",
+      "manufacturer": "Samsung Electro-Mechanics",
+      "package": "1206",
+      "jlcpcb_stock_at_check": 324887
+    },
+    "C78804": {
+      "tier": "extended",
+      "verified": true,
+      "identity_verified": true,
+      "checked_at": "2026-10-21T10:14:41.980835+00:00",
+      "source_url": "https://jlcpcb.com/partdetail/C78804",
+      "tier_source_url": "https://jlcpcb.com/api/overseas-pcb-order/v1/shoppingCart/smtGood/selectSmtComponentList/v2",
+      "tier_request": {
+        "keyword": "C78804",
+        "currentPage": 1,
+        "pageSize": 10
+      },
+      "mpn": "SWPA6045S4R7MT",
+      "manufacturer": "Sunlord",
+      "package": "SMD,6x6mm",
+      "jlcpcb_stock_at_check": 27737
+    },
+    "C81598": {
+      "tier": "basic",
+      "verified": true,
+      "identity_verified": true,
+      "checked_at": "2026-10-21T10:14:42.964402+00:00",
+      "source_url": "https://jlcpcb.com/partdetail/C81598",
+      "tier_source_url": "https://jlcpcb.com/api/overseas-pcb-order/v1/shoppingCart/smtGood/selectSmtComponentList/v2",
+      "tier_request": {
+        "keyword": "C81598",
+        "currentPage": 1,
+        "pageSize": 10
+      },
+      "mpn": "1N4148W",
+      "manufacturer": "ST(Semtech)",
+      "package": "SOD-123",
+      "jlcpcb_stock_at_check": 4235774
+    },
+    "C96123": {
+      "tier": "basic",
+      "verified": true,
+      "identity_verified": true,
+      "checked_at": "2026-10-21T10:14:43.935822+00:00",
+      "source_url": "https://jlcpcb.com/partdetail/C96123",
+      "tier_source_url": "https://jlcpcb.com/api/overseas-pcb-order/v1/shoppingCart/smtGood/selectSmtComponentList/v2",
+      "tier_request": {
+        "keyword": "C96123",
+        "currentPage": 1,
+        "pageSize": 10
+      },
+      "mpn": "CL31A476MPHNNNE",
+      "manufacturer": "Samsung Electro-Mechanics",
+      "package": "1206",
+      "jlcpcb_stock_at_check": 387409
+    },
+    "C109227": {
+      "tier": "basic",
+      "verified": true,
+      "identity_verified": true,
+      "checked_at": "2026-10-21T10:14:44.914563+00:00",
+      "source_url": "https://jlcpcb.com/partdetail/C109227",
+      "tier_source_url": "https://jlcpcb.com/api/overseas-pcb-order/v1/shoppingCart/smtGood/selectSmtComponentList/v2",
+      "tier_request": {
+        "keyword": "C109227",
+        "currentPage": 1,
+        "pageSize": 10
+      },
+      "mpn": "LTV-817S-TA1-C",
+      "manufacturer": "Lite-On",
+      "package": "SMD-4P",
+      "jlcpcb_stock_at_check": 245451
+    },
+    "C187608": {
+      "tier": "extended",
+      "verified": true,
+      "identity_verified": true,
+      "checked_at": "2026-10-21T10:14:46.010944+00:00",
+      "source_url": "https://jlcpcb.com/partdetail/C187608",
+      "tier_source_url": "https://jlcpcb.com/api/overseas-pcb-order/v1/shoppingCart/smtGood/selectSmtComponentList/v2",
+      "tier_request": {
+        "keyword": "C187608",
+        "currentPage": 1,
+        "pageSize": 10
+      },
+      "mpn": "046701.5NRHF",
+      "manufacturer": "Littelfuse",
+      "package": "0603",
+      "jlcpcb_stock_at_check": 2149
+    },
+    "C318884": {
+      "tier": "basic",
+      "verified": true,
+      "identity_verified": true,
+      "checked_at": "2026-10-21T10:14:47.014832+00:00",
+      "source_url": "https://jlcpcb.com/partdetail/C318884",
+      "tier_source_url": "https://jlcpcb.com/api/overseas-pcb-order/v1/shoppingCart/smtGood/selectSmtComponentList/v2",
+      "tier_request": {
+        "keyword": "C318884",
+        "currentPage": 1,
+        "pageSize": 10
+      },
+      "mpn": "TS-1187A-B-A-B",
+      "manufacturer": "XKB Connection",
+      "package": "SMD-4P,5.1x5.1mm",
+      "jlcpcb_stock_at_check": 267670
+    },
+    "C552486": {
+      "tier": "extended",
+      "verified": true,
+      "identity_verified": true,
+      "checked_at": "2026-10-21T10:14:47.963592+00:00",
+      "source_url": "https://jlcpcb.com/partdetail/C552486",
+      "tier_source_url": "https://jlcpcb.com/api/overseas-pcb-order/v1/shoppingCart/smtGood/selectSmtComponentList/v2",
+      "tier_request": {
+        "keyword": "C552486",
+        "currentPage": 1,
+        "pageSize": 10
+      },
+      "mpn": "PESD2CANFD24V-TR",
+      "manufacturer": "Nexperia",
+      "package": "SOT-23",
+      "jlcpcb_stock_at_check": 10747
+    },
+    "C2927130": {
+      "tier": "extended",
+      "verified": true,
+      "identity_verified": true,
+      "checked_at": "2026-10-21T10:14:48.951383+00:00",
+      "source_url": "https://jlcpcb.com/partdetail/C2927130",
+      "tier_source_url": "https://jlcpcb.com/api/overseas-pcb-order/v1/shoppingCart/smtGood/selectSmtComponentList/v2",
+      "tier_request": {
+        "keyword": "C2927130",
+        "currentPage": 1,
+        "pageSize": 10
+      },
+      "mpn": "SY8301ABC",
+      "manufacturer": "Silergy Corp",
+      "package": "SOT-23-6",
+      "jlcpcb_stock_at_check": 37716
+    },
+    "C2977596": {
+      "tier": "extended",
+      "verified": true,
+      "identity_verified": true,
+      "checked_at": "2026-10-21T10:14:49.945775+00:00",
+      "source_url": "https://jlcpcb.com/partdetail/C2977596",
+      "tier_source_url": "https://jlcpcb.com/api/overseas-pcb-order/v1/shoppingCart/smtGood/selectSmtComponentList/v2",
+      "tier_request": {
+        "keyword": "C2977596",
+        "currentPage": 1,
+        "pageSize": 10
+      },
+      "mpn": "DC3-2.54-10PAS",
+      "manufacturer": "ZHOURI",
+      "package": "Plugin,P=2.54mm",
+      "jlcpcb_stock_at_check": 87
+    },
+    "C7420333": {
+      "tier": "preferred",
+      "verified": true,
+      "identity_verified": true,
+      "checked_at": "2026-10-21T10:14:50.934207+00:00",
+      "source_url": "https://jlcpcb.com/partdetail/C7420333",
+      "tier_source_url": "https://jlcpcb.com/api/overseas-pcb-order/v1/shoppingCart/smtGood/selectSmtComponentList/v2",
+      "tier_request": {
+        "keyword": "C7420333",
+        "currentPage": 1,
+        "pageSize": 10
+      },
+      "mpn": "BAT54S",
+      "manufacturer": "hongjiacheng",
+      "package": "SOT-23",
+      "jlcpcb_stock_at_check": 857809
+    },
+    "C19268030": {
+      "tier": "extended",
+      "verified": true,
+      "identity_verified": true,
+      "checked_at": "2026-10-21T10:14:52.252034+00:00",
+      "source_url": "https://jlcpcb.com/partdetail/C19268030",
+      "tier_source_url": "https://jlcpcb.com/api/overseas-pcb-order/v1/shoppingCart/smtGood/selectSmtComponentList/v2",
+      "tier_request": {
+        "keyword": "C19268030",
+        "currentPage": 1,
+        "pageSize": 10
+      },
+      "mpn": "XT30PW(2+2)-M.G.B",
+      "manufacturer": "Changzhou Amass Elec",
+      "package": "-",
+      "jlcpcb_stock_at_check": 57510
+    },
+    "C22395522": {
+      "tier": "preferred",
+      "verified": true,
+      "identity_verified": true,
+      "checked_at": "2026-10-21T10:14:53.262353+00:00",
+      "source_url": "https://jlcpcb.com/partdetail/C22395522",
+      "tier_source_url": "https://jlcpcb.com/api/overseas-pcb-order/v1/shoppingCart/smtGood/selectSmtComponentList/v2",
+      "tier_request": {
+        "keyword": "C22395522",
+        "currentPage": 1,
+        "pageSize": 10
+      },
+      "mpn": "BZX84C8V2",
+      "manufacturer": "hongjiacheng",
+      "package": "SOT-23",
+      "jlcpcb_stock_at_check": 31362
+    },
+    "C44859616": {
+      "tier": "extended",
+      "verified": true,
+      "identity_verified": true,
+      "checked_at": "2026-10-21T10:14:54.273683+00:00",
+      "source_url": "https://jlcpcb.com/partdetail/C44859616",
+      "tier_source_url": "https://jlcpcb.com/api/overseas-pcb-order/v1/shoppingCart/smtGood/selectSmtComponentList/v2",
+      "tier_request": {
+        "keyword": "C44859616",
+        "currentPage": 1,
+        "pageSize": 10
+      },
+      "mpn": "TPT1334-SO1R",
+      "manufacturer": "3PEAK",
+      "package": "SOP-8",
+      "jlcpcb_stock_at_check": 7579
+    }
+  }
+}
