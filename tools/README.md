@@ -4,6 +4,10 @@
 the current schematic and PCB. It does not create a cart, submit an order or
 make a payment. It never substitutes parts from the Markdown BOM.
 
+The [Orders tab](https://ivere27.github.io/ulva/#orders) contains the published
+selector. It also works offline when opening `docs/index.html` directly, without
+selecting any data files. Its embedded data reflects the last generated snapshot.
+
 Use Python 3.10 or later with KiCad 9's `kicad-cli` on `PATH` and its `pcbnew`
 Python module available to that interpreter. The first run exports a netlist
 and placements from a temporary CAD snapshot. Later runs reuse a local cache
@@ -18,6 +22,19 @@ python3 tools/prepare_orders.py --boards 5
 Open `build/orders/index.html` locally. Edit the board count and check either
 PCBA or loose LCSC parts per reference; the choices cannot overlap. Uncheck
 parts already on hand. Download the selection ZIP or individual files.
+
+To update the shared viewer from this checkout's current CAD:
+
+```sh
+python3 tools/prepare_orders.py --boards 5 --update-docs
+python3 scripts/export_viewer_info.py
+```
+
+`--update-docs` writes `docs/orders/index.html` after checking the source hashes.
+CSV, selection and provenance files remain in `build/orders/` and can also be
+downloaded from the selector. A matching fabrication ZIP is copied to
+`docs/orders/` as a separate download when generated with `--gerbers` or already
+present in the build output.
 
 For a small initial assembly followed by optional upgrades, use the BOM's
 [additional parts by stage](../docs/bom.md#minimal-bring-up-guide-additional-parts-by-stage).
@@ -111,3 +128,11 @@ an explicitly supplied nonexistent catalog is an error. `blocked:true` or
 `identity_verified:false` prevents ordering that code. `--max-catalog-age-days`
 changes the explicit freshness policy. Supplier identity, availability and
 assembly compatibility should be rechecked before placing the actual order.
+
+## Tests
+
+Run the order selection and consolidation unit tests:
+
+```sh
+python3 -m unittest discover -s tools
+```

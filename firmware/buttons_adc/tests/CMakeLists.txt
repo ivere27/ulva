@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.16)
+project(ulva_buttons_tests C)
+enable_testing()
+add_executable(test_buttons test_buttons.c ../components/ulva_buttons/button_decode.c)
+target_include_directories(test_buttons PRIVATE ../components/ulva_buttons/include)
+target_compile_features(test_buttons PRIVATE c_std_11)
+target_compile_options(test_buttons PRIVATE -Wall -Wextra -Werror -UNDEBUG)
+add_test(NAME buttons COMMAND test_buttons)

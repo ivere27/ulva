@@ -347,6 +347,8 @@ def main():
     parser.add_argument('--output', type=Path, default=ROOT / 'build/orders')
     parser.add_argument('--catalog', type=Path, help='Verified catalog JSON (default: tools/parts-catalog.json; missing default means unknown)')
     parser.add_argument('--gerbers', action='store_true', help='Run native DRC and also export a matching Gerber/drill ZIP')
+    parser.add_argument('--update-docs', action='store_true',
+                        help='Publish the generated selector to the shared viewer Orders tab')
     parser.add_argument('--boards', type=int, default=5, help='Initial editable board count (default: 5)')
     parser.add_argument('--max-catalog-age-days', type=int, default=30)
     parser.add_argument('--selection', type=Path, help='Saved selector JSON to validate and export')
@@ -362,6 +364,8 @@ def main():
         return
     source = args.source.expanduser().resolve()
     output = args.output.expanduser().resolve()
+    if args.update_docs and source != ROOT.resolve():
+        parser.error('--update-docs requires this checkout\'s authoritative CAD')
     if output == source or (source in output.parents and source / 'build' not in output.parents):
         parser.error('Output/cache must be under source/build or outside the source checkout')
     if not 1 <= args.boards <= 100000 or args.max_catalog_age_days < 0:
@@ -394,6 +398,16 @@ def main():
     files['index.html'] = template.replace('__ORDER_DATA__', payload)
     for name, content in files.items():
         (output / name).write_text(content, encoding='utf-8')
+    if args.update_docs:
+        check_source(source, receipt)
+        destination = ROOT / 'docs/orders'
+        destination.mkdir(parents=True, exist_ok=True)
+        (destination / 'index.html').write_text(files['index.html'], encoding='utf-8')
+        if model.get('fabrication'):
+            shutil.copyfile(output / 'fabrication-gerbers.zip', destination / 'fabrication-gerbers.zip')
+        else:
+            (destination / 'fabrication-gerbers.zip').unlink(missing_ok=True)
+        check_source(source, receipt)
     counts = {mode: list(selection['choices'].values()).count(mode) for mode in ('pcba', 'loose', 'none')}
     print(json.dumps({'output': str(output), 'references': len(model['rows']), 'boards': selection['boards'],
                       'selected': counts, 'source_digest': model['source_digest']}, indent=2))

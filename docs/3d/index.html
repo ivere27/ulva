@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11191c">
+  <link rel="icon" href="data:,">
+  <title>Ulva · 3D assembly</title>
+  <link rel="stylesheet" href="viewer.css">
+</head>
+<body data-parts-open="true">
+  <script>if (new URLSearchParams(location.search).get('embedded') === '1') document.body.classList.add('embedded');</script>
+  <header>
+    <h1>ULVA <span>· 3D assembly</span></h1>
+    <button id="toggle-parts" aria-expanded="true" aria-controls="parts-panel">Parts</button>
+  </header>
+  <main>
+    <section class="workspace" aria-label="Interactive board assembly">
+      <nav class="view-tools" aria-label="Camera views">
+        <button data-view="isometric" disabled>Isometric</button>
+        <button data-view="top" disabled>Top</button>
+        <button data-view="bottom" disabled>Bottom</button>
+        <button id="reset-view" disabled>Reset view</button>
+      </nav>
+      <div id="viewport" aria-busy="true">
+        <div id="loading-panel">
+          <div class="loading-card">
+            <h2 id="load-title">Loading assembly</h2>
+            <p id="load-status" role="status">Opening the board and its parts…</p>
+            <div class="load-actions">
+              <button id="retry-load" hidden>Retry</button>
+              <button id="open-files" hidden>Open local files</button>
+            </div>
+            <input id="assembly-files" type="file" accept=".json,.glb,application/json,model/gltf-binary" multiple hidden>
+          </div>
+        </div>
+        <p class="gesture-hint" id="gesture-hint" hidden>Drag to orbit · Scroll to zoom · Right-drag to pan</p>
+      </div>
+      <footer class="view-status">
+        <span id="visible-count" aria-live="polite">Preparing parts</span>
+        <span>Visibility changes this view only.</span>
+      </footer>
+    </section>
+    <aside id="parts-panel" aria-label="Assembly parts">
+      <div class="panel-title"><h2>Parts</h2><button id="close-parts" aria-label="Close parts">×</button></div>
+      <label class="field-label" for="part-search">Find a part</label>
+      <input id="part-search" type="search" placeholder="Reference, name or module" autocomplete="off" disabled>
+      <label class="field-label" for="kind-filter">Show</label>
+      <select id="kind-filter" disabled>
+        <option value="all">All parts</option>
+        <option value="carrier">Carrier components</option>
+        <option value="module">Plug-in modules</option>
+      </select>
+      <div id="part-groups"></div>
+      <p id="no-results" hidden>No matching parts.</p>
+      <p class="model-note">Some shapes are approximations. This view does not establish mechanical fit.</p>
+      <div class="downloads"><a id="download-model" href="board.glb" download>Download model</a><a id="download-parts" href="assembly.json" download>Parts data</a></div>
+    </aside>
+  </main>
+  <script src="viewer.bundle.js" onerror="document.getElementById('load-title').textContent='Unable to open the viewer'; document.getElementById('load-status').textContent='Keep viewer.bundle.js beside this page and try again.'; document.getElementById('viewport').setAttribute('aria-busy','false'); document.getElementById('visible-count').textContent='Viewer unavailable';"></script>
+</body>
+</html>

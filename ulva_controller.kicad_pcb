@@ -1598,7 +1598,7 @@
 			(uuid "5ab68d90-2d5f-4613-881b-9b30760ed4bb")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/TerminalBlock_MetzConnect.3dshapes/TerminalBlock_MetzConnect_360272_1x01_Horizontal_ScrewM2.6.step"
+		(model "${KIPRJMOD}/Ulva.3dshapes/TerminalBlock_MetzConnect_360272.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -3286,7 +3286,7 @@
 			(uuid "fc3cd55f-c014-43c9-a109-37150e958449")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/TerminalBlock_MetzConnect.3dshapes/TerminalBlock_MetzConnect_360272_1x01_Horizontal_ScrewM2.6.step"
+		(model "${KIPRJMOD}/Ulva.3dshapes/TerminalBlock_MetzConnect_360272.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -6017,7 +6017,7 @@
 			(uuid "c09d29f7-01de-4bb5-aa4a-371633e89d54")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/TerminalBlock_MetzConnect.3dshapes/TerminalBlock_MetzConnect_360272_1x01_Horizontal_ScrewM2.6.step"
+		(model "${KIPRJMOD}/Ulva.3dshapes/TerminalBlock_MetzConnect_360272.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -6914,7 +6914,7 @@
 			(uuid "3a12e642-9888-4d04-a515-b16c2d172911")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/TerminalBlock_MetzConnect.3dshapes/TerminalBlock_MetzConnect_360272_1x01_Horizontal_ScrewM2.6.step"
+		(model "${KIPRJMOD}/Ulva.3dshapes/TerminalBlock_MetzConnect_360272.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -7423,7 +7423,7 @@
 			(uuid "569e2325-edd6-4d52-896f-e668d0dfba95")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/TerminalBlock_MetzConnect.3dshapes/TerminalBlock_MetzConnect_360272_1x01_Horizontal_ScrewM2.6.step"
+		(model "${KIPRJMOD}/Ulva.3dshapes/TerminalBlock_MetzConnect_360272.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -10067,7 +10067,7 @@
 			(uuid "6e1f32aa-4449-4fa5-bd4b-d87354d667fc")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/TerminalBlock_MetzConnect.3dshapes/TerminalBlock_MetzConnect_360272_1x01_Horizontal_ScrewM2.6.step"
+		(model "${KIPRJMOD}/Ulva.3dshapes/TerminalBlock_MetzConnect_360272.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -10360,7 +10360,7 @@
 			(uuid "10007091-1ff1-4d40-a84d-8a5a15a3754c")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/TerminalBlock_MetzConnect.3dshapes/TerminalBlock_MetzConnect_360272_1x01_Horizontal_ScrewM2.6.step"
+		(model "${KIPRJMOD}/Ulva.3dshapes/TerminalBlock_MetzConnect_360272.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -12411,7 +12411,7 @@
 			(uuid "46bfef95-a5bc-49a4-9be5-21665eb5ab14")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/TerminalBlock_MetzConnect.3dshapes/TerminalBlock_MetzConnect_360272_1x01_Horizontal_ScrewM2.6.step"
+		(model "${KIPRJMOD}/Ulva.3dshapes/TerminalBlock_MetzConnect_360272.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -13142,7 +13142,7 @@
 			(uuid "43f50317-7944-4c83-9d29-77ad91a487ed")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/TerminalBlock_MetzConnect.3dshapes/TerminalBlock_MetzConnect_360272_1x01_Horizontal_ScrewM2.6.step"
+		(model "${KIPRJMOD}/Ulva.3dshapes/TerminalBlock_MetzConnect_360272.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -14920,7 +14920,7 @@
 			(uuid "37e15a39-f479-4eb0-85a7-404e731c89ed")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/TerminalBlock_MetzConnect.3dshapes/TerminalBlock_MetzConnect_360272_1x01_Horizontal_ScrewM2.6.step"
+		(model "${KIPRJMOD}/Ulva.3dshapes/TerminalBlock_MetzConnect_360272.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -17093,7 +17093,7 @@
 			(uuid "a0459ce1-988d-4e6f-aab3-46d189116514")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/TerminalBlock_MetzConnect.3dshapes/TerminalBlock_MetzConnect_360272_1x01_Horizontal_ScrewM2.6.step"
+		(model "${KIPRJMOD}/Ulva.3dshapes/TerminalBlock_MetzConnect_360272.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -17577,7 +17577,7 @@
 			(uuid "c98d1c58-d13e-468a-8950-70af86b25816")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/TerminalBlock_MetzConnect.3dshapes/TerminalBlock_MetzConnect_360272_1x01_Horizontal_ScrewM2.6.step"
+		(model "${KIPRJMOD}/Ulva.3dshapes/TerminalBlock_MetzConnect_360272.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -21476,7 +21476,7 @@
 			(uuid "8c4ee033-72ba-4f5d-be9b-f49e1aa9ab77")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/TerminalBlock_MetzConnect.3dshapes/TerminalBlock_MetzConnect_360272_1x01_Horizontal_ScrewM2.6.step"
+		(model "${KIPRJMOD}/Ulva.3dshapes/TerminalBlock_MetzConnect_360272.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -25027,7 +25027,7 @@
 			(uuid "2a63ee1d-1c72-4e90-af5b-70e8ee4c40fd")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/TerminalBlock_MetzConnect.3dshapes/TerminalBlock_MetzConnect_360272_1x01_Horizontal_ScrewM2.6.step"
+		(model "${KIPRJMOD}/Ulva.3dshapes/TerminalBlock_MetzConnect_360272.wrl"
 			(offset
 				(xyz 0 0 0)
 			)

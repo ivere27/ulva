@@ -2,9 +2,14 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; base-uri 'none'">
 <title>Ulva order preparation</title>
+<link rel="icon" href="data:,">
 <style>
 :root{font:15px/1.45 system-ui,sans-serif;color:#183529;background:#f4f7f4}body{margin:0}main{max-width:1500px;margin:auto;padding:28px}h1{font-size:28px;margin:0 0 6px}p{max-width:1000px}button,input,select{font:inherit;padding:7px 10px;border:1px solid #aab9af;border-radius:5px;background:white}button{cursor:pointer}button:disabled{cursor:default;opacity:.5}input[type=checkbox]{width:20px;height:20px;cursor:pointer}input:disabled{cursor:default}label{display:inline-flex;align-items:center;gap:7px}header,.controls,.downloads{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.controls,.downloads{margin:18px 0}.primary{background:#1c6542;color:white;border-color:#1c6542}.panel{background:white;border:1px solid #d4ded7;border-radius:9px;padding:14px;margin:15px 0}.table-wrap{overflow:auto}table{border-collapse:collapse;width:100%;background:white}th,td{padding:9px 10px;text-align:left;border-bottom:1px solid #dde4df;vertical-align:top}th{font-size:13px;white-space:nowrap;background:#eaf0ec;position:sticky;top:0}td{font-size:13px}.muted{color:#64756b}.badge{display:inline-block;padding:2px 6px;border-radius:4px;background:#e9f2ec}.unknown{background:#fff0cd}.error{background:#ffeadf;color:#8d3011}.status{font-weight:600}code{overflow-wrap:anywhere}details pre{white-space:pre-wrap;max-width:650px;font-size:12px}.counts{font-size:17px;font-weight:600}.ref{font-weight:650;white-space:nowrap}.small{font-size:12px}#boards{width:80px}#search{min-width:260px}#error:empty{display:none}
-</style></head><body><main>
+</style><style>
+body.embedded main{padding:12px}body.embedded header h1{display:none}
+#fabrication{overflow-wrap:anywhere}
+@media(max-width:600px){main{padding:12px}.controls{min-width:0}.controls>label{max-width:100%;min-width:0}.controls select{min-width:0;max-width:100%}#search{min-width:0;width:100%;flex-basis:100%}.panel,pre{overflow-wrap:anywhere}.downloads>button{max-width:100%}}
+</style></head><body><script>if(new URLSearchParams(location.search).get('embedded')==='1')document.body.classList.add('embedded');</script><main>
 <header><h1>Ulva order preparation</h1><span class="badge">Offline · no cart or purchase submission</span></header>
 <p>Select supplier assembly or loose LCSC parts for each reference. Selecting one clears the other. Verified Basic and Preferred SMT parts default to PCBA; other valid schematic LCSC parts default to loose parts. Uncheck anything already on hand.</p>
 <div class="panel small"><strong>Snapshot workflow.</strong> This page cannot detect later CAD edits. Before uploading, regenerate from current CAD or run <code>python3 tools/prepare_orders.py --check-source path/to/provenance.json</code>. Supplier stock, packing quantities, prices and fees still need review. KiCad CPL rotations require the supplier assembly preview. No substitutions are taken from documentation.</div>
@@ -76,7 +81,11 @@ $('load').addEventListener('click',()=>$('file').click());$('file').addEventList
 for(const button of document.querySelectorAll('[data-download]'))button.addEventListener('click',()=>{try{const name=button.dataset.download;download(name,buildFiles()[name],name.endsWith('.json')?'application/json':'text/csv;charset=utf-8')}catch(e){fail(e)}});
 $('zip').addEventListener('click',()=>{try{download('ulva-order-selection.zip',zip(buildFiles()),'application/zip')}catch(e){fail(e)}});
 $('provenance').textContent=JSON.stringify({generated_at:model.generated_at,source_digest:model.source_digest,source_files_sha256:model.source_files_sha256,catalog_sha256:model.catalog_sha256,catalog_max_age_days:model.catalog_max_age_days},null,2);
-$('fabrication').textContent=model.fabrication?`Separate matching fabrication bundle: ${model.fabrication.file} · SHA-256 ${model.fabrication.sha256}`:'Fabrication Gerbers are not in this selection ZIP. Generate a separate matching bundle with --gerbers.';
+if(model.fabrication){
+ $('fabrication').append(document.createTextNode('Separate matching fabrication bundle: '));
+ const link=document.createElement('a');link.href=model.fabrication.file;link.download=model.fabrication.file;link.textContent='Download Gerbers';
+ $('fabrication').append(link,document.createTextNode(' · SHA-256 '+model.fabrication.sha256));
+}else $('fabrication').textContent='Fabrication Gerbers are not in this selection ZIP. Generate a separate matching bundle with --gerbers.';
 render();
 // Testable local export logic; contains no network or purchase functionality.
 window.orderSelector={model,getSelection:()=>structuredClone(selection),buildFiles,validate,zip};

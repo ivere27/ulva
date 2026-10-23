@@ -1,0 +1,66 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  tests:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Run Order Tool Unit Tests
+        run: python3 -m unittest discover -s tools
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Verify 3D Viewer Bundle
+        run: python3 scripts/build_3d_viewer.py --check
+
+      - name: Verify Viewer File Versions
+        run: python3 scripts/export_viewer_info.py --check
+
+      - name: Build and Run Button Firmware Unit Tests
+        run: |
+          cmake -S firmware/buttons_adc/tests -B build/buttons-tests
+          cmake --build build/buttons-tests
+          ctest --test-dir build/buttons-tests --output-on-failure
+
+  kicad-checks:
+    name: KiCad Checks
+    runs-on: ubuntu-latest
+    container:
+      image: kicad/kicad:9.0.9
+      options: --user 0
+    env:
+      KICAD_CONFIG_HOME: ${{ github.workspace }}/build/kicad-config
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install System and Python Dependencies
+        run: |
+          apt-get update
+          apt-get install -y git python3-pip ngspice
+          python3 -m pip install --target build/preview-python gerbonara==1.5.0 resvg-py==0.2.6
+          mkdir -p "$KICAD_CONFIG_HOME/9.0"
+          cp /usr/share/kicad/template/fp-lib-table /usr/share/kicad/template/sym-lib-table "$KICAD_CONFIG_HOME/9.0/"
+
+      - name: Schematic Checks and ERC
+        run: python3 scripts/run_checks.py schematic
+
+      - name: PCB Checks and DRC
+        run: python3 scripts/run_checks.py pcb

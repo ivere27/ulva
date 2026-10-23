@@ -24,6 +24,16 @@ Set the connected board's Flash capacity and console path in `menuconfig`,
 and replace the serial port as needed. Defaults use the standard IDF partition
 configuration and do not use PSRAM.
 
+## Host unit tests
+
+Run the button decode unit tests on the host machine without ESP-IDF or hardware:
+
+```sh
+cmake -S firmware/buttons_adc/tests -B build/buttons-tests
+cmake --build build/buttons-tests
+ctest --test-dir build/buttons-tests --output-on-failure
+```
+
 ## Use the component
 
 Copy `components/ulva_buttons/` into an ESP-IDF application and pass an existing

@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>ULVA __REVISION__ · Routing viewer</title>
+  <script>
+    if (new URLSearchParams(location.search).get('embedded') === '1' && parent !== window) {
+      document.documentElement.classList.add('embedded');
+    }
+  </script>
+  <style>
+    :root {color-scheme:dark;--bg:#101719;--panel:#192225;--line:#344247;--text:#ecf1ee;--muted:#a6b7b9;--mint:#91e5c7;--gold:#ffe27d;--front:#e75c5d;--back:#6c9ae1}
+    * {box-sizing:border-box} body {margin:0;background:var(--bg);color:var(--text);font:14px/1.5 system-ui,-apple-system,sans-serif;height:100vh;height:100dvh;display:grid;grid-template-rows:auto minmax(0,1fr);overflow:hidden}
+    button,input,textarea {font:inherit} button {cursor:pointer;border:1px solid var(--line);border-radius:8px;background:#253136;color:var(--text);padding:6px 10px;min-height:36px}
+    button:hover {border-color:var(--mint);background:#314448} button:focus-visible,input:focus-visible,textarea:focus-visible {outline:2px solid var(--mint);outline-offset:2px}
+    button:disabled {opacity:.4;cursor:default} button.active {background:#244a42;color:var(--mint);border-color:#659d8c}
+    .primary {background:var(--mint);color:#12322a;font-weight:700;border-color:var(--mint)} .primary:hover {background:#b4efdb}
+    header {padding:8px 16px;border-bottom:1px solid var(--line);display:flex;align-items:center;min-width:0}
+    .embedded body {grid-template-rows:minmax(0,1fr)}
+    .embedded header {display:none}
+    h1 {font-size:17px;line-height:1.4;margin:0;letter-spacing:-.3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    main {display:grid;grid-template-columns:minmax(0,1fr) 334px;min-height:0;overflow:hidden}
+    .workspace {padding:10px;display:grid;grid-template-rows:auto minmax(0,1fr) auto;gap:8px;min-width:0;min-height:0}
+    .toolbar {display:flex;gap:7px;align-items:center;flex-wrap:wrap}.divider {width:1px;height:23px;background:var(--line);margin:0 4px}
+    .legend {margin-left:auto;color:var(--muted);font-size:12px;display:flex;gap:12px}.dot {display:inline-block;width:8px;height:8px;margin-right:4px;border-radius:50%}
+    #viewport {position:relative;background:#202020;border:1px solid var(--line);border-radius:10px;overflow:hidden;min-height:0;touch-action:none}
+    #board {display:block;user-select:none;cursor:crosshair} #board.panning {cursor:grabbing}
+    #board[data-layer="front"] [data-copper-layer="B.Cu"],#board[data-layer="back"] [data-copper-layer="F.Cu"] {display:none}
+    #board.has-selection [data-copper-layer] {opacity:.22} #board.has-selection [data-hole] {opacity:.3}
+    #highlight {stroke-linejoin:round;stroke-linecap:round} #selection-marker circle {stroke:white;stroke-width:1.5;fill:none;vector-effect:non-scaling-stroke}
+    .map-note {position:absolute;top:12px;left:12px;max-width:330px;background:#101719e6;border:1px solid #344247;border-radius:8px;padding:8px 12px;font-size:12px;color:#d1dfdd;pointer-events:none}
+    .status {display:flex;justify-content:space-between;color:var(--muted);font-size:12px;gap:8px}.status span:last-child {text-align:right}
+    aside {border-left:1px solid var(--line);background:var(--panel);padding:16px;min-height:0;overflow:auto;overscroll-behavior:contain}
+    .label {font-size:12px;color:var(--muted);font-weight:600;margin-bottom:6px;display:block} input,textarea {width:100%;border:1px solid #425157;border-radius:8px;padding:10px 11px;background:#111b1e;color:var(--text)}
+    textarea {resize:vertical;min-height:77px} #search {font-size:13px} #net-results {margin-top:7px;max-height:138px;overflow:auto;display:flex;flex-direction:column;gap:4px}
+    .net-option {text-align:left;font-size:12px;padding:6px 9px;display:flex;align-items:center;justify-content:space-between;gap:9px;min-height:32px}.net-option span:first-child {overflow-wrap:anywhere}.net-option .count {color:var(--muted);white-space:nowrap;font-size:11px}
+    .selection {margin:19px 0 15px;padding-top:16px;border-top:1px solid var(--line)} #net-title {font-size:20px;line-height:1.35;color:var(--gold);margin:0 0 7px;overflow-wrap:anywhere} #empty {color:var(--muted);margin:10px 0 14px}
+    #selection-details[hidden],#empty[hidden],#candidates[hidden] {display:none} .metrics {display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}.metric {padding:9px;background:#111b1e;border-radius:8px}.metric small {color:var(--muted);display:block;font-size:11px}.metric strong {font-size:15px;font-weight:600}
+    #selected-item {padding:9px 10px;border:1px solid #5b6048;border-radius:8px;font-size:12px;color:#eadfba;white-space:pre-line;margin-top:10px}.row {display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.row button {font-size:12px}
+    details {margin-top:11px} summary {cursor:pointer;font-size:12px;color:var(--muted)} #pad-list {font:12px/1.8 ui-monospace,monospace;max-height:112px;overflow:auto;overflow-wrap:anywhere;padding-top:7px}
+    #candidates {margin-top:13px;padding:10px;background:#302d22;border:1px solid #615c3d;border-radius:8px} #candidates p {margin:0 0 7px;font-size:12px;color:#f5df9a} #candidate-list {display:flex;flex-direction:column;gap:5px;max-height:128px;overflow:auto} #candidate-list button {font-size:12px;text-align:left}
+    .question {margin-top:17px;border-top:1px solid var(--line);padding-top:16px} #copy-question {width:100%;margin-top:8px} #question-preview {height:130px;margin-top:8px;font:11px/1.5 ui-monospace,monospace;color:var(--muted)} .hint {font-size:12px;color:var(--muted);margin:8px 0 0}
+    #toast {position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:#c4efdf;color:#163c30;padding:10px 20px;border-radius:9px;box-shadow:0 6px 30px #0006;z-index:4;pointer-events:none;opacity:0;transition:opacity .15s} #toast.show {opacity:1}
+    [hidden] {display:none!important}
+    #board-loader {position:absolute;inset:0;display:grid;place-items:center;padding:20px;touch-action:auto}
+    .loader-card {max-width:390px;text-align:center;background:#192225;border:1px solid var(--line);border-radius:10px;padding:20px}
+    .loader-card h2 {font-size:17px;margin:0 0 8px}.loader-card p {font-size:13px;color:var(--muted);margin:0 0 14px}
+    .loader-actions {display:flex;gap:8px;justify-content:center;flex-wrap:wrap}#load-status {overflow-wrap:anywhere}#load-status.error {color:#ffd1ae}
+    @media(max-width:950px) {body {display:block;height:auto;min-height:100dvh;overflow:auto}main {display:block;overflow:visible}aside {border-left:0;border-top:1px solid var(--line);padding:14px;overflow:visible}.legend {display:none}header {padding:7px 12px}.workspace {height:calc(100dvh - 40px);min-height:450px;padding:8px;gap:6px}.toolbar {gap:5px}.toolbar button {min-height:44px}.status {font-size:11px}.loader-card {padding:16px}}
+    @media(max-width:500px) {h1 {font-size:15px}.status span:last-child {max-width:52%}.toolbar .divider {margin:0 1px}}
+    @media(max-width:950px) {.embedded .workspace {height:100dvh}}
+  </style>
+</head>
+<body>
+<header>
+  <h1>ULVA __REVISION__ · Routing viewer</h1>
+</header>
+<main>
+  <section class="workspace" aria-label="PCB routing map">
+    <div class="toolbar">
+      <button disabled class="active" data-layer-choice="all">Front + back</button><button disabled data-layer-choice="front">Front</button><button disabled data-layer-choice="back">Back</button>
+      <span class="divider"></span><button disabled id="zoom-out" aria-label="Zoom out">−</button><button disabled id="zoom-in" aria-label="Zoom in">+</button><button disabled id="fit">Fit board</button>
+      <div class="legend"><span><i class="dot" style="background:var(--front)"></i>Front</span><span><i class="dot" style="background:var(--back)"></i>Back</span><span><i class="dot" style="background:var(--gold)"></i>Selection</span></div>
+    </div>
+    <div id="viewport" aria-busy="true">
+      <div id="board-loader">
+        <div class="loader-card">
+          <h2 id="load-title">Open the routing board</h2>
+          <p id="load-status" role="status">Choose the board.svg file saved beside this page.</p>
+          <div class="loader-actions"><button class="primary" id="open-board">Open board.svg</button><button id="retry-board" hidden>Retry</button></div>
+          <input id="board-file" type="file" accept=".svg,image/svg+xml" hidden>
+        </div>
+      </div>
+      <div class="map-note" id="map-note" hidden>Click a trace to inspect it.<br>Scroll to zoom · Drag to pan · Esc to clear</div>
+    </div>
+    <div class="status"><span id="cursor-position">PCB coordinates · mm</span><span>GND pours hidden · Both layers viewed from the front</span></div>
+  </section>
+  <aside aria-label="Selected trace and question">
+    <label class="label" for="search">Search nets or components</label>
+    <input id="search" disabled placeholder="e.g. I2C0, CAN, SW1, Q2" autocomplete="off">
+    <div id="net-results" aria-label="Net search results"></div>
+    <div class="selection">
+      <div class="label">Selected net</div><h2 id="net-title">Select a trace</h2>
+      <p id="empty">Click a trace, via, or pad to highlight everything connected to its net.</p>
+      <div id="selection-details" hidden>
+        <div id="net-layers" class="hint"></div>
+        <div class="metrics"><div class="metric"><small>Total trace length</small><strong id="net-length"></strong></div><div class="metric"><small>Vias</small><strong id="net-vias"></strong></div><div class="metric"><small>Width</small><strong id="net-width"></strong></div><div class="metric"><small>Segments</small><strong id="net-segments"></strong></div></div>
+        <div id="selected-item"></div>
+        <div class="row"><button disabled id="focus-net">Zoom to net</button><button disabled id="clear">Clear selection</button><button disabled id="save-image">Save selection image</button></div>
+        <details><summary id="pad-summary"></summary><div id="pad-list"></div></details>
+      </div>
+      <div id="candidates" hidden><p>Overlapping items · Choose a net and layer</p><div id="candidate-list"></div></div>
+    </div>
+    <div class="question">
+      <label class="label" for="question">Question about this trace</label>
+      <textarea id="question" disabled>Why does this trace follow this route, and could it be shortened?</textarea>
+      <button class="primary" id="copy-question" disabled>Copy question</button>
+      <p class="hint">Paste the copied text into a conversation to identify this trace by net, layer, and coordinates.</p>
+      <details><summary>Preview copied text</summary><textarea id="question-preview" disabled readonly aria-label="Question to copy"></textarea></details>
+    </div>
+  </aside>
+</main>
+<div id="toast" role="status"></div>
+<script id="board-data" type="application/json">__BOARD_DATA__</script>
+<script>
+'use strict';
+const data=JSON.parse(document.getElementById('board-data').textContent);
+const $=id=>document.getElementById(id), ns='http://www.w3.org/2000/svg';
+let svg=null, loadToken=0, requestController=null;
+const nets=new Map(data.nets.map(n=>[n.id,n])), items=[...data.segments,...data.vias,...data.pads];
+let layer='all', selected=null, selectedItem=null, selectedPoint=null, view=[...data.viewBox], drag=null, toastTimer;
+const fmt=(n,d=2)=>n.toFixed(d).replace(/\.?0+$/,'');
+const labelLayers=ls=>ls.length>1?'Front + back (F.Cu / B.Cu)':ls[0]==='F.Cu'?'Front (F.Cu)':'Back (B.Cu)';
+const visible=item=>layer==='all'||item.layers.includes(layer==='front'?'F.Cu':'B.Cu');
+function el(tag,attrs={}) {const e=document.createElementNS(ns,tag);Object.entries(attrs).forEach(([k,v])=>e.setAttribute(k,v));return e;}
+function setView(v) {view=v;svg.setAttribute('viewBox',v.join(' '));}
+function toBoard(clientX,clientY) {const point=new DOMPoint(clientX,clientY).matrixTransform(svg.getScreenCTM().inverse());return [point.x-data.offset[0],point.y-data.offset[1]];}
+function zoom(factor,center) {
+  const c=center||[view[0]+view[2]/2,view[1]+view[3]/2];
+  const next=Math.max(3,Math.min(220,view[2]*factor)), ratio=next/view[2];
+  setView([c[0]-(c[0]-view[0])*ratio,c[1]-(c[1]-view[1])*ratio,next,view[3]*ratio]);
+}
+function drawPad(p) {
+  const [w,h]=p.size, radius=p.shape===2?Math.min(w,h)/2:p.round_radius;
+  const g=el('g',{transform:`translate(${p.at.join(' ')}) rotate(${-p.angle})`});
+  g.append(el('rect',{x:-w/2,y:-h/2,width:w,height:h,rx:p.shape===0?w/2:radius,
+    fill:'#ffe27d',stroke:'#fff5c5','stroke-width':.08}));
+  if(Math.max(...p.drill)>0)g.append(el('rect',{x:-p.drill[0]/2,y:-p.drill[1]/2,width:p.drill[0],height:p.drill[1],rx:Math.min(...p.drill)/2,fill:'#202020'}));
+  return g;
+}
+function renderHighlight() {
+  const g=$('highlight');g.replaceChildren();$('selection-marker').replaceChildren();
+  svg.classList.toggle('has-selection',!!selected);
+  if(!selected)return;
+  data.segments.filter(t=>t.net===selected.id&&visible(t)).forEach(t=>g.append(el('line',{
+    x1:t.start[0],y1:t.start[1],x2:t.end[0],y2:t.end[1],stroke:'#ffe27d','stroke-width':Math.max(.27,t.width)})));
+  data.vias.filter(t=>t.net===selected.id&&visible(t)).forEach(t=>{
+    g.append(el('circle',{cx:t.at[0],cy:t.at[1],r:t.width/2,fill:'#ffe27d'}));
+    g.append(el('circle',{cx:t.at[0],cy:t.at[1],r:t.drill/2,fill:'#202020'}));
+  });
+  data.pads.filter(t=>t.net===selected.id&&visible(t)).forEach(p=>g.append(drawPad(p)));
+  if(selectedPoint) $('selection-marker').append(el('circle',{cx:selectedPoint[0],cy:selectedPoint[1],r:.8}));
+}
+function questionText() {
+  if(!selected)return '';
+  const text=[`ULVA ${data.revision} routing question`,`Net: ${selected.name}`];
+  if(selectedItem) {
+    text.push(`Selected item: ${selectedItem.kind==='track'?'Trace':selectedItem.kind==='via'?'Via':`Pad ${selectedItem.ref}.${selectedItem.number}`}`,
+      `Layer: ${selectedItem.layers.join(' / ')}`,`PCB coordinates: X=${fmt(selectedPoint[0],3)} mm, Y=${fmt(selectedPoint[1],3)} mm (viewed from the front)`);
+    if(selectedItem.kind==='track')text.push(`Width: ${fmt(selectedItem.width,4)} mm`,
+      `Segment: (${selectedItem.start.map(x=>fmt(x,3)).join(', ')}) → (${selectedItem.end.map(x=>fmt(x,3)).join(', ')}) mm`);
+    text.push(`Item UUID: ${selectedItem.uuid}`);
+  } else text.push('Selection: whole net');
+  text.push(`Total net trace length: ${fmt(selected.length,3)} mm / Vias: ${selected.vias.length}`,
+    `Connected pads: ${selected.connections.join(', ')}`,`PCB SHA256: ${data.sha256}`,'',`Question: ${$('question').value.trim()}`);
+  return text.join('\n');
+}
+function updateQuestion() {$('question-preview').value=questionText();$('copy-question').disabled=!selected;}
+function select(net,item=null,point=null) {
+  selected=net;selectedItem=item;selectedPoint=point;
+  $('empty').hidden=true;$('selection-details').hidden=false;$('net-title').textContent=net.name;
+  $('net-layers').textContent=labelLayers(net.layers);$('net-length').textContent=`${fmt(net.length)} mm`;
+  $('net-vias').textContent=`${net.vias.length}`;$('net-segments').textContent=`${net.segments.length}`;
+  $('net-width').textContent=net.widths.length?`${net.widths.map(w=>fmt(w,4)).join(' / ')} mm`:'Pad / pour connection';
+  $('pad-summary').textContent=`Show ${net.connections.length} connected pads`;$('pad-list').textContent=net.connections.join(' · ');
+  $('selected-item').textContent=item?`${item.kind==='track'?'Trace segment':item.kind==='via'?'Via':`${item.ref}.${item.number} Pad`} · ${labelLayers(item.layers)}\nX ${fmt(point[0],3)} / Y ${fmt(point[1],3)} mm${item.kind==='track'?` · Width ${fmt(item.width,4)} mm`:''}`:'Whole net selected · Click the map to inspect a segment';
+  $('map-note').textContent=`${net.name} selected · Click another trace to change`;
+  renderHighlight();updateQuestion();
+}
+function clear() {
+  selected=null;selectedItem=null;selectedPoint=null;$('empty').hidden=false;$('selection-details').hidden=true;$('candidates').hidden=true;
+  $('net-title').textContent='Select a trace';$('map-note').innerHTML='Click a trace to inspect it.<br>Scroll to zoom · Drag to pan · Esc to clear';renderHighlight();updateQuestion();
+}
+function renderResults() {
+  const q=$('search').value.trim().toLowerCase(), list=$('net-results');list.replaceChildren();
+  const found=data.nets.filter(n=>n.name.toLowerCase().includes(q)||n.connections.some(p=>p.toLowerCase().includes(q)));
+  const initial=['I2C0_SCL','I2C0_SDA','I2C1_SCL','I2C1_SDA'];
+  (q?found:data.nets.filter(n=>initial.includes(n.name))).forEach(n=>{
+    const button=document.createElement('button');button.className='net-option';button.dataset.net=n.name;
+    const name=document.createElement('span');name.textContent=n.name;
+    const count=document.createElement('span');count.className='count';count.textContent=`${fmt(n.length)} mm`;
+    button.append(name,count);button.onclick=()=>{select(n);$('candidates').hidden=true;};list.append(button);
+  });
+  if(q&&!found.length) {const empty=document.createElement('span');empty.className='hint';empty.textContent='No matching nets.';list.append(empty);}
+}
+function segmentDistance(point,a,b) {
+  const vx=b[0]-a[0],vy=b[1]-a[1],len=vx*vx+vy*vy;
+  const t=len?Math.max(0,Math.min(1,((point[0]-a[0])*vx+(point[1]-a[1])*vy)/len)):0;
+  return Math.hypot(point[0]-a[0]-t*vx,point[1]-a[1]-t*vy);
+}
+function distance(point,item) {
+  if(item.kind==='track')return Math.max(0,segmentDistance(point,item.start,item.end)-item.width/2);
+  if(item.kind==='via')return Math.max(0,Math.hypot(point[0]-item.at[0],point[1]-item.at[1])-item.width/2);
+  const a=item.angle*Math.PI/180,dx=point[0]-item.at[0],dy=point[1]-item.at[1];
+  const local=[dx*Math.cos(a)-dy*Math.sin(a),dx*Math.sin(a)+dy*Math.cos(a)];
+  if(item.shape===0)return Math.max(0,Math.hypot(...local)-item.size[0]/2);
+  const [w,h]=item.size,r=item.shape===2?Math.min(w,h)/2:item.round_radius;
+  const qx=Math.abs(local[0])-w/2+r,qy=Math.abs(local[1])-h/2+r;
+  return Math.max(0,Math.hypot(Math.max(qx,0),Math.max(qy,0))+Math.min(Math.max(qx,qy),0)-r);
+}
+function hitCandidates(point) {
+  const tolerance=4.5/Math.abs(svg.getScreenCTM().a), hits=items.filter(visible)
+    .map(item=>({item,distance:distance(point,item)})).filter(h=>h.distance<=tolerance)
+    .sort((a,b)=>a.distance-b.distance||({via:0,pad:1,track:2}[a.item.kind]-{via:0,pad:1,track:2}[b.item.kind]));
+  const unique=new Map();
+  for(const h of hits) {const key=`${h.item.net}:${h.item.layers.join(',')}`;if(!unique.has(key))unique.set(key,h.item);}
+  return [...unique.values()];
+}
+function clickAt(point) {
+  const hits=hitCandidates(point);$('candidates').hidden=hits.length<2;$('candidate-list').replaceChildren();
+  if(!hits.length){toast('No nearby trace. Zoom in or search by net name.');return;}
+  select(nets.get(hits[0].net),hits[0],point);
+  hits.forEach(item=>{
+    const b=document.createElement('button');b.textContent=`${nets.get(item.net).name} · ${item.layers.join(' / ')}`;
+    b.dataset.net=nets.get(item.net).name;b.dataset.layers=item.layers.join(',');
+    b.onclick=()=>select(nets.get(item.net),item,point);$('candidate-list').append(b);
+  });
+}
+function focusNet() {
+  if(!selected)return;
+  const points=items.filter(t=>t.net===selected.id&&visible(t)).flatMap(t=>t.kind==='track'?[t.start,t.end]:[t.at]);
+  if(!points.length){toast('This net is on another layer. Select Front + back.');return;}
+  const xs=points.map(p=>p[0]+data.offset[0]),ys=points.map(p=>p[1]+data.offset[1]);
+  const xmin=Math.min(...xs)-3,ymin=Math.min(...ys)-3,w=Math.max(6,Math.max(...xs)-xmin+3),h=Math.max(6,Math.max(...ys)-ymin+3);
+  setView([xmin,ymin,w,h]);
+}
+function toast(message) {$('toast').textContent=message;$('toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').classList.remove('show'),2800);}
+async function copyQuestion() {
+  const text=questionText();if(!text)return;
+  try {await navigator.clipboard.writeText(text);toast('Question copied. Paste it into your conversation.');}
+  catch {
+    const buffer=document.createElement('textarea');buffer.value=text;buffer.style.cssText='position:fixed;left:-9999px';document.body.append(buffer);buffer.select();
+    const copied=document.execCommand('copy');buffer.remove();
+    if(copied)toast('Question copied. Paste it into your conversation.');
+    else {$('question-preview').closest('details').open=true;$('question-preview').focus();$('question-preview').select();toast('Press Ctrl+C to copy the selected text.');}
+  }
+}
+async function saveImage() {
+  const clone=svg.cloneNode(true);clone.removeAttribute('id');
+  // Preserve exactly the currently visible copper and dimming in a standalone image.
+  svg.querySelectorAll('[data-copper-layer]').forEach((e,i)=>{
+    const node=clone.querySelectorAll('[data-copper-layer]')[i];
+    node.style.display=getComputedStyle(e).display;node.style.opacity=getComputedStyle(e).opacity;
+  });
+  clone.querySelectorAll('[data-hole]').forEach(e=>e.style.opacity=selected ? 0.3 : 1);
+  clone.querySelectorAll('#selection-marker circle').forEach(e=>{e.setAttribute('fill','none');e.setAttribute('stroke','white');e.setAttribute('stroke-width','.2');});
+  clone.querySelector('#highlight').setAttribute('stroke-linecap','round');
+  const ratio=svg.getBoundingClientRect().width/svg.getBoundingClientRect().height;
+  clone.setAttribute('width','1600');clone.setAttribute('height',String(Math.round(1600/ratio)));
+  const blob=new Blob([new XMLSerializer().serializeToString(clone)],{type:'image/svg+xml'}),url=URL.createObjectURL(blob);
+  try {
+    const image=new Image();image.src=url;await image.decode();
+    const canvas=document.createElement('canvas');canvas.width=1600;canvas.height=Math.round(1600/ratio);
+    const context=canvas.getContext('2d');context.fillStyle='#202020';context.fillRect(0,0,canvas.width,canvas.height);context.drawImage(image,0,0);
+    const link=document.createElement('a');link.download=`ULVA-${data.revision}-${selected.name.replace(/[^a-zA-Z0-9_-]/g,'_')}.png`;link.href=canvas.toDataURL('image/png');link.click();
+    toast('Selected trace image saved.');
+  } catch {toast('Image export failed. You can still copy the question.');}
+  finally {URL.revokeObjectURL(url);}
+}
+function initializeBoard() {
+svg.addEventListener('wheel',event=>{event.preventDefault();const c=new DOMPoint(event.clientX,event.clientY).matrixTransform(svg.getScreenCTM().inverse());zoom(event.deltaY<0?.85:1/.85,[c.x,c.y]);},{passive:false});
+svg.addEventListener('pointerdown',event=>{if(event.button!==0)return;drag={id:event.pointerId,x:event.clientX,y:event.clientY,view:[...view],scale:svg.getScreenCTM().a,moved:false};svg.setPointerCapture(event.pointerId);});
+svg.addEventListener('pointermove',event=>{
+  const p=toBoard(event.clientX,event.clientY);$('cursor-position').textContent=`X ${fmt(p[0],3)} / Y ${fmt(p[1],3)} mm`;
+  if(!drag||drag.id!==event.pointerId)return;
+  const dx=event.clientX-drag.x,dy=event.clientY-drag.y;
+  if(Math.hypot(dx,dy)>4)drag.moved=true;
+  if(drag.moved){svg.classList.add('panning');setView([drag.view[0]-dx/drag.scale,drag.view[1]-dy/drag.scale,drag.view[2],drag.view[3]]);}
+});
+svg.addEventListener('pointerup',event=>{if(!drag||drag.id!==event.pointerId)return;const wasDrag=drag.moved;drag=null;svg.classList.remove('panning');svg.releasePointerCapture(event.pointerId);if(!wasDrag)clickAt(toBoard(event.clientX,event.clientY));});
+svg.addEventListener('pointercancel',()=>{drag=null;svg.classList.remove('panning');});
+document.querySelectorAll('[data-layer-choice]').forEach(b=>b.onclick=()=>{layer=b.dataset.layerChoice;svg.dataset.layer=layer;document.querySelectorAll('[data-layer-choice]').forEach(x=>x.classList.toggle('active',x===b));$('candidates').hidden=true;renderHighlight();});
+$('search').addEventListener('input',renderResults);$('question').addEventListener('input',updateQuestion);
+$('zoom-in').onclick=()=>zoom(.8);$('zoom-out').onclick=()=>zoom(1.25);$('fit').onclick=()=>setView([...data.viewBox]);
+$('clear').onclick=clear;$('focus-net').onclick=focusNet;$('copy-question').onclick=copyQuestion;$('save-image').onclick=saveImage;
+document.addEventListener('keydown',event=>{if(event.key==='Escape')clear();});
+svg.dataset.layer='all';setView([...data.viewBox]);renderResults();
+}
+
+async function sha256Bytes(buffer) {
+  if(globalThis.crypto?.subtle) {
+    const digest=await crypto.subtle.digest('SHA-256',buffer);
+    return Array.from(new Uint8Array(digest),b=>b.toString(16).padStart(2,'0')).join('');
+  }
+  // Plain HTTP is not a secure context in every browser. Hash locally there too.
+  const bytes=new Uint8Array(buffer), padded=new Uint8Array(Math.ceil((bytes.length+9)/64)*64);
+  padded.set(bytes);padded[bytes.length]=0x80;
+  const dv=new DataView(padded.buffer);
+  dv.setUint32(padded.length-8,Math.floor(bytes.length/0x20000000));
+  dv.setUint32(padded.length-4,(bytes.length*8)>>>0);
+  const k=[0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,
+    0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,
+    0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,
+    0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,
+    0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,
+    0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,
+    0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,
+    0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2];
+  const h=[0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19];
+  const w=new Uint32Array(64),rotate=(x,n)=>(x>>>n)|(x<<(32-n));
+  for(let offset=0;offset<padded.length;offset+=64) {
+    for(let i=0;i<16;i++)w[i]=dv.getUint32(offset+4*i);
+    for(let i=16;i<64;i++) {
+      const x=w[i-15],y=w[i-2],s0=rotate(x,7)^rotate(x,18)^(x>>>3),s1=rotate(y,17)^rotate(y,19)^(y>>>10);
+      w[i]=(w[i-16]+s0+w[i-7]+s1)>>>0;
+    }
+    let [a,b,c,d,e,f,g,j]=h;
+    for(let i=0;i<64;i++) {
+      const s1=rotate(e,6)^rotate(e,11)^rotate(e,25),choice=(e&f)^(~e&g);
+      const t1=(j+s1+choice+k[i]+w[i])>>>0;
+      const s0=rotate(a,2)^rotate(a,13)^rotate(a,22),majority=(a&b)^(a&c)^(b&c),t2=(s0+majority)>>>0;
+      j=g;g=f;f=e;e=(d+t1)>>>0;d=c;c=b;b=a;a=(t1+t2)>>>0;
+    }
+    [a,b,c,d,e,f,g,j].forEach((value,i)=>h[i]=(h[i]+value)>>>0);
+  }
+  return h.map(value=>value.toString(16).padStart(8,'0')).join('');
+}
+function loading(message) {
+  $('viewport').setAttribute('aria-busy','true');$('load-status').classList.remove('error');
+  $('load-title').textContent='Loading board';$('load-status').textContent=message;$('retry-board').disabled=true;
+}
+function loadError(message) {
+  $('viewport').setAttribute('aria-busy','false');$('load-title').textContent='Board not loaded';
+  $('load-status').classList.add('error');$('load-status').textContent=message;$('retry-board').disabled=false;
+}
+async function mountBoard(buffer,token) {
+  if(!/^[a-f0-9]{64}$/i.test(data.board_svg_sha256||''))throw Error('This routing page is missing its board.svg verification hash. Regenerate the viewer files.');
+  const actual=await sha256Bytes(buffer);
+  if(token!==loadToken)return;
+  if(actual!==data.board_svg_sha256.toLowerCase())throw Error('This board.svg does not match this routing page. Open the matching file saved beside index.html.');
+  const parsed=new DOMParser().parseFromString(new TextDecoder('utf-8',{fatal:true}).decode(buffer),'image/svg+xml');
+  const root=parsed.documentElement;
+  if(parsed.querySelector('parsererror')||root.localName!=='svg'||root.namespaceURI!==ns||!root.querySelector('#highlight')||!root.querySelector('#selection-marker')) {
+    throw Error('The matching file is not a valid routing SVG. Regenerate the viewer files.');
+  }
+  if(root.querySelector('script,foreignObject')||[root,...root.querySelectorAll('*')].some(node=>Array.from(node.attributes).some(attr=>/^on/i.test(attr.name)||(attr.localName==='href'&&attr.value&&!attr.value.startsWith('#'))))) {
+    throw Error('The SVG contains unsupported active or external content. Regenerate the viewer files.');
+  }
+  svg=document.importNode(root,true);svg.id='board';svg.setAttribute('width','100%');svg.setAttribute('height','100%');
+  $('viewport').prepend(svg);initializeBoard();
+  document.querySelectorAll('.toolbar button,#search,#question,#question-preview,#focus-net,#clear,#save-image').forEach(control=>control.disabled=false);
+  $('board-loader').hidden=true;$('map-note').hidden=false;$('viewport').setAttribute('aria-busy','false');
+}
+async function loadFromNetwork() {
+  if(svg)return;
+  requestController?.abort();requestController=new AbortController();const token=++loadToken;
+  loading('Loading and verifying board.svg…');
+  try {
+    const url=new URL('./board.svg',location.href);url.searchParams.set('sha256',data.board_svg_sha256||'');
+    const response=await fetch(url,{cache:'no-cache',signal:requestController.signal});
+    if(!response.ok)throw Error(`Unable to load board.svg (HTTP ${response.status}). Retry or open the matching file.`);
+    await mountBoard(await response.arrayBuffer(),token);
+  } catch(error) {
+    if(token!==loadToken)return;
+    loadError(error.name==='TypeError'?'Unable to load board.svg. Retry or open the matching file.':error.message);
+  }
+}
+$('open-board').onclick=()=>$('board-file').click();
+$('board-file').addEventListener('change',async event=>{
+  const file=event.target.files[0];event.target.value='';if(!file||svg)return;
+  requestController?.abort();const token=++loadToken;loading('Reading and verifying board.svg…');
+  try {await mountBoard(await file.arrayBuffer(),token);}
+  catch(error) {if(token===loadToken)loadError(error.message||'Unable to read this file. Choose the matching board.svg.');}
+});
+$('retry-board').onclick=loadFromNetwork;
+if(location.protocol==='http:'||location.protocol==='https:') {
+  $('retry-board').hidden=false;loadFromNetwork();
+} else {
+  $('viewport').setAttribute('aria-busy','false');
+  $('load-status').textContent='Open the board.svg file saved beside this page. No local server is required.';
+}
+
+</script>
+</body>
+</html>

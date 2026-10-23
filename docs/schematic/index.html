@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11191c">
+  <link rel="icon" href="data:,">
+  <title>Ulva · Schematics</title>
+  <link rel="stylesheet" href="viewer.css">
+</head>
+<body data-pages-open="true">
+  <script>if (new URLSearchParams(location.search).get('embedded') === '1') document.body.classList.add('embedded');</script>
+  <header><h1>ULVA <span>· Schematics</span></h1><a id="pdf-link" href="schematic.pdf" download>Download PDF</a></header>
+  <main>
+    <nav aria-label="Schematic pages and zoom">
+      <button id="toggle-pages" aria-expanded="true" aria-controls="page-sidebar" disabled>Pages</button>
+      <button id="previous" aria-label="Previous sheet" disabled>←</button>
+      <label class="visually-hidden" for="sheet-select">Schematic sheet</label>
+      <select id="sheet-select" disabled></select>
+      <button id="next" aria-label="Next sheet" disabled>→</button>
+      <div class="zoom-tools">
+        <button id="zoom-out" aria-label="Zoom out" disabled>−</button>
+        <button id="zoom-in" aria-label="Zoom in" disabled>+</button>
+        <button id="fit" disabled>Fit page</button>
+        <span id="zoom-level" aria-live="polite"></span>
+      </div>
+    </nav>
+    <div class="sheet-workspace">
+      <aside id="page-sidebar" aria-label="Schematic pages">
+        <div class="sidebar-heading"><h2>Pages</h2><button id="close-pages" aria-label="Close pages">×</button></div>
+        <ol id="page-thumbnails"></ol>
+      </aside>
+      <div id="viewport" tabindex="0" role="region" aria-label="Schematic sheet. Drag to pan, scroll or pinch to zoom." aria-busy="true">
+        <img id="sheet-image" alt="" draggable="false" hidden>
+        <p id="message" role="status">Opening schematic pages…</p>
+      </div>
+    </div>
+    <footer><span id="page-status" aria-live="polite"></span><span>Drag to pan · Scroll or pinch to zoom</span></footer>
+  </main>
+  <script src="pages.js"></script>
+  <script src="viewer.js"></script>
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>ULVA board viewer</title>
+  <link rel="icon" href="data:,">
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 100%; height: 100%; }
+    body {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-rows: auto minmax(0, 1fr);
+      height: 100vh;
+      height: 100dvh;
+      overflow: hidden;
+      color: #e3eeea;
+      background: #101719;
+      font: 14px/1.3 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      height: 40px;
+      padding: 0 12px;
+      border-bottom: 1px solid #34454b;
+      background: #101719;
+    }
+    .brand { flex-shrink: 0; font-size: 14px; font-weight: 750; letter-spacing: .08em; }
+    [role="tablist"] {
+      display: flex;
+      flex: 1;
+      min-width: 0;
+      align-self: stretch;
+      gap: 2px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    [role="tablist"]::-webkit-scrollbar { display: none; }
+    [role="tab"] {
+      flex-shrink: 0;
+      margin: 0;
+      padding: 8px 10px 6px;
+      border: 0;
+      border-bottom: 3px solid transparent;
+      border-radius: 0;
+      color: #b1c2bf;
+      background: transparent;
+      font: inherit;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    [role="tab"]:hover { background: #203036; }
+    [role="tab"][aria-selected="true"] { color: #9ce4ce; border-bottom-color: #9ce4ce; }
+    button:focus-visible { outline: 2px solid #9ce4ce; outline-offset: 2px; }
+    [role="tab"]:focus-visible { outline-offset: -4px; }
+    #version-button {
+      flex-shrink: 0;
+      min-width: 0;
+      max-width: 128px;
+      margin-left: auto;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 12px;
+      padding: 4px 8px;
+    }
+    .action {
+      border: 1px solid #425a61;
+      border-radius: 5px;
+      padding: 6px 10px;
+      color: #dcebe6;
+      background: #203036;
+      font: inherit;
+      cursor: pointer;
+    }
+    .action:hover { background: #2c4147; }
+    main, [role="tabpanel"] { min-width: 0; min-height: 0; width: 100%; height: 100%; }
+    [hidden] { display: none !important; }
+    iframe { display: block; width: 100%; height: 100%; border: 0; }
+    noscript { position: absolute; inset: 40px 0 0; padding: 24px; background: #101719; }
+    a { color: #9ce4ce; }
+    dialog {
+      width: min(720px, calc(100% - 24px));
+      max-height: calc(100vh - 24px);
+      max-height: calc(100dvh - 24px);
+      margin: auto;
+      padding: 0;
+      border: 1px solid #425a61;
+      border-radius: 10px;
+      color: #e3eeea;
+      background: #11191c;
+      box-shadow: 0 16px 64px #0009;
+    }
+    dialog[open] { display: flex; flex-direction: column; }
+    dialog::backdrop { background: #0009; }
+    .dialog-heading, .dialog-footer { display: flex; align-items: center; gap: 12px; padding: 12px 16px; }
+    .dialog-heading { border-bottom: 1px solid #34454b; }
+    .dialog-heading h2 { margin: 0; flex: 1; font-size: 17px; }
+    .dialog-body { min-height: 0; padding: 0 16px; overflow: auto; }
+    .dialog-body > p { color: #b1c2bf; }
+    #source-warning { border-left: 3px solid #e4bf7e; padding-left: 10px; color: #efd7ac; }
+    .version-section h3 { margin: 18px 0 8px; font-size: 14px; color: #9ce4ce; }
+    .version-section dl { display: grid; grid-template-columns: 116px minmax(0, 1fr); gap: 8px 12px; margin: 0 0 16px; }
+    .version-section dt { color: #b1c2bf; }
+    .version-section dd { margin: 0; min-width: 0; overflow-wrap: anywhere; user-select: text; }
+    .version-section code { font: 12px/1.5 ui-monospace, SFMono-Regular, Consolas, monospace; }
+    .dialog-footer { border-top: 1px solid #34454b; }
+    #version-status { color: #b1c2bf; font-size: 12px; }
+    @media (max-width: 440px) {
+      header { gap: 8px; padding: 0 8px; }
+      .brand { font-size: 12px; }
+      [role="tab"] { padding-left: 7px; padding-right: 7px; font-size: 12px; }
+      #version-button { max-width: 82px; padding: 4px 6px; font-size: 11px; }
+      .version-section dl { grid-template-columns: 94px minmax(0, 1fr); gap: 8px; font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <span class="brand">ULVA</span>
+    <nav role="tablist" aria-label="Board view">
+      <button id="tab-routing" type="button" role="tab" aria-selected="true" aria-controls="panel-routing" tabindex="0">Routing</button>
+      <button id="tab-3d" type="button" role="tab" aria-selected="false" aria-controls="panel-3d" tabindex="-1">3D</button>
+      <button id="tab-schematic" type="button" role="tab" aria-selected="false" aria-controls="panel-schematic" tabindex="-1">Schematic</button>
+      <button id="tab-orders" type="button" role="tab" aria-selected="false" aria-controls="panel-orders" tabindex="-1">Orders</button>
+    </nav>
+    <button id="version-button" class="action" type="button" aria-label="Version details" aria-haspopup="dialog" aria-controls="version-dialog" title="Version details">Version</button>
+  </header>
+  <main>
+    <section id="panel-routing" role="tabpanel" aria-labelledby="tab-routing">
+      <iframe id="routing-frame" title="ULVA PCB routing viewer" data-src="./routing/index.html?embedded=1" allow="clipboard-write"></iframe>
+    </section>
+    <section id="panel-3d" role="tabpanel" aria-labelledby="tab-3d" hidden>
+      <iframe id="three-frame" title="ULVA 3D assembly viewer" data-src="./3d/index.html?embedded=1"></iframe>
+    </section>
+    <section id="panel-schematic" role="tabpanel" aria-labelledby="tab-schematic" hidden>
+      <iframe id="schematic-frame" title="ULVA schematic viewer" data-src="./schematic/index.html?embedded=1"></iframe>
+    </section>
+    <section id="panel-orders" role="tabpanel" aria-labelledby="tab-orders" hidden>
+      <iframe id="orders-frame" title="ULVA component order planner" data-src="./orders/index.html?embedded=1"></iframe>
+    </section>
+  </main>
+  <dialog id="version-dialog" aria-labelledby="version-title" aria-describedby="version-description">
+    <div class="dialog-heading">
+      <h2 id="version-title">Version details</h2>
+      <button id="close-version" class="action" type="button" aria-label="Close version details" autofocus>Close</button>
+    </div>
+    <div class="dialog-body">
+      <p id="version-description">Export base is the Git checkout recorded when version metadata was generated; it is not a live repository status or proof that every view was built at that commit. SHA-256 hashes identify the exported files and their source.</p>
+      <p id="metadata-status" hidden>Version metadata is unavailable for this export.</p>
+      <p id="source-warning" hidden></p>
+      <div id="version-fields"></div>
+    </div>
+    <div class="dialog-footer">
+      <button id="copy-version" class="action" type="button">Copy details</button>
+      <span id="version-status" role="status" aria-live="polite"></span>
+    </div>
+  </dialog>
+  <noscript>
+    <p>Open the <a href="./routing/index.html">routing viewer</a>, <a href="./3d/index.html">3D viewer</a>, <a href="./schematic/index.html">schematic viewer</a> or <a href="./orders/index.html">order planner</a>. The interactive viewers require JavaScript.</p>
+  </noscript>
+  <script src="./viewer-info.js"></script>
+  <script>
+    (() => {
+      const views = [
+        { name: 'routing', tab: document.getElementById('tab-routing'), panel: document.getElementById('panel-routing'), frame: document.getElementById('routing-frame') },
+        { name: '3d', tab: document.getElementById('tab-3d'), panel: document.getElementById('panel-3d'), frame: document.getElementById('three-frame') },
+        { name: 'schematic', tab: document.getElementById('tab-schematic'), panel: document.getElementById('panel-schematic'), frame: document.getElementById('schematic-frame') },
+        { name: 'orders', tab: document.getElementById('tab-orders'), panel: document.getElementById('panel-orders'), frame: document.getElementById('orders-frame') },
+      ];
+
+      function activate(name, focus = false) {
+        const selected = views.find(view => view.name === name) || views[0];
+        for (const view of views) {
+          const active = view === selected;
+          view.tab.setAttribute('aria-selected', String(active));
+          view.tab.tabIndex = active ? 0 : -1;
+          view.panel.hidden = !active;
+        }
+        // Keep frames mounted so selections, camera and controls survive switching.
+        if (!selected.frame.hasAttribute('src')) selected.frame.src = selected.frame.dataset.src;
+        selected.tab.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+        if (focus) selected.tab.focus();
+      }
+
+      function select(name, focus = false) {
+        activate(name, focus);
+        if (location.hash !== '#' + name) location.hash = name;
+      }
+
+      views.forEach((view, index) => {
+        view.tab.addEventListener('click', () => select(view.name));
+        view.tab.addEventListener('keydown', event => {
+          let next;
+          if (event.key === 'ArrowRight') next = (index + 1) % views.length;
+          else if (event.key === 'ArrowLeft') next = (index + views.length - 1) % views.length;
+          else if (event.key === 'Home') next = 0;
+          else if (event.key === 'End') next = views.length - 1;
+          else return;
+          event.preventDefault();
+          select(views[next].name, true);
+        });
+      });
+      window.addEventListener('hashchange', () => activate(location.hash.slice(1)));
+      activate(location.hash.slice(1));
+      new ResizeObserver(() => {
+        const selected = views.find(view => view.tab.getAttribute('aria-selected') === 'true');
+        selected?.tab.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+      }).observe(document.querySelector('[role="tablist"]'));
+
+      const metadata = window.ULVA_VIEWER_INFO;
+      const info = metadata && metadata.schema === 1 ? metadata : {};
+      const knownText = value => typeof value === 'string' && value.trim() ? value : 'Unknown';
+      const hash = (value, length = 64) => typeof value === 'string' && new RegExp('^[a-fA-F0-9]{' + length + '}$').test(value) ? value : 'Unknown';
+      const revision = knownText(info.revision);
+      const commitHash = hash(info.commit?.hash, 40);
+      const sourceState = info.commit?.sourceModified === true ? 'Modified source' : info.commit?.sourceModified === false ? 'Unmodified source' : 'Unknown';
+      const versionButton = document.getElementById('version-button');
+      const dialog = document.getElementById('version-dialog');
+      const copyStatus = document.getElementById('version-status');
+      const details = [];
+
+      versionButton.textContent = revision;
+      versionButton.title = 'Version details: ' + revision + '\nExport base: ' + commitHash + '\n' + sourceState;
+      document.getElementById('metadata-status').hidden = info === metadata;
+
+      function section(title, fields) {
+        const container = document.createElement('section'); container.className = 'version-section';
+        const heading = document.createElement('h3'); heading.textContent = title; container.append(heading);
+        const list = document.createElement('dl');
+        details.push(title);
+        for (const [label, value, isHash] of fields) {
+          const term = document.createElement('dt'); term.textContent = label;
+          const definition = document.createElement('dd');
+          const text = isHash ? document.createElement('code') : document.createElement('span');
+          text.textContent = value; if (isHash) text.title = value;
+          definition.append(text); list.append(term, definition);
+          details.push(label + ': ' + value);
+        }
+        container.append(list); document.getElementById('version-fields').append(container); details.push('');
+      }
+
+      const currentSource = hash(info.currentSourcePcbSha256);
+      const boardFields = [['Revision', revision], ['Export base', commitHash, true], ['Source state', sourceState]];
+      if (currentSource !== 'Unknown') boardFields.push(['Current PCB SHA-256', currentSource, true]);
+      section('Board', boardFields);
+      section('Routing', [['File', knownText(info.routing?.file)], ['File SHA-256', hash(info.routing?.sha256), true], ['PCB SHA-256', hash(info.routing?.sourcePcbSha256), true]]);
+      section('3D', [['File', knownText(info.model?.file)], ['File SHA-256', hash(info.model?.sha256), true], ['Metadata SHA-256', hash(info.model?.metadataSha256), true], ['PCB SHA-256', hash(info.model?.sourcePcbSha256), true]]);
+      section('Schematic', [['File', knownText(info.schematic?.file)], ['File SHA-256', hash(info.schematic?.sha256), true], ['Source SHA-256', hash(info.schematic?.sourceSha256), true], ['Pages', Number.isInteger(info.schematic?.pages) && info.schematic.pages > 0 ? String(info.schematic.pages) : 'Unknown']]);
+      if (info.orders) {
+        const orderFields = [['File', knownText(info.orders.file)], ['File SHA-256', hash(info.orders.sha256), true], ['CAD source digest', hash(info.orders.sourceSha256), true], ['Catalog SHA-256', hash(info.orders.catalogSha256), true]];
+        const orderPcb = hash(info.orders.sourcePcbSha256);
+        if (orderPcb !== 'Unknown') orderFields.push(['PCB SHA-256', orderPcb, true]);
+        section('Orders', orderFields);
+      }
+      const routingSource = hash(info.routing?.sourcePcbSha256);
+      const modelSource = hash(info.model?.sourcePcbSha256);
+      const differs = (a, b) => a !== 'Unknown' && b !== 'Unknown' && a.toLowerCase() !== b.toLowerCase();
+      const staleViews = [];
+      if (differs(routingSource, currentSource)) staleViews.push('Routing');
+      if (differs(modelSource, currentSource)) staleViews.push('3D');
+      if (differs(hash(info.orders?.sourcePcbSha256), currentSource)) staleViews.push('Orders');
+      const warning = staleViews.length
+        ? staleViews.join(' and ') + (staleViews.length > 1 ? ' do' : ' does') + ' not match the recorded current PCB source.'
+        : differs(routingSource, modelSource) ? 'Routing and 3D were exported from different PCB source files.' : '';
+      if (warning) {
+        const notice = document.getElementById('source-warning');
+        notice.textContent = warning; notice.hidden = false;
+        details.push('Warning: ' + warning);
+      }
+      versionButton.addEventListener('click', () => { copyStatus.textContent = ''; dialog.showModal(); });
+      document.getElementById('close-version').addEventListener('click', () => dialog.close());
+      document.getElementById('copy-version').addEventListener('click', async () => {
+        const text = 'ULVA viewer\n' + document.getElementById('version-description').textContent + '\n\n' + details.join('\n');
+        try {
+          if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable');
+          await navigator.clipboard.writeText(text);
+          copyStatus.textContent = 'Details copied.';
+        } catch {
+          const field = document.createElement('textarea'); field.value = text; field.setAttribute('aria-label', 'Version details to copy');
+          field.style.cssText = 'position:fixed;left:-9999px;top:0'; dialog.append(field); field.select();
+          let copied = false; try { copied = document.execCommand('copy'); } catch { /* Keep the details selectable when copying is unavailable. */ }
+          field.remove(); document.getElementById('copy-version').focus();
+          copyStatus.textContent = copied ? 'Details copied.' : 'Copy unavailable. Select the details to copy.';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
